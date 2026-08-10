@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --foreground-muted: #757575;
+  --foreground-soft: #424242;
+  --border: #bdbdbd;
+  --border-strong: #424242;
+  --surface: #fafafa;
+  --surface-muted: #f5f5f5;
+  --surface-hover: #eeeeee;
+  --surface-primary: #eff5fe;
+  --surface-success: #ebf5ec;
+  --surface-warning: #fbeef0;
+  --disabled: #9e9e9e;
+  --primary: #126dff;
+  --primary-dark: #072c66;
+  --primary-medium: #c3d9f9;
+  --flag-blue: #1e4e9d;
+  --success: #078814;
+  --success-dark: #033608;
+  --success-soft: #9fdaa5;
+  --warning: #c3112b;
+  --warning-dark: #4e0711;
+  --warning-soft: #f8b5b9;
+  --alert: #bd730c;
+  --focus: #d96e00;
+  --focus-inverse: #ffffff;
+  --link: #0b4199;
+  --shadow-small: 0 2px 4px 0 rgb(26 26 26 / 20%);
+  --shadow-medium: 0 6px 16px 0 rgb(26 26 26 / 24%);
+  --shadow-large: 0 12px 20px 0 rgb(26 26 26 / 16%);
+  --shadow-dialog: 0 -4px 22px -5px rgb(0 0 0 / 25%);
+  --shadow-head: 0 5px 10px -5px rgb(26 26 26 / 20%);
+  --idsk-space-1: 0.9375rem;
+  --idsk-space-2: 1.25rem;
+  --idsk-space-3: 1.875rem;
+  --idsk-space-4: 2.5rem;
+  --idsk-space-5: 3.75rem;
+  --idsk-space-6: 6.25rem;
+  --idsk-page-gutter: 0.9375rem;
+  --idsk-grid-gutter-mobile: 1rem;
+  --idsk-grid-gutter: 1.25rem;
+  --idsk-grid-max-width: 70rem;
+  --radius: 0.3125rem;
+  --font-sans: "Source Sans Pro", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-soft: var(--foreground-soft);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-success: var(--surface-success);
+  --color-surface-warning: var(--surface-warning);
+  --color-disabled: var(--disabled);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-flag-blue: var(--flag-blue);
+  --color-success: var(--success);
+  --color-success-dark: var(--success-dark);
+  --color-warning: var(--warning);
+  --color-warning-dark: var(--warning-dark);
+  --color-alert: var(--alert);
+  --color-focus: var(--focus);
+  --color-focus-inverse: var(--focus-inverse);
+  --color-link: var(--link);
+  --font-sans: var(--font-sans);
+  --shadow-idsk-sm: var(--shadow-small);
+  --shadow-idsk-md: var(--shadow-medium);
+  --shadow-idsk-lg: var(--shadow-large);
+  --shadow-idsk-dialog: var(--shadow-dialog);
+  --shadow-idsk-head: var(--shadow-head);
+  --spacing-idsk-1: var(--idsk-space-1);
+  --spacing-idsk-2: var(--idsk-space-2);
+  --spacing-idsk-3: var(--idsk-space-3);
+  --spacing-idsk-4: var(--idsk-space-4);
+  --spacing-idsk-5: var(--idsk-space-5);
+  --spacing-idsk-6: var(--idsk-space-6);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  a {
+    color: var(--link);
+  }
+
+  a:hover {
+    color: var(--primary);
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  :where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus,
+  :where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .idsk-container {
+    margin-inline: auto;
+    width: min(calc(100% - (2 * var(--idsk-page-gutter))), var(--idsk-grid-max-width));
+  }
+
+  .idsk-grid,
+  .idsk-grid-4,
+  .idsk-grid-8,
+  .idsk-grid-12 {
+    display: grid;
+    gap: var(--idsk-grid-gutter-mobile);
+  }
+
+  .idsk-grid,
+  .idsk-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .idsk-grid-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .idsk-grid-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .idsk-panel {
+    @apply rounded-[var(--radius)] border border-border bg-white;
+  }
+
+  .idsk-focus-ring {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .idsk-focus-ring-inverse {
+    outline: 3px solid var(--focus-inverse);
+    outline-offset: 2px;
+  }
+
+  .idsk-focus-inverse:focus,
+  .idsk-focus-inverse:focus-visible {
+    outline-color: var(--focus-inverse);
+  }
+
+  .idsk-h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 2.8125rem;
+  }
+
+  .idsk-h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 2.1875rem;
+  }
+
+  .idsk-h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 1.625rem;
+  }
+
+  .idsk-h4 {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 1.5rem;
+  }
+
+  .idsk-subtitle,
+  .idsk-subtitle-bold {
+    font-size: 1.1875rem;
+    letter-spacing: 0.025em;
+    line-height: 1.75rem;
+  }
+
+  .idsk-subtitle {
+    font-weight: 400;
+  }
+
+  .idsk-subtitle-bold {
+    font-weight: 700;
+  }
+
+  .idsk-body {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 1.5rem;
+  }
+
+  .idsk-body-bold {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 1.75rem;
+  }
+
+  .idsk-body-s,
+  .idsk-body-s-bold {
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    line-height: 1.25rem;
+  }
+
+  .idsk-body-s {
+    font-weight: 400;
+  }
+
+  .idsk-body-s-bold {
+    font-weight: 700;
+  }
+
+  .idsk-caption,
+  .idsk-caption-bold {
+    font-size: 0.75rem;
+    letter-spacing: 0.025em;
+    line-height: 1rem;
+  }
+
+  .idsk-caption {
+    font-weight: 400;
+  }
+
+  .idsk-caption-bold {
+    font-weight: 700;
+  }
+
+  .idsk-link {
+    color: var(--link);
+    letter-spacing: 0.025em;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1578em;
+  }
+
+  .idsk-link:hover {
+    color: var(--primary);
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+  }
+
+  .idsk-link-l {
+    font-size: 1.1875rem;
+    line-height: 1.75rem;
+  }
+
+  .idsk-link-m {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .idsk-link-s {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .idsk-link-caption {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .idsk-link-bold {
+    font-weight: 700;
+  }
+
+  .idsk-link:focus,
+  .idsk-link:focus-visible {
+    border-radius: 5px;
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (min-width: 730px) {
+    .idsk-grid,
+    .idsk-grid-8,
+    .idsk-grid-12 {
+      gap: var(--idsk-grid-gutter);
+    }
+
+    .idsk-grid {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 731px) {
+    .idsk-h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 3.4375rem;
+    }
+
+    .idsk-h2 {
+      font-size: 2.25rem;
+      line-height: 2.8125rem;
+    }
+
+    .idsk-h3 {
+      font-size: 1.5rem;
+      line-height: 2.1875rem;
+    }
+
+    .idsk-h4 {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+    }
+
+    .idsk-subtitle,
+    .idsk-subtitle-bold {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+
+    .idsk-body,
+    .idsk-body-bold {
+      font-size: 1.1875rem;
+      line-height: 1.75rem;
+    }
+
+    .idsk-body-s {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .idsk-body-s-bold {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .idsk-link-l {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+
+    .idsk-link-m {
+      font-size: 1.1875rem;
+      line-height: 1.75rem;
+    }
+
+    .idsk-link-s {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .idsk-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+}
