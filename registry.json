@@ -1,0 +1,294 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "idsk-shadcn",
+  "homepage": "https://github.com/bmikuska46/idsk-shadcn",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "cn() helper built with clsx and tailwind-merge.",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "styles",
+      "type": "registry:item",
+      "title": "IDSK Styles",
+      "description": "IDSK design tokens, focus ring, typography and layout utility classes.",
+      "dependencies": ["@fontsource/source-sans-pro"],
+      "files": [
+        {
+          "path": "src/index.css",
+          "type": "registry:file",
+          "target": "src/styles/idsk.css"
+        }
+      ],
+      "docs": "Import `src/styles/idsk.css` in your app entry (after Tailwind). Load Source Sans Pro, e.g. `import '@fontsource/source-sans-pro/400.css'` and `700.css`."
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "IDSK button with primary, secondary and text variants.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "IDSK text input with label, hint and error support.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "IDSK textarea with character count and validation states.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "IDSK select built on Radix Select.",
+      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-group",
+      "type": "registry:ui",
+      "title": "Checkbox Group",
+      "description": "IDSK checkbox group with indeterminate support.",
+      "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/checkbox-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "IDSK radio group for single-choice form fields.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File Upload",
+      "description": "IDSK file upload with success and error states.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/file-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-input",
+      "type": "registry:ui",
+      "title": "Search Input",
+      "description": "IDSK search field with icon affordance.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/search-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "error-summary",
+      "type": "registry:ui",
+      "title": "Error Summary",
+      "description": "IDSK error summary for form validation overview.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/error-summary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "feedback-bar",
+      "type": "registry:ui",
+      "title": "Feedback Bar",
+      "description": "IDSK feedback bar for collecting page feedback.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "bmikuska46/idsk-shadcn/utils",
+        "bmikuska46/idsk-shadcn/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/feedback-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "information-bar",
+      "type": "registry:ui",
+      "title": "Information Bar",
+      "description": "IDSK information, warning and success notification bar.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "bmikuska46/idsk-shadcn/utils",
+        "bmikuska46/idsk-shadcn/button"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/information-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "IDSK breadcrumb navigation with mobile collapse.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/breadcrumbs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "IDSK accordion allowing multiple open sections.",
+      "dependencies": ["@radix-ui/react-accordion"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signpost",
+      "type": "registry:ui",
+      "title": "Signpost",
+      "description": "IDSK signpost link card for service navigation.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/signpost.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "IDSK content card with optional image and tags.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "government-logo",
+      "type": "registry:ui",
+      "title": "Government Logo",
+      "description": "Slovak government / gov.sk logo mark.",
+      "registryDependencies": ["bmikuska46/idsk-shadcn/utils"],
+      "files": [
+        {
+          "path": "src/components/ui/government-logo.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "type": "registry:ui",
+      "title": "Header",
+      "description": "IDSK website header with official banner, search and navigation.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "bmikuska46/idsk-shadcn/utils",
+        "bmikuska46/idsk-shadcn/button",
+        "bmikuska46/idsk-shadcn/government-logo",
+        "bmikuska46/idsk-shadcn/search-input"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:ui",
+      "title": "Footer",
+      "description": "IDSK website footer with link columns and government logo.",
+      "registryDependencies": [
+        "bmikuska46/idsk-shadcn/utils",
+        "bmikuska46/idsk-shadcn/government-logo"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/footer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,28 @@ IDSK je verejne dostupný na voľné použitie. Oficiálny úvod: [idsk.gov.sk/c
 - Radix UI (tam, kde to dáva zmysel)
 - Alias `@/*` → `src/*`
 
+## Inštalácia cez shadcn CLI (GitHub registry)
+
+Repozitár je publikovaný ako [shadcn GitHub registry](https://ui.shadcn.com/docs/registry/github). V projekte so shadcn (`components.json`) nainštalujte:
+
+```bash
+# IDSK tokeny a utility triedy (odporúčané raz na začiatok)
+pnpm dlx shadcn@latest add bmikuska46/idsk-shadcn/styles
+
+# konkrétny komponent
+pnpm dlx shadcn@latest add bmikuska46/idsk-shadcn/button
+pnpm dlx shadcn@latest add bmikuska46/idsk-shadcn/header
+```
+
+Ďalšie príkazy:
+
+```bash
+pnpm dlx shadcn@latest list bmikuska46/idsk-shadcn
+pnpm dlx shadcn@latest view bmikuska46/idsk-shadcn/button
+```
+
+Po inštalácii `styles` importujte `src/styles/idsk.css` vo vstupe aplikácie a načítajte Source Sans Pro (`@fontsource/source-sans-pro`).
+
 ## Použitie komponentov
 
 Komponenty sa nachádzajú v `src/components/ui/`. Zatiaľ nie je barrel export — importujte ich priamo zo súborov:
