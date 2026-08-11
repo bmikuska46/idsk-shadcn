@@ -53,7 +53,8 @@ export function Card({
       className={cn(
         'relative flex h-full w-full overflow-hidden rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide transition-all duration-200',
         isHorizontal ? 'flex-col md:flex-row' : 'flex-col',
-        isLinked && 'group-hover:ring-[4px] group-hover:ring-[#757575]',
+        isLinked &&
+          'group-hover:ring-[4px] group-hover:ring-[#757575] group-focus:outline-solid group-focus:outline-[3px] group-focus:outline-[#D96E00] group-focus:outline-offset-2',
         !isLinked && className,
       )}
     >
@@ -123,7 +124,7 @@ export function Card({
     return (
       <a
         className={cn(
-          'group block h-full max-w-[1060px] rounded-[10px] focus:outline-[3px] focus:outline-solid focus:outline-[#D96E00] focus:outline-offset-2',
+          'group block h-full max-w-[1060px] rounded-[10px] outline-none',
           className,
         )}
         href={href}
