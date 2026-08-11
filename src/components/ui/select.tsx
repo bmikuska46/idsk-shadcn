@@ -1,3 +1,5 @@
+'use client'
+
 import * as SelectPrimitive from '@radix-ui/react-select'
 import { AlertTriangle, Check, ChevronDown, ChevronUp } from 'lucide-react'
 import { forwardRef, useId, type ButtonHTMLAttributes } from 'react'

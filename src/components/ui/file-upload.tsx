@@ -1,3 +1,5 @@
+'use client'
+
 import { AlertTriangle, CheckCircle, Upload, X } from 'lucide-react'
 import {
   forwardRef,

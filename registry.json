@@ -29,7 +29,7 @@
           "target": "src/styles/idsk.css"
         }
       ],
-      "docs": "Import `src/styles/idsk.css` in your app entry (after Tailwind). Load Source Sans Pro, e.g. `import '@fontsource/source-sans-pro/400.css'` and `700.css`."
+      "docs": "Import `src/styles/idsk.css` in your root layout or app entry (after Tailwind). Load Source Sans Pro, e.g. `import '@fontsource/source-sans-pro/400.css'` and `700.css`."
     },
     {
       "name": "button",

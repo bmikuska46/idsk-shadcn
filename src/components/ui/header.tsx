@@ -1,3 +1,5 @@
+'use client'
+
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { useEffect, useId, useRef, useState, type ReactNode } from 'react'
 

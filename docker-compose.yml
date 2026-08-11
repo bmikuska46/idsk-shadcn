@@ -1,0 +1,6 @@
+services:
+  idsk:
+    image: ghcr.io/bmikuska46/idsk-shadcn:latest
+    ports:
+      - "8080:3000"
+    restart: unless-stopped

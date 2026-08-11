@@ -1,3 +1,5 @@
+'use client'
+
 import { Home, Search } from 'lucide-react'
 import { useState } from 'react'
 
@@ -22,7 +24,7 @@ import { Textarea } from '@/components/ui/textarea'
 const placeholderImage =
   'https://placehold.co/960x540/EFF5FE/126DFF?text=IDSK'
 
-function App() {
+export function HomeDemo() {
   const [radioValue, setRadioValue] = useState('citizen')
   const [checkboxValues, setCheckboxValues] = useState<string[]>(['notifications'])
 
@@ -546,5 +548,3 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
     </div>
   )
 }
-
-export default App

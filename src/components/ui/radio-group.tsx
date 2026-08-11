@@ -1,3 +1,5 @@
+'use client'
+
 import { useId, type ChangeEvent, type FieldsetHTMLAttributes } from 'react'
 
 import { cn } from '@/lib/utils'

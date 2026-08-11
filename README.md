@@ -24,7 +24,7 @@ IDSK je verejne dostupný na voľné použitie. Oficiálny úvod: [idsk.gov.sk/c
 
 - React 19
 - TypeScript
-- Vite
+- Next.js (App Router)
 - Tailwind CSS v4
 - Radix UI (tam, kde to dáva zmysel)
 - Alias `@/*` → `src/*`
@@ -49,7 +49,7 @@ pnpm dlx shadcn@latest list bmikuska46/idsk-shadcn
 pnpm dlx shadcn@latest view bmikuska46/idsk-shadcn/button
 ```
 
-Po inštalácii `styles` importujte `src/styles/idsk.css` vo vstupe aplikácie a načítajte Source Sans Pro (`@fontsource/source-sans-pro`).
+Po inštalácii `styles` importujte `src/styles/idsk.css` v root layoute (alebo vstupe aplikácie) a načítajte Source Sans Pro (`@fontsource/source-sans-pro`).
 
 ## Použitie komponentov
 
@@ -61,7 +61,7 @@ import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 ```
 
-Pred použitím zabezpečte, že aplikácia načítava globálne štýly a font (projekt to už robí v `src/main.tsx` a `src/index.css`):
+Pred použitím zabezpečte, že aplikácia načítava globálne štýly a font (projekt to už robí v `src/app/layout.tsx` a `src/index.css`):
 
 - tokeny a utility: `src/index.css`
 - font Source Sans Pro
@@ -207,11 +207,18 @@ export function LayoutExample() {
 
 ```text
 src/
+  app/             # Next.js App Router (layout + page)
   components/ui/   # IDSK komponenty v štýle shadcn
+  components/home-demo.tsx  # ukážková stránka
   lib/utils.ts     # cn() helper (clsx + tailwind-merge)
   index.css        # tokeny a globálne štýly
-  App.tsx          # ukážková aplikácia
-  main.tsx
+```
+
+## Lokálny vývoj
+
+```bash
+pnpm install
+pnpm dev
 ```
 
 ## Docker / GHCR
@@ -226,7 +233,7 @@ Lokálne spustenie:
 
 ```bash
 docker pull ghcr.io/bmikuska46/idsk-shadcn:latest
-docker run --rm -p 8080:80 ghcr.io/bmikuska46/idsk-shadcn:latest
+docker run --rm -p 8080:3000 ghcr.io/bmikuska46/idsk-shadcn:latest
 ```
 
 ## Odkazy

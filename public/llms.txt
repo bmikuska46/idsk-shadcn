@@ -1,0 +1,28 @@
+# IDSK shadcn
+
+> Neoficiálna open source knižnica React a Tailwind CSS komponentov podľa dizajnového systému IDSK 3.1 pre elektronické služby a weby slovenskej verejnej správy.
+
+IDSK shadcn poskytuje kopírovateľné komponenty v štýle shadcn/ui. Projekt obsahuje formulárové, navigačné, obsahové a layoutové komponenty s dôrazom na responzívnosť a prístupnosť. Nejde o oficiálnu stránku ani produkt slovenskej verejnej správy.
+
+## Hlavné zdroje
+
+- [Ukážka komponentov](https://idsk.bmikuska.com/): Kompletná interaktívna ukážka dostupných komponentov.
+- [Inštalácia](https://idsk.bmikuska.com/#instalacia): Postup inštalácie komponentov cez shadcn CLI.
+- [Komponenty](https://idsk.bmikuska.com/#komponenty): Tlačidlá a základné interaktívne prvky.
+- [Formuláre](https://idsk.bmikuska.com/#formulare): Polia, výbery, nahrávanie súborov a chybové stavy.
+- [Navigácia](https://idsk.bmikuska.com/#navigacia): Hlavičky, rázcestníky a akordeóny.
+- [Obsah](https://idsk.bmikuska.com/#obsah): Kartičky a obsahové bloky.
+- [Zdrojový kód](https://github.com/bmikuska46/idsk-shadcn): GitHub repozitár, dokumentácia a aktuálny zoznam komponentov.
+
+## Technológie
+
+- React 19 a TypeScript
+- Next.js App Router
+- Tailwind CSS 4
+- Radix UI
+- Source Sans Pro
+
+## Kontext
+
+- [Oficiálny IDSK manuál](https://idsk.gov.sk/): Pravidlá a vzory Jednotného dizajn manuálu elektronických služieb.
+- [shadcn/ui](https://ui.shadcn.com/): Vzor distribúcie kopírovateľných React komponentov.
