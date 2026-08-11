@@ -4,6 +4,8 @@ React + TypeScript UI komponenty podľa dizajnového systému **IDSK 3.1**, impl
 
 Tento repozitár poskytuje hotové komponenty (formuláre, navigácia, layout, obsah) pre elektronické služby a weby verejnej správy v súlade s IDSK.
 
+Ukážková aplikácia: [idsk.bmikuska.com](https://idsk.bmikuska.com).
+
 ## Čo je IDSK?
 
 [IDSK](https://idsk.gov.sk/co-je/uvod) (Jednotný dizajn manuál elektronických služieb) je súbor pravidiel tvorby obsahu a funkčnosti elektronických služieb v súlade s potrebami používateľov. Definuje komponenty, jednotné používanie výrazov, princípy, vzory a pravidlá pre tvorbu jednotného používateľského rozhrania.
@@ -212,8 +214,24 @@ src/
   main.tsx
 ```
 
+## Docker / GHCR
+
+Pri pushi do `main` (alebo manuálne cez Actions) sa zbuildí a publikuje image:
+
+```text
+ghcr.io/bmikuska46/idsk-shadcn:latest
+```
+
+Lokálne spustenie:
+
+```bash
+docker pull ghcr.io/bmikuska46/idsk-shadcn:latest
+docker run --rm -p 8080:80 ghcr.io/bmikuska46/idsk-shadcn:latest
+```
+
 ## Odkazy
 
+- [Ukážka — idsk.bmikuska.com](https://idsk.bmikuska.com)
 - [Čo je IDSK — Úvod](https://idsk.gov.sk/co-je/uvod)
 - [Oficiálny IDSK manuál](https://idsk.gov.sk/)
 - [shadcn/ui](https://ui.shadcn.com/)
