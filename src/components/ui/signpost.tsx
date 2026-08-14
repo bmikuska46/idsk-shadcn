@@ -46,7 +46,7 @@ export function Signpost({
   const hasImage = variant === 'vertical' && Boolean(imageSrc)
   const opensNewWindow = target === '_blank'
   const rootClassName = cn(
-    'group block w-full rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide no-underline hover:ring-[4px] hover:ring-[#757575] focus:outline-none focus-visible:outline-[3px] focus-visible:outline-solid focus-visible:outline-[#D96E00] focus-visible:outline-offset-2',
+    'group block w-full min-w-0 rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide no-underline hover:ring-[4px] hover:ring-[#757575] focus:outline-none focus-visible:outline-[3px] focus-visible:outline-solid focus-visible:outline-[#D96E00] focus-visible:outline-offset-2',
     hasImage ? 'overflow-hidden' : 'p-5',
     className,
   )
@@ -78,7 +78,7 @@ export function Signpost({
                 {icon}
               </span>
             ) : null}
-            <Heading className="text-[19px] leading-7 font-bold text-[#0B4199] underline sm:text-[24px] sm:leading-9 group-hover:decoration-[3px] group-hover:underline-offset-2">
+            <Heading className="min-w-0 text-[19px] leading-7 font-bold text-[#0B4199] underline sm:text-[24px] sm:leading-9 group-hover:decoration-[3px] group-hover:underline-offset-2">
               {title}
             </Heading>
           </div>

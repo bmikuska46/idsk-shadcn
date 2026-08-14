@@ -157,7 +157,7 @@ export function CheckboxGroup({
                 </CheckboxPrimitive.Root>
                 <span
                   className={cn(
-                    'ml-3 text-[19px] leading-7',
+                    'ml-3 min-w-0 text-[19px] leading-7',
                     isDisabled ? 'text-[#757575]' : 'text-black',
                   )}
                   id={itemLabelId}

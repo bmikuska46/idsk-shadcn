@@ -75,7 +75,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
         aria-describedby={descriptionId}
         aria-labelledby={titleId}
         className={cn(
-          'mb-8 max-w-[640px] rounded-lg border-y-2 border-r-2 border-l-[5px] border-warning bg-white p-5 text-foreground',
+          'mb-8 max-w-[640px] min-w-0 rounded-lg border-y-2 border-r-2 border-l-[5px] border-warning bg-white p-4 text-foreground sm:p-5',
           'focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
           className,
         )}
@@ -104,7 +104,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
               <a
                 {...linkProps}
                 className={cn(
-                  'text-primary underline decoration-[1px] underline-offset-3 transition-all duration-200',
+                  'break-words text-primary underline decoration-[1px] underline-offset-3 transition-all duration-200',
                   'hover:text-[#126DFF] hover:decoration-[2px]',
                   'focus:text-[#126DFF] focus-visible:rounded-none focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus focus-visible:ring-offset-2',
                   linkProps?.className,

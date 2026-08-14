@@ -48,9 +48,9 @@ export function IdskAccordion({
           value={item.value}
         >
           <AccordionPrimitive.Header className="m-0 p-0">
-            <AccordionPrimitive.Trigger className="group relative z-0 flex w-full flex-col rounded-lg bg-[#F5F5F5] px-6 py-4 text-left outline-none transition-shadow duration-200 hover:z-30 hover:shadow-[0_0_0_4px_#757575] focus:ring-[3px] focus:ring-[#D96E00] focus:ring-offset-[2px] focus-visible:z-30 data-[state=open]:rounded-b-none disabled:cursor-not-allowed">
-              <span className="flex w-full items-center justify-between">
-                <span className="m-0 flex-grow p-0 text-base font-bold text-black sm:text-lg">
+            <AccordionPrimitive.Trigger className="group relative z-0 flex w-full flex-col rounded-lg bg-[#F5F5F5] px-4 py-4 text-left outline-none transition-shadow duration-200 hover:z-30 hover:shadow-[0_0_0_4px_#757575] focus:ring-[3px] focus:ring-[#D96E00] focus:ring-offset-[2px] focus-visible:z-30 data-[state=open]:rounded-b-none disabled:cursor-not-allowed sm:px-6">
+              <span className="flex w-full min-w-0 items-center justify-between gap-3">
+                <span className="m-0 min-w-0 flex-grow p-0 text-base font-bold text-black sm:text-lg">
                   {item.title}
                 </span>
                 <span
@@ -66,7 +66,7 @@ export function IdskAccordion({
             </AccordionPrimitive.Trigger>
           </AccordionPrimitive.Header>
           <AccordionPrimitive.Content className="overflow-hidden rounded-b-lg border-t border-neutral-200 bg-white text-black">
-            <div className="idsk-body p-6 text-black">{item.content}</div>
+            <div className="idsk-body p-4 text-black sm:p-6">{item.content}</div>
           </AccordionPrimitive.Content>
         </AccordionPrimitive.Item>
       ))}

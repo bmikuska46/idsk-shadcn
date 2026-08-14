@@ -16,16 +16,16 @@ export function GovernmentLogo({
   return (
     <div
       className={cn(
-        'inline-flex items-center gap-3',
+        'flex min-w-0 max-w-full items-center gap-3',
         inverted ? 'text-white' : 'text-foreground',
         className,
       )}
     >
-      <div className="flex flex-col leading-none">
-        <span className="text-[1.125rem] font-black">{siteName}</span>
+      <div className="flex min-w-0 flex-col leading-none">
+        <span className="break-words text-[1.125rem] font-black">{siteName}</span>
         <span
           className={cn(
-            'idsk-caption mt-1',
+            'idsk-caption mt-1 text-pretty',
             inverted ? 'text-white/80' : 'text-foreground-muted',
           )}
         >

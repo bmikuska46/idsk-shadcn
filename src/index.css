@@ -134,7 +134,14 @@
 @layer components {
   .idsk-container {
     margin-inline: auto;
+    min-width: 0;
     width: min(calc(100% - (2 * var(--idsk-page-gutter))), var(--idsk-grid-max-width));
+  }
+
+  pre {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
   }
 
   .idsk-grid,

@@ -106,7 +106,7 @@ export function IdskRadioGroup({
             <div className="flex flex-col" key={item.value}>
               <label
                 className={cn(
-                  'group relative flex items-center',
+                  'group relative flex min-w-0 items-center',
                   isDisabled ? 'cursor-not-allowed' : 'cursor-pointer',
                 )}
                 htmlFor={itemId}
@@ -147,7 +147,7 @@ export function IdskRadioGroup({
                 </span>
                 <span
                   className={cn(
-                    'ml-3 text-[19px] leading-7',
+                    'ml-3 min-w-0 text-[19px] leading-7',
                     isDisabled ? 'text-foreground-muted' : 'text-foreground',
                   )}
                 >

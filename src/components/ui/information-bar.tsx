@@ -76,26 +76,28 @@ export function InformationBar({
     <section
       aria-labelledby={titleId}
       className={cn(
-        'relative flex w-full max-w-[740px] items-center overflow-hidden rounded-[5px] border-2 border-l-[5px] bg-white p-4 sm:px-6 sm:py-5',
+        'relative flex w-full max-w-[740px] flex-col gap-3 rounded-[5px] border-2 border-l-[5px] bg-white p-4 sm:flex-row sm:items-center sm:px-6 sm:py-5',
         config.className,
         className,
       )}
       role={role}
       {...props}
     >
-      <div className="mr-3 shrink-0 self-center sm:mr-4">
-        {icon ?? config.icon}
-      </div>
-      <div className="min-w-0 grow text-foreground">
-        <h3 className="text-base font-bold leading-6 tracking-wide sm:text-lg" id={titleId}>
-          {title}
-        </h3>
-        <div className="mt-1 text-sm leading-6 tracking-wide sm:text-base">
-          {children}
+      <div className="flex min-w-0 grow items-start">
+        <div className="mr-3 shrink-0 self-center sm:mr-4">
+          {icon ?? config.icon}
+        </div>
+        <div className="min-w-0 grow text-foreground">
+          <h3 className="text-base font-bold leading-6 tracking-wide sm:text-lg" id={titleId}>
+            {title}
+          </h3>
+          <div className="mt-1 text-sm leading-6 tracking-wide sm:text-base">
+            {children}
+          </div>
         </div>
       </div>
       {action || onDismiss ? (
-        <div className="ml-3 flex shrink-0 items-center gap-1 self-center">
+        <div className="flex shrink-0 items-center gap-1 self-start pl-9 sm:ml-3 sm:self-center sm:pl-0">
           {action}
           {onDismiss ? (
             <Button

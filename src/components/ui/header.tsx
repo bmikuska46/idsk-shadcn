@@ -222,17 +222,24 @@ export function IdskHeader({
       ) : null}
 
       <div className="flex w-full flex-col items-center border-b border-border bg-white py-4" data-idsk="header-main-section">
-        <div className="idsk-container flex flex-wrap items-center justify-between gap-4">
+        <div
+          className={cn(
+            'idsk-container grid items-center gap-x-4 gap-y-4',
+            search
+              ? 'grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_minmax(12rem,360px)_auto]'
+              : 'grid-cols-[minmax(0,1fr)_auto]',
+          )}
+        >
           <a
             aria-label={`Domovská stránka ${serviceName}`}
-            className="min-w-0 rounded-[5px] no-underline hover:ring-4 hover:ring-foreground-muted"
+            className="col-start-1 row-start-1 min-w-0 rounded-[5px] no-underline hover:ring-4 hover:ring-foreground-muted"
             href={homeHref}
           >
             <GovernmentLogo siteName={serviceName} tagline={tagline} />
           </a>
 
           {search ? (
-            <div className="order-3 hidden w-full max-w-[360px] min-[730px]:order-none min-[730px]:block">
+            <div className="col-span-2 col-start-1 row-start-2 hidden min-[730px]:block lg:col-span-1 lg:col-start-2 lg:row-start-1">
               <SearchInput
                 buttonAriaLabel="Vyhľadať"
                 label="Hľadať na stránke"
@@ -242,9 +249,14 @@ export function IdskHeader({
             </div>
           ) : null}
 
-          <div className="flex shrink-0 items-center gap-3">
+          <div
+            className={cn(
+              'col-start-2 row-start-1 flex shrink-0 items-center gap-3',
+              search && 'lg:col-start-3',
+            )}
+          >
             {userName ? (
-              <span className="hidden text-base font-bold text-foreground-soft sm:inline">
+              <span className="hidden text-base font-bold text-foreground-soft min-[730px]:inline">
                 {userName}
               </span>
             ) : null}
@@ -306,7 +318,7 @@ export function IdskHeader({
           className="hidden w-full flex-col items-center bg-white pt-1 min-[730px]:flex"
           data-idsk="website-navigation"
         >
-          <ul className="idsk-container m-0 flex list-none flex-row gap-4" role="list">
+          <ul className="idsk-container m-0 flex list-none flex-row flex-wrap gap-x-4" role="list">
             {nav.slice(0, 5).map((item, index) => (
               <li className="relative flex" key={item.label}>
                 {item.children?.length ? (

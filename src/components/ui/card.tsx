@@ -51,10 +51,9 @@ export function Card({
   const article = (
     <article
       className={cn(
-        'relative flex h-full w-full overflow-hidden rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide transition-all duration-200',
-        isHorizontal ? 'flex-col md:flex-row' : 'flex-col',
-        isLinked &&
-          'group-hover:ring-[4px] group-hover:ring-[#757575] group-focus:outline-solid group-focus:outline-[3px] group-focus:outline-[#D96E00] group-focus:outline-offset-2',
+        'relative flex h-full w-full min-w-0 overflow-hidden rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide transition-all duration-200',
+        isHorizontal ? 'flex-col min-[730px]:flex-row' : 'flex-col',
+        isLinked && 'group-hover:ring-[4px] group-hover:ring-[#757575]',
         !isLinked && className,
       )}
     >
@@ -63,7 +62,7 @@ export function Card({
           className={cn(
             'relative shrink-0 overflow-hidden bg-zinc-200',
             isHorizontal
-              ? 'h-[192px] w-full md:h-auto md:min-h-[170px] md:w-[40%] md:max-w-[360px]'
+              ? 'h-[192px] w-full min-[730px]:h-auto min-[730px]:min-h-[170px] min-[730px]:w-[40%] min-[730px]:max-w-[360px]'
               : 'h-[192px] w-full',
           )}
         >
@@ -124,7 +123,7 @@ export function Card({
     return (
       <a
         className={cn(
-          'group block h-full max-w-[1060px] rounded-[10px] outline-none',
+          'group block h-full min-w-0 max-w-[1060px] rounded-[10px] focus:outline-[3px] focus:outline-solid focus:outline-[#D96E00] focus:outline-offset-2',
           className,
         )}
         href={href}

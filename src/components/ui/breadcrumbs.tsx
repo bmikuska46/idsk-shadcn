@@ -62,7 +62,7 @@ export function Breadcrumbs({
           return (
             <li
               aria-current={isCurrent ? 'page' : undefined}
-              className="flex min-w-0 items-center gap-2 whitespace-nowrap"
+              className="flex min-w-0 items-center gap-2"
               key={`${item.label}-${index}`}
             >
               {index > 0 ? (
@@ -75,7 +75,7 @@ export function Breadcrumbs({
               {!isCurrent && item.href ? (
                 <a
                   aria-label={showHomeIcon ? item.label : undefined}
-                  className="min-w-0 rounded-[5px] text-[#212121] underline hover:text-[#0B4199] hover:decoration-[3px] focus:outline focus:outline-[3px] focus:outline-[#D96E00] focus:outline-offset-2"
+                  className="min-w-0 break-words rounded-[5px] text-[#212121] underline hover:text-[#0B4199] hover:decoration-[3px] focus:outline focus:outline-[3px] focus:outline-[#D96E00] focus:outline-offset-2"
                   href={item.href}
                 >
                   {showHomeIcon ? (
@@ -89,7 +89,7 @@ export function Breadcrumbs({
                   )}
                 </a>
               ) : (
-                <span className="min-w-0 text-black">{item.label}</span>
+                <span className="min-w-0 break-words text-black">{item.label}</span>
               )}
             </li>
           )

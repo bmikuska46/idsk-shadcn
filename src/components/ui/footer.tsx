@@ -49,12 +49,12 @@ export function IdskFooter({
       className={cn('w-full border-t border-border bg-surface-muted', className)}
     >
       <div className="idsk-container flex flex-wrap items-end justify-between gap-8 py-12">
-        <div className="min-w-0 flex-[1_1_560px] text-base leading-6 text-foreground">
+        <div className="min-w-0 flex-[1_1_100%] text-base leading-6 text-foreground min-[730px]:flex-[1_1_560px]">
           {columns.length ? (
             <nav aria-label="Navigácia v päte" className="border-b border-border pb-7">
               <div className="flex flex-wrap gap-x-20 gap-y-10">
                 {columns.map((column) => (
-                  <div className="min-w-[180px] flex-1" key={column.title}>
+                  <div className="min-w-[140px] flex-1 basis-40" key={column.title}>
                     <h2 className="mb-4 text-lg font-bold">{column.title}</h2>
                     <ul className="m-0 list-none space-y-3 p-0">
                       {column.links.map((link) => (

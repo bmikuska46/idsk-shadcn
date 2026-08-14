@@ -29,7 +29,7 @@ export function HomeDemo() {
   const [checkboxValues, setCheckboxValues] = useState<string[]>(['notifications'])
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="min-w-0 bg-background text-foreground">
       <IdskHeader
         actions={[
           { label: 'Prihlásiť sa' },
@@ -50,6 +50,7 @@ export function HomeDemo() {
       />
 
       <Breadcrumbs
+        collapseOnMobile
         items={[
           { href: '#', label: 'Domov' },
           { href: '#', label: 'Dizajn systém' },
@@ -59,7 +60,7 @@ export function HomeDemo() {
 
       <main className="pb-16">
         <section className="idsk-container py-8 md:py-12">
-          <div className="grid gap-8 xl:grid-cols-[1.3fr_0.9fr]">
+          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr]">
             <div className="space-y-6">
               <span className="inline-flex rounded-full bg-surface-primary px-4 py-2 text-sm font-bold text-primary-dark">
                 Neoficiálna ukážka shadcn komponentov
@@ -90,7 +91,7 @@ export function HomeDemo() {
                 </Button>
               </div>
             </div>
-            <div className="rounded-[5px] border border-border bg-surface p-6 shadow-idsk-md">
+            <div className="rounded-[5px] border border-border bg-surface p-4 shadow-idsk-md sm:p-6">
               <h2 className="idsk-h3">Použité základy</h2>
               <ul className="mt-4 space-y-3 text-sm text-foreground-muted md:text-base">
                 <li>
@@ -145,15 +146,15 @@ export function HomeDemo() {
               inštalujte položky cez CLI v tvare <code>@namespace/component</code>.
             </InformationBar>
 
-            <div className="grid gap-6 lg:grid-cols-2">
-              <div className="space-y-4 rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+            <div className="grid min-w-0 gap-6 lg:grid-cols-2">
+              <div className="min-w-0 space-y-4 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
                 <h3 className="idsk-h4">1. Pridajte registry</h3>
                 <p className="idsk-body text-foreground-soft">
                   Do <code>components.json</code> doplňte pole{' '}
                   <code>registries</code> podľa oficiálneho návodu. URL musí
                   obsahovať placeholder <code>{'{name}'}</code>.
                 </p>
-                <pre className="overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
+                <pre className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
                   <code>{`{
   "registries": {
     "@idsk": "https://example.com/r/{name}.json"
@@ -161,13 +162,13 @@ export function HomeDemo() {
 }`}</code>
                 </pre>
               </div>
-              <div className="space-y-4 rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+              <div className="min-w-0 space-y-4 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
                 <h3 className="idsk-h4">2. Nainštalujte komponent</h3>
                 <p className="idsk-body text-foreground-soft">
                   Po konfigurácii registry použite shadcn CLI. Alternatívne môžete
                   pridať položku priamo z URL podľa rovnakého oficiálneho návodu.
                 </p>
-                <pre className="overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
+                <pre className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
                   <code>{`npx shadcn@latest add @idsk/button
 
 # alebo priamo z URL
@@ -186,7 +187,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Primárne, sekundárne a textové varianty s basic, success a warning tónmi podľa oficiálnej špecifikácie tlačidiel.
               </p>
             </div>
-            <div className="grid gap-6 rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm lg:grid-cols-2">
+            <div className="grid min-w-0 gap-6 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6 lg:grid-cols-2">
               <div className="space-y-4">
                 <h3 className="idsk-h4">Základné akcie</h3>
                 <div className="flex flex-wrap gap-3">
@@ -220,7 +221,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Statické informačné, varovné, upozorňovacie a úspešné správy používajú text a ikonu, takže význam nie je vyjadrený iba farbou.
               </p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-2">
+            <div className="grid gap-5 md:grid-cols-2">
               <InformationBar title="Dôležitá informácia">
                 Pre rýchlejšie vybavenie žiadosti odporúčame priložiť doklad o ukončení štúdia.
               </InformationBar>
@@ -256,8 +257,8 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Samostatné vyhľadávacie pole replikuje hlavičkové vyhľadávanie z webu IDSK vrátane rozloženia, rádiusu a ikonového tlačidla.
               </p>
             </div>
-            <div className="rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
-              <div className="max-w-lg">
+            <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
+              <div className="w-full max-w-lg min-w-0">
                 <SearchInput
                   buttonAriaLabel="Vyhľadať komponent"
                   label="Vyhľadať komponent"
@@ -284,8 +285,8 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
               ]}
               title="Zadajte správne tieto vstupné údaje a skúste odoslať znova."
             />
-            <div className="grid gap-8 lg:grid-cols-2">
-              <div className="space-y-6 rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+            <div className="grid min-w-0 gap-8 lg:grid-cols-2">
+              <div className="min-w-0 space-y-6 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
                 <Input
                   description="Popisný text"
                   hint="Napríklad vo formáte 850101/1234."
@@ -318,7 +319,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                   required
                 />
               </div>
-              <div className="space-y-6 rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+              <div className="min-w-0 space-y-6 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
                 <Textarea
                   hint="Uveďte len informácie, ktoré súvisia s vašou žiadosťou."
                   label="Doplňujúce informácie"
@@ -370,7 +371,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 />
               </div>
             </div>
-            <div className="rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+            <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
               <FileUpload />
             </div>
           </div>
@@ -384,7 +385,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Rázcestníky, akordeón a hlavička elektronickej služby vychádzajú z oficiálnych IDSK vzorov, ale sú prepísané do lokálnych React komponentov.
               </p>
             </div>
-            <div className="rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+            <div className="rounded-[5px] border border-border bg-white shadow-idsk-sm">
               <IdskHeader
                 actions={[
                   { label: 'Profil', variant: 'secondary' },
@@ -401,7 +402,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 variant="service"
               />
             </div>
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="grid min-w-0 gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Signpost
                 description="Prehľad základných údajov a stav vybavenia žiadosti."
                 href="#"
@@ -428,7 +429,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 variant="vertical"
               />
             </div>
-            <div className="rounded-[5px] border border-border bg-white p-6 shadow-idsk-sm">
+            <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
               <IdskAccordion
                 items={[
                   {
@@ -464,8 +465,9 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Kartičky a dlaždice sú použiteľné pre články, služby, oznamy aj vstupné body do procesov verejnej správy.
               </p>
             </div>
-            <div className="grid gap-6 xl:grid-cols-3">
+            <div className="grid min-w-0 gap-6 md:grid-cols-2 xl:grid-cols-3">
               <Card
+                className="md:col-span-2 xl:col-span-1"
                 date="2026-04-21"
                 dateLabel="21. 4. 2026"
                 description="V tejto časti nájdete všetky podstatné informácie o vydaní a používaní občianskeho preukazu s čipom."
