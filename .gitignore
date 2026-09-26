@@ -53,3 +53,7 @@ coverage
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Browser regression artifacts
+test-results/
+playwright-report/

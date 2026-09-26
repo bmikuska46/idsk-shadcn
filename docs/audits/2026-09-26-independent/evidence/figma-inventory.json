@@ -1,0 +1,5203 @@
+{
+  "name": "IDSK 3.1.0 (Community)",
+  "version": "2403288842141627689",
+  "lastModified": "2026-09-25T21:31:51Z",
+  "pages": [
+    {
+      "id": "2910:6755",
+      "name": "01 Hlavička (Header)",
+      "components": [
+        {
+          "id": "6184:8695",
+          "name": ".master Avatars",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -10687.0,
+            "y": 2604.0,
+            "width": 480.0,
+            "height": 170.0
+          },
+          "componentPropertyDefinitions": {
+            "Details#6277:65": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Focus#7809:2": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Foto",
+              "variantOptions": [
+                "Foto",
+                "Avatar",
+                "Inicials"
+              ]
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "6184:8706",
+          "name": "Type=Foto, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10657.0,
+            "y": 2634.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "7809:18511",
+          "name": "Type=Avatar, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10511.0,
+            "y": 2634.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "7809:18519",
+          "name": "Type=Inicials, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10365.0,
+            "y": 2634.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "7809:18503",
+          "name": "Type=Foto, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10657.0,
+            "y": 2704.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6184:8704",
+          "name": "Type=Avatar, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10511.0,
+            "y": 2704.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6184:8702",
+          "name": "Type=Inicials, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10365.0,
+            "y": 2704.0,
+            "width": 116.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5617:1921",
+          "name": "Header",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -12580.0,
+            "y": 798.0,
+            "width": 1480.0,
+            "height": 1048.0
+          },
+          "componentPropertyDefinitions": {
+            "Navigation Website#6271:2": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Logo#7738:6": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "8287:11520",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "3d4d0ce28571b0deeb9002f178da18274879bb2a"
+                }
+              ]
+            },
+            "Action zone#8018:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Optional Icon#8123:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Optional button#8182:7": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Subheadig#8287:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Organization name#8287:5": {
+              "type": "TEXT",
+              "defaultValue": "Názov Organizácie"
+            },
+            "Subheading#8287:10": {
+              "type": "TEXT",
+              "defaultValue": "Podnadpis"
+            },
+            "Service name#8287:15": {
+              "type": "TEXT",
+              "defaultValue": "Názov Služby"
+            },
+            "Logged in": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Website",
+              "variantOptions": [
+                "Website",
+                "Service"
+              ]
+            },
+            "Navigation service": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On",
+                "O"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5617:2039",
+          "name": "Logged in=Off, Type=Website, Navigation service=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12550.0,
+            "y": 828.0,
+            "width": 1420.0,
+            "height": 188.0
+          }
+        },
+        {
+          "id": "7809:28201",
+          "name": "Logged in=On, Type=Website, Navigation service=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12550.0,
+            "y": 1094.0,
+            "width": 1420.0,
+            "height": 188.0
+          }
+        },
+        {
+          "id": "7809:34760",
+          "name": "Logged in=On, Type=Service, Navigation service=O",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12550.0,
+            "y": 1360.0,
+            "width": 1420.0,
+            "height": 135.0
+          }
+        },
+        {
+          "id": "7809:34786",
+          "name": "Logged in=On, Type=Service, Navigation service=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12550.0,
+            "y": 1573.0,
+            "width": 1420.0,
+            "height": 188.0
+          }
+        },
+        {
+          "id": "8287:11520",
+          "name": ".master State sign",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10687.0,
+            "y": 2514.0,
+            "width": 33.0,
+            "height": 40.999996185302734
+          }
+        },
+        {
+          "id": "7715:19960",
+          "name": ".master Top bar",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -11268.0,
+            "y": 1960.0,
+            "width": 1502.0,
+            "height": 328.0
+          },
+          "componentPropertyDefinitions": {
+            "Link website list#7809:15": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Language picker#7809:20": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Gov disclaimer#7809:25": {
+              "type": "TEXT",
+              "defaultValue": "Sem zadajte text pre vašu situáciu, napríklad: Toto je oficiálna webová stránka orgánu verejnej moci Slovenskej republiky. Webové stránky, ktoré využívajú doménu .gov.sk, sú oficiálnymi webovými stránkami orgánov verejnej moci, alebo elektronických služieb štátu."
+            },
+            "Expanded": {
+              "type": "VARIANT",
+              "defaultValue": "On",
+              "variantOptions": [
+                "On",
+                "Off"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7715:19959",
+          "name": "Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11248.0,
+            "y": 1980.0,
+            "width": 1462.0,
+            "height": 215.0
+          }
+        },
+        {
+          "id": "7715:19961",
+          "name": "Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11248.0,
+            "y": 2223.0,
+            "width": 1462.0,
+            "height": 45.0
+          }
+        },
+        {
+          "id": "7738:25218",
+          "name": ".master language picker",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -11268.0,
+            "y": 2341.0,
+            "width": 195.0,
+            "height": 276.0
+          },
+          "componentPropertyDefinitions": {
+            "Expand": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7738:25217",
+          "name": "Expand=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11248.0,
+            "y": 2361.0,
+            "width": 111.0,
+            "height": 35.0
+          }
+        },
+        {
+          "id": "7738:25219",
+          "name": "Expand=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11248.0,
+            "y": 2449.0,
+            "width": 111.0,
+            "height": 35.0
+          }
+        },
+        {
+          "id": "7807:9095",
+          "name": ".master Header search field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -11059.0,
+            "y": 2341.0,
+            "width": 353.0,
+            "height": 433.0
+          },
+          "componentPropertyDefinitions": {
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Active"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7807:9094",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10807.0,
+            "y": 2361.0,
+            "width": 49.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:9231",
+          "name": "State=Active",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11003.0,
+            "y": 2424.0,
+            "width": 245.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:17891",
+          "name": ".master Notification button",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -10693.0,
+            "y": 2341.0,
+            "width": 89.0,
+            "height": 132.0
+          },
+          "componentPropertyDefinitions": {
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "New notification",
+              "variantOptions": [
+                "Default",
+                "New notification"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7809:17890",
+          "name": "State=New notification",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10673.0,
+            "y": 2361.0,
+            "width": 49.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:17889",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10673.0,
+            "y": 2412.0,
+            "width": 49.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:21957",
+          "name": ".master Mail button",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -10590.0,
+            "y": 2341.0,
+            "width": 89.0,
+            "height": 132.0
+          },
+          "componentPropertyDefinitions": {
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "New notification",
+              "variantOptions": [
+                "Default",
+                "New notification"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7809:21958",
+          "name": "State=New notification",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10570.0,
+            "y": 2361.0,
+            "width": 49.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:21964",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10570.0,
+            "y": 2412.0,
+            "width": 49.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7809:22969",
+          "name": ".master Header menu Item",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -12580.0,
+            "y": 1960.0,
+            "width": 1297.0,
+            "height": 1045.0
+          },
+          "componentPropertyDefinitions": {
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Dropdown",
+              "variantOptions": [
+                "Dropdown",
+                "Select"
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Selected",
+                "Hover",
+                "hover"
+              ]
+            },
+            "Expanded": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            },
+            "Background": {
+              "type": "VARIANT",
+              "defaultValue": "Light",
+              "variantOptions": [
+                "Light",
+                "Dark"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7809:22968",
+          "name": "Type=Dropdown, State=Default, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12528.0,
+            "y": 1980.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30351",
+          "name": "Type=Dropdown, State=Default, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11932.0,
+            "y": 1980.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23780",
+          "name": "Type=Select, State=Default, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12133.0,
+            "y": 1980.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30359",
+          "name": "Type=Select, State=Default, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11537.0,
+            "y": 1980.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23564",
+          "name": "Type=Dropdown, State=Selected, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12528.0,
+            "y": 2231.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30365",
+          "name": "Type=Dropdown, State=Selected, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11932.0,
+            "y": 2231.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23788",
+          "name": "Type=Select, State=Selected, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12133.0,
+            "y": 2231.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30373",
+          "name": "Type=Select, State=Selected, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11537.0,
+            "y": 2231.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23476",
+          "name": "Type=Dropdown, State=Default, Expanded=On, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12528.0,
+            "y": 2322.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30379",
+          "name": "Type=Dropdown, State=Default, Expanded=On, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11932.0,
+            "y": 2322.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23344",
+          "name": "Type=Dropdown, State=Hover, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12528.0,
+            "y": 2093.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30387",
+          "name": "Type=Dropdown, State=Hover, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11932.0,
+            "y": 2093.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23796",
+          "name": "Type=Select, State=Hover, Expanded=Off, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12133.0,
+            "y": 2093.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30395",
+          "name": "Type=Select, State=Hover, Expanded=Off, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11537.0,
+            "y": 2093.0,
+            "width": 69.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:23484",
+          "name": "Type=Dropdown, State=hover, Expanded=On, Background=Light",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12528.0,
+            "y": 2648.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "7809:30401",
+          "name": "Type=Dropdown, State=hover, Expanded=On, Background=Dark",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11932.0,
+            "y": 2648.0,
+            "width": 94.0,
+            "height": 48.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:8300",
+      "name": "02 Päta (Footer)",
+      "components": [
+        {
+          "id": "4521:28146",
+          "name": "Footer",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4336.0,
+            "y": 4733.0,
+            "width": 1480.0,
+            "height": 1227.0
+          },
+          "componentPropertyDefinitions": {
+            "Links#4975:4": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Logo#5011:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "5010:1710",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "6f501ed4560af0bf76c57c7ccd1ac10828dc4ffc"
+                },
+                {
+                  "type": "COMPONENT",
+                  "key": "93451b8b474193a5a4edefd9889f87f54473340e"
+                }
+              ]
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5340:2199",
+          "name": "Type=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 4753.0,
+            "width": 1440.0,
+            "height": 482.0
+          }
+        },
+        {
+          "id": "5927:18645",
+          "name": "Type=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 5265.0,
+            "width": 320.0,
+            "height": 675.0
+          }
+        },
+        {
+          "id": "5007:1707",
+          "name": ".master logo-mirri-black",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3103.0,
+            "y": 6132.0,
+            "width": 290.05645751953125,
+            "height": 66.0
+          }
+        },
+        {
+          "id": "5010:1710",
+          "name": ".master logo-placeholder-bw",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3103.0,
+            "y": 6281.0,
+            "width": 290.0,
+            "height": 66.0
+          }
+        },
+        {
+          "id": "5927:19241",
+          "name": ".master (Footer - link columns)",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4336.0,
+            "y": 6036.0,
+            "width": 1160.0,
+            "height": 1460.0
+          },
+          "componentPropertyDefinitions": {
+            "Collumn number": {
+              "type": "VARIANT",
+              "defaultValue": "1",
+              "variantOptions": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5927:19238",
+          "name": "Collumn number=1",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 6056.0,
+            "width": 1120.0,
+            "height": 310.0
+          }
+        },
+        {
+          "id": "5927:19237",
+          "name": "Collumn number=2",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 6426.0,
+            "width": 1120.0,
+            "height": 310.0
+          }
+        },
+        {
+          "id": "5927:19239",
+          "name": "Collumn number=3",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 6796.0,
+            "width": 1120.0,
+            "height": 310.0
+          }
+        },
+        {
+          "id": "5927:19240",
+          "name": "Collumn number=4",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -4316.0,
+            "y": 7166.0,
+            "width": 1120.0,
+            "height": 310.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2910:9773",
+      "name": "03 Tlačidlo (Button)",
+      "components": [
+        {
+          "id": "7024:19534",
+          "name": ".master Button",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4000.0,
+            "y": 7671.0,
+            "width": 180.0,
+            "height": 208.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#7024:6": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Right icon type#7024:10": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:34923",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "ddde0064cf3bac61b035d2bb495637dd47737f22"
+                }
+              ]
+            },
+            "Left icon type#7024:14": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:34923",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "ddde0064cf3bac61b035d2bb495637dd47737f22"
+                }
+              ]
+            },
+            "Right icon#7024:18": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Left icon#7024:22": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Label text#7024:26": {
+              "type": "TEXT",
+              "defaultValue": "Tlačidlo"
+            },
+            "Label#8189:14": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "L",
+              "variantOptions": [
+                "L",
+                "M",
+                "S"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7024:19533",
+          "name": "Size=L",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3980.0,
+            "y": 7691.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7024:19535",
+          "name": "Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3980.0,
+            "y": 7758.0,
+            "width": 140.0,
+            "height": 41.0
+          }
+        },
+        {
+          "id": "7024:19546",
+          "name": "Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3980.0,
+            "y": 7818.0,
+            "width": 140.0,
+            "height": 35.0
+          }
+        },
+        {
+          "id": "7024:19640",
+          "name": "Button",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4000.0,
+            "y": 6429.0,
+            "width": 1124.0,
+            "height": 1195.0
+          },
+          "componentPropertyDefinitions": {
+            "Button type": {
+              "type": "VARIANT",
+              "defaultValue": "Primary",
+              "variantOptions": [
+                "Primary",
+                "Secondary",
+                "Tertiary",
+                "Tertiary no padding"
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Active",
+                "Disabled"
+              ]
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "On",
+                "Off"
+              ]
+            },
+            "Color scheme": {
+              "type": "VARIANT",
+              "defaultValue": "Primary",
+              "variantOptions": [
+                "Primary",
+                "Error",
+                "Sucess",
+                "White"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7024:19639",
+          "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6449.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:4654",
+          "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6449.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5113",
+          "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6449.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14873",
+          "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3219.0,
+            "y": 6449.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5280",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6449.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14887",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3019.0,
+            "y": 6449.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7024:19641",
+          "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6528.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:4656",
+          "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6528.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5111",
+          "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6528.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14875",
+          "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3219.0,
+            "y": 6528.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5288",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6528.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14885",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3019.0,
+            "y": 6528.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7024:19651",
+          "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6607.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:4658",
+          "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6607.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5109",
+          "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6607.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14877",
+          "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3219.0,
+            "y": 6607.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5284",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6607.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14883",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3019.0,
+            "y": 6607.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7024:19661",
+          "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6686.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:4660",
+          "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6686.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5107",
+          "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6686.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14879",
+          "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3219.0,
+            "y": 6686.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5286",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6686.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7715:14881",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=White",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3019.0,
+            "y": 6686.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7024:19731",
+          "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6765.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:4662",
+          "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6765.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5105",
+          "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6765.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:5282",
+          "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Primary",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6765.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7322",
+          "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6844.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7324",
+          "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6844.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7326",
+          "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6844.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7328",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6844.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7336",
+          "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 6923.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7338",
+          "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 6923.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7340",
+          "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 6923.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7342",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 6923.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7350",
+          "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7002.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7352",
+          "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7002.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7354",
+          "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7002.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7356",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7002.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7364",
+          "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7081.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7366",
+          "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7081.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7368",
+          "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7081.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7370",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7081.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7378",
+          "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7160.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7380",
+          "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7160.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7382",
+          "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7160.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7384",
+          "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7160.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7742",
+          "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7239.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7744",
+          "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7239.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7746",
+          "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7239.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7748",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7239.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7756",
+          "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7318.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7758",
+          "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7318.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7760",
+          "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7318.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7762",
+          "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7318.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7770",
+          "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7397.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7772",
+          "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7397.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7774",
+          "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7397.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7776",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7397.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7784",
+          "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7476.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7786",
+          "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7476.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7788",
+          "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7476.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7790",
+          "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7476.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7798",
+          "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3977.0,
+            "y": 7555.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7800",
+          "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3777.0,
+            "y": 7555.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7802",
+          "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3577.0,
+            "y": 7555.0,
+            "width": 140.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "7039:7804",
+          "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Sucess",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3377.0,
+            "y": 7555.0,
+            "width": 120.0,
+            "height": 49.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "6121:13803",
+      "name": "04 Oznámenie o používaní cookie (Cookies bar)",
+      "components": [
+        {
+          "id": "6601:7889",
+          "name": "Cookie bar",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -7884.0,
+            "y": 6368.0,
+            "width": 1560.0,
+            "height": 1224.0
+          },
+          "componentPropertyDefinitions": {
+            "Headline#7868:0": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum "
+            },
+            "Description text#7868:3": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem."
+            },
+            "Device": {
+              "type": "VARIANT",
+              "defaultValue": "Web",
+              "variantOptions": [
+                "Web",
+                "Mobile"
+              ]
+            }
+          }
+        },
+        {
+          "id": "6601:7888",
+          "name": "Device=Web",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7824.0,
+            "y": 6404.0,
+            "width": 1440.0,
+            "height": 389.0
+          }
+        },
+        {
+          "id": "6601:7890",
+          "name": "Device=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7821.0,
+            "y": 6823.0,
+            "width": 320.0,
+            "height": 633.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:7792",
+      "name": "05 Textové pole (Text input)",
+      "components": [
+        {
+          "id": "5718:13930",
+          "name": ".master Text Input Field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -12411.0,
+            "y": -1713.0,
+            "width": 2276.0,
+            "height": 198.0
+          },
+          "componentPropertyDefinitions": {
+            "Icon#5718:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:31836",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "d327ae0e08641ea4a0627af29384ce65b03eaf89"
+                }
+              ]
+            },
+            "Error icon#5927:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3235:29217",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "7f7a620aa77c114129e77928393350be3aaf545b"
+                }
+              ]
+            },
+            "Focus#5927:21": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "L",
+              "variantOptions": [
+                "L",
+                "M"
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Error",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5718:13957",
+          "name": "Size=L, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12391.0,
+            "y": -1688.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5718:13960",
+          "name": "Size=L, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11931.0,
+            "y": -1688.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5718:13963",
+          "name": "Size=L, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11471.0,
+            "y": -1688.0,
+            "width": 396.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5718:13967",
+          "name": "Size=L, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11015.0,
+            "y": -1688.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5718:13970",
+          "name": "Size=L, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10555.0,
+            "y": -1688.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5718:14028",
+          "name": "Size=M, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12391.0,
+            "y": -1580.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5718:14031",
+          "name": "Size=M, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11931.0,
+            "y": -1580.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5718:14034",
+          "name": "Size=M, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11471.0,
+            "y": -1580.0,
+            "width": 396.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5718:14038",
+          "name": "Size=M, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11015.0,
+            "y": -1580.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5718:14042",
+          "name": "Size=M, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10555.0,
+            "y": -1580.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5718:14237",
+          "name": "Text field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -12411.0,
+            "y": -2239.0,
+            "width": 2280.0,
+            "height": 420.0
+          },
+          "componentPropertyDefinitions": {
+            "Label text#5718:6": {
+              "type": "TEXT",
+              "defaultValue": "Názov textového poľa"
+            },
+            "Hint text#5718:28": {
+              "type": "TEXT",
+              "defaultValue": "Popis textového poľa"
+            },
+            "Top hint#5718:50": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error text text#5718:72": {
+              "type": "TEXT",
+              "defaultValue": "Chybový text "
+            },
+            "Error text#5718:75": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Tooltip#6601:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Bottom hint#6601:11": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Bottom hint text#6601:22": {
+              "type": "TEXT",
+              "defaultValue": "Popisný text"
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "L",
+              "variantOptions": [
+                "L",
+                "M"
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Error",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5927:6356",
+          "name": "Size=L, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12391.0,
+            "y": -2219.0,
+            "width": 400.0,
+            "height": 150.0
+          }
+        },
+        {
+          "id": "5927:6365",
+          "name": "Size=L, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11931.0,
+            "y": -2219.0,
+            "width": 400.0,
+            "height": 150.0
+          }
+        },
+        {
+          "id": "5927:6374",
+          "name": "Size=L, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11471.0,
+            "y": -2219.0,
+            "width": 400.0,
+            "height": 150.0
+          }
+        },
+        {
+          "id": "5927:6383",
+          "name": "Size=L, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11011.0,
+            "y": -2219.0,
+            "width": 400.0,
+            "height": 183.0
+          }
+        },
+        {
+          "id": "5927:6392",
+          "name": "Size=L, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10551.0,
+            "y": -2219.0,
+            "width": 400.0,
+            "height": 150.0
+          }
+        },
+        {
+          "id": "5927:6401",
+          "name": "Size=M, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -12391.0,
+            "y": -2014.0,
+            "width": 400.0,
+            "height": 134.0
+          }
+        },
+        {
+          "id": "5927:6410",
+          "name": "Size=M, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11931.0,
+            "y": -2014.0,
+            "width": 400.0,
+            "height": 134.0
+          }
+        },
+        {
+          "id": "5927:6419",
+          "name": "Size=M, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11471.0,
+            "y": -2014.0,
+            "width": 400.0,
+            "height": 134.0
+          }
+        },
+        {
+          "id": "5927:6428",
+          "name": "Size=M, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -11011.0,
+            "y": -2014.0,
+            "width": 400.0,
+            "height": 163.0
+          }
+        },
+        {
+          "id": "5927:6437",
+          "name": "Size=M, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10551.0,
+            "y": -2014.0,
+            "width": 400.0,
+            "height": 134.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8421",
+      "name": "06 Viacriadkové textové pole (Text area) ",
+      "components": [
+        {
+          "id": "2910:18362",
+          "name": "Text area",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -9584.0,
+            "y": -2011.0,
+            "width": 900.0,
+            "height": 500.0
+          },
+          "componentPropertyDefinitions": {
+            "Top hint#5711:18": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Bottom hint#5711:20": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error text#5711:22": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Top hint text#5711:24": {
+              "type": "TEXT",
+              "defaultValue": "Popisný text"
+            },
+            "Bottom hint text#5711:28": {
+              "type": "TEXT",
+              "defaultValue": "Popisný text"
+            },
+            "Error text content#5711:42": {
+              "type": "TEXT",
+              "defaultValue": "Chybový text"
+            },
+            "Tooltip#6601:33": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Heading#7868:9": {
+              "type": "TEXT",
+              "defaultValue": "Názov textového poľa"
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "L",
+              "variantOptions": [
+                "L",
+                "M"
+              ]
+            }
+          }
+        },
+        {
+          "id": "2910:18363",
+          "name": "Size=L",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -9554.0,
+            "y": -1981.0,
+            "width": 640.0,
+            "height": 211.0
+          }
+        },
+        {
+          "id": "6912:19340",
+          "name": "Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -9554.0,
+            "y": -1740.0,
+            "width": 640.0,
+            "height": 199.0
+          }
+        },
+        {
+          "id": "5711:17115",
+          "name": ".master Text area",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -10321.0,
+            "y": -2011.0,
+            "width": 680.0,
+            "height": 488.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#6912:0": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Error",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5711:17114",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10301.0,
+            "y": -1991.0,
+            "width": 640.0,
+            "height": 97.0
+          }
+        },
+        {
+          "id": "5711:17231",
+          "name": "State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10301.0,
+            "y": -1640.0,
+            "width": 640.0,
+            "height": 97.0
+          }
+        },
+        {
+          "id": "5711:17160",
+          "name": "State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10301.0,
+            "y": -1757.0,
+            "width": 640.0,
+            "height": 97.0
+          }
+        },
+        {
+          "id": "5711:17116",
+          "name": "State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -10301.0,
+            "y": -1874.0,
+            "width": 640.0,
+            "height": 97.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8411",
+      "name": "07 Rozbaľovacie pole (Select)",
+      "components": [
+        {
+          "id": "5711:16095",
+          "name": "Drop down field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -2233.0,
+            "y": 7001.0,
+            "width": 1912.0,
+            "height": 542.0
+          },
+          "componentPropertyDefinitions": {
+            "Top hint#5711:11": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error text#5711:15": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Heading#5711:30": {
+              "type": "TEXT",
+              "defaultValue": "Názov rozbaľovacieho pola"
+            },
+            "Top hint text#5711:33": {
+              "type": "TEXT",
+              "defaultValue": "Popis rozbaľovacieho poľa"
+            },
+            "Error text content#5711:39": {
+              "type": "TEXT",
+              "defaultValue": "Chybový text"
+            },
+            "Tooltip#7031:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Expanded": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "L",
+              "variantOptions": [
+                "L",
+                "M"
+              ]
+            },
+            "Selected": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5711:15696",
+          "name": "Expanded=Off, Size=L, Selected=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2213.0,
+            "y": 7021.0,
+            "width": 400.0,
+            "height": 117.0
+          }
+        },
+        {
+          "id": "6912:15883",
+          "name": "Expanded=Off, Size=L, Selected=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2213.0,
+            "y": 7354.0,
+            "width": 400.0,
+            "height": 117.0
+          }
+        },
+        {
+          "id": "6912:15480",
+          "name": "Expanded=Off, Size=M, Selected=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1253.0,
+            "y": 7021.0,
+            "width": 400.0,
+            "height": 105.0
+          }
+        },
+        {
+          "id": "6912:15947",
+          "name": "Expanded=Off, Size=M, Selected=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1253.0,
+            "y": 7370.0,
+            "width": 400.0,
+            "height": 105.0
+          }
+        },
+        {
+          "id": "5711:16096",
+          "name": "Expanded=On, Size=L, Selected=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1733.0,
+            "y": 7021.0,
+            "width": 400.0,
+            "height": 117.0
+          }
+        },
+        {
+          "id": "6912:15493",
+          "name": "Expanded=On, Size=M, Selected=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -773.0,
+            "y": 7021.0,
+            "width": 400.0,
+            "height": 105.0
+          }
+        },
+        {
+          "id": "6601:15354",
+          "name": "Drop down input Field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -2233.0,
+            "y": 6701.0,
+            "width": 2276.0,
+            "height": 176.0
+          },
+          "componentPropertyDefinitions": {
+            "Icon#5718:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:31836",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "d327ae0e08641ea4a0627af29384ce65b03eaf89"
+                }
+              ]
+            },
+            "Error icon#5927:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3235:29217",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "7f7a620aa77c114129e77928393350be3aaf545b"
+                }
+              ]
+            },
+            "Focus#5927:21": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "M",
+              "variantOptions": [
+                "M",
+                "S"
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Focus",
+                "Error",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "6601:15355",
+          "name": "Size=M, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2213.0,
+            "y": 6726.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6601:15360",
+          "name": "Size=M, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1753.0,
+            "y": 6726.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6601:15366",
+          "name": "Size=M, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1293.0,
+            "y": 6726.0,
+            "width": 396.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6601:15371",
+          "name": "Size=M, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -837.0,
+            "y": 6726.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6601:15376",
+          "name": "Size=M, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -377.0,
+            "y": 6726.0,
+            "width": 400.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6601:15407",
+          "name": "Size=S, State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2213.0,
+            "y": 6812.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6601:15412",
+          "name": "Size=S, State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1753.0,
+            "y": 6812.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6601:15418",
+          "name": "Size=S, State=Focus",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1293.0,
+            "y": 6812.0,
+            "width": 396.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6601:15423",
+          "name": "Size=S, State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -837.0,
+            "y": 6812.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6601:15428",
+          "name": "Size=S, State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -377.0,
+            "y": 6812.0,
+            "width": 400.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "2910:19084",
+          "name": ".master Dropdown item",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 0.0,
+            "y": 5127.0,
+            "width": 400.0,
+            "height": 420.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#6008:0": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Status": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Active",
+                "Disabled"
+              ]
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "2910:19091",
+          "name": "Status=Default, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 30.0,
+            "y": 5157.0,
+            "width": 340.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "2910:19087",
+          "name": "Status=Default, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 30.0,
+            "y": 5235.0,
+            "width": 340.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "2910:19089",
+          "name": "Status=Active, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 30.0,
+            "y": 5313.0,
+            "width": 340.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6047:13411",
+          "name": "Status=Active, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 30.0,
+            "y": 5391.0,
+            "width": 340.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "2910:19085",
+          "name": "Status=Disabled, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 30.0,
+            "y": 5469.0,
+            "width": 340.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "3431:23671",
+          "name": "Dropdown list",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 0.0,
+            "y": 4717.0,
+            "width": 307.0,
+            "height": 336.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8412",
+      "name": "08 Začiarkavacie políčko (Checkbox) ",
+      "components": [
+        {
+          "id": "6728:1741",
+          "name": ".master Checkbox picker",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -8225.0,
+            "y": -2739.0,
+            "width": 80.0,
+            "height": 500.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#6728:12": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Checked": {
+              "type": "VARIANT",
+              "defaultValue": "On",
+              "variantOptions": [
+                "On",
+                "Off"
+              ]
+            },
+            "Disabled": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "M",
+              "variantOptions": [
+                "M",
+                "S"
+              ]
+            }
+          }
+        },
+        {
+          "id": "6728:1740",
+          "name": "Checked=On, Disabled=Off, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2719.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3188",
+          "name": "Checked=On, Disabled=Off, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2479.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:1742",
+          "name": "Checked=Off, Disabled=Off, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2659.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3192",
+          "name": "Checked=Off, Disabled=Off, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2419.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:2920",
+          "name": "Checked=Off, Disabled=On, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2599.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3196",
+          "name": "Checked=Off, Disabled=On, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2359.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:2925",
+          "name": "Checked=On, Disabled=On, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2539.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3200",
+          "name": "Checked=On, Disabled=On, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8205.0,
+            "y": -2299.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:1755",
+          "name": "Checkbox",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -8075.0,
+            "y": -2745.0,
+            "width": 168.0,
+            "height": 512.0
+          },
+          "componentPropertyDefinitions": {
+            "Hint#6728:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Label#6728:4": {
+              "type": "TEXT",
+              "defaultValue": "Menovka"
+            },
+            "Hint text#6728:8": {
+              "type": "TEXT",
+              "defaultValue": "Pomôcka"
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Disabled"
+              ]
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "M",
+              "variantOptions": [
+                "M",
+                "S"
+              ]
+            }
+          }
+        },
+        {
+          "id": "6728:1754",
+          "name": "State=Default, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2725.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "6728:3230",
+          "name": "State=Default, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2479.0,
+            "width": 100.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6728:1779",
+          "name": "State=Disabled, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2561.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "6728:3240",
+          "name": "State=Disabled, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2397.0,
+            "width": 100.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "6728:1756",
+          "name": "State=Hover, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2643.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "6728:3235",
+          "name": "State=Hover, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -8055.0,
+            "y": -2315.0,
+            "width": 100.0,
+            "height": 48.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8415",
+      "name": "09 Prepínacie pole (Radio)",
+      "components": [
+        {
+          "id": "4519:25208",
+          "name": "Radio button",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -1760.0,
+            "y": -2372.0,
+            "width": 201.0,
+            "height": 540.0
+          },
+          "componentPropertyDefinitions": {
+            "Hint#5105:147": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Label#6728:15": {
+              "type": "TEXT",
+              "defaultValue": "Menovka"
+            },
+            "Hint text#6728:22": {
+              "type": "TEXT",
+              "defaultValue": "Pomôcka"
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Disabled"
+              ]
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "M",
+              "variantOptions": [
+                "M",
+                "S"
+              ]
+            }
+          }
+        },
+        {
+          "id": "4519:25218",
+          "name": "State=Default, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -2342.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "4519:25216",
+          "name": "State=Hover, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -2250.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "4534:6382",
+          "name": "State=Disabled, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -2158.0,
+            "width": 128.0,
+            "height": 62.0
+          }
+        },
+        {
+          "id": "4519:25228",
+          "name": "State=Default, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -2066.0,
+            "width": 112.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "4534:6380",
+          "name": "State=Disabled, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -1988.0,
+            "width": 112.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "4519:25226",
+          "name": "State=Hover, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1730.0,
+            "y": -1910.0,
+            "width": 112.0,
+            "height": 48.0
+          }
+        },
+        {
+          "id": "5105:10468",
+          "name": ".master Radio picker",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -1921.0,
+            "y": -2372.0,
+            "width": 121.0,
+            "height": 526.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#5908:41": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Checked": {
+              "type": "VARIANT",
+              "defaultValue": "On",
+              "variantOptions": [
+                "On",
+                "Off"
+              ]
+            },
+            "Disabled": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            },
+            "Size": {
+              "type": "VARIANT",
+              "defaultValue": "M",
+              "variantOptions": [
+                "M",
+                "S"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5105:10463",
+          "name": "Checked=On, Disabled=Off, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2342.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3615",
+          "name": "Checked=Off, Disabled=Off, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2272.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3619",
+          "name": "Checked=On, Disabled=On, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2202.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "6728:3607",
+          "name": "Checked=Off, Disabled=On, Size=M",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2132.0,
+            "width": 40.0,
+            "height": 40.0
+          }
+        },
+        {
+          "id": "5105:10464",
+          "name": "Checked=On, Disabled=Off, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2062.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:3627",
+          "name": "Checked=Off, Disabled=Off, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -2008.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:3623",
+          "name": "Checked=On, Disabled=On, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -1954.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "6728:3611",
+          "name": "Checked=Off, Disabled=On, Size=S",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1891.0,
+            "y": -1900.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8413",
+      "name": "10 Prehľad s chybovými hláseniami (Error summary) ",
+      "components": [
+        {
+          "id": "5110:5146",
+          "name": "Error summary",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -6121.0,
+            "y": -3177.0,
+            "width": 680.0,
+            "height": 253.0
+          },
+          "componentPropertyDefinitions": {
+            "Headline#5110:0": {
+              "type": "TEXT",
+              "defaultValue": "Text upozornenia, že sa vyskytol problém."
+            },
+            "Description text#5110:1": {
+              "type": "TEXT",
+              "defaultValue": "Priestor pre popis, k akým chybám došlo a ako ich opraviť."
+            },
+            "Description#5110:2": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error 1#6770:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error 2#6770:2": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error 3#6770:4": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Error 4#6770:6": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 5#6770:8": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 6#6770:10": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 7#6770:12": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 8#6770:14": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 9#6770:16": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Error 10#6770:18": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Property 1": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default"
+              ]
+            }
+          }
+        },
+        {
+          "id": "4520:27824",
+          "name": "Property 1=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -6101.0,
+            "y": -3157.0,
+            "width": 640.0,
+            "height": 213.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5711:8414",
+      "name": "11 Pole na nahratie súboru (File upload)",
+      "components": [
+        {
+          "id": "2910:19093",
+          "name": "Drag and drop upload",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4021.0,
+            "y": 3620.0,
+            "width": 1200.0,
+            "height": 1385.0
+          },
+          "componentPropertyDefinitions": {
+            "Attachement 1#6880:12": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Attachement 2#6880:16": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Attachement 3#6880:20": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Attachement 4#6880:24": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Attachement 5#6880:28": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Hint#7340:15": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Hint text#7340:19": {
+              "type": "TEXT",
+              "defaultValue": "Podrobnejšie vysvetlenie požiadavky"
+            },
+            "Label#7557:0": {
+              "type": "TEXT",
+              "defaultValue": "Nahrajte súbor"
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Uploaded files",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "2910:19094",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 3650.0,
+            "width": 1140.0,
+            "height": 344.0
+          }
+        },
+        {
+          "id": "2910:19108",
+          "name": "State=Uploaded files",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 4024.0,
+            "width": 1140.0,
+            "height": 577.0
+          }
+        },
+        {
+          "id": "2910:19101",
+          "name": "State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 4631.0,
+            "width": 1140.0,
+            "height": 344.0
+          }
+        },
+        {
+          "id": "4521:28019",
+          "name": "File upload",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -4021.0,
+            "y": 2332.0,
+            "width": 1200.0,
+            "height": 1200.0
+          },
+          "componentPropertyDefinitions": {
+            "Hint#6770:40": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Hint text#6770:46": {
+              "type": "TEXT",
+              "defaultValue": "Podrobnejšie vysvetlenie požiadavky"
+            },
+            "Label#6770:52": {
+              "type": "TEXT",
+              "defaultValue": "Názov požadovaného súboru"
+            },
+            "Tooltip#6770:71": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Requested formats#6880:0": {
+              "type": "TEXT",
+              "defaultValue": "jpg, png, doc, docx, pdf"
+            },
+            "Max size#6880:4": {
+              "type": "TEXT",
+              "defaultValue": "500 Mb"
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Uploaded",
+                "Error",
+                "Disabled",
+                "Default"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7515:4787",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 2362.0,
+            "width": 1140.0,
+            "height": 216.0
+          }
+        },
+        {
+          "id": "6770:11770",
+          "name": "State=Uploaded",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 2608.0,
+            "width": 1140.0,
+            "height": 285.0
+          }
+        },
+        {
+          "id": "6880:976",
+          "name": "State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 2923.0,
+            "width": 1140.0,
+            "height": 216.0
+          }
+        },
+        {
+          "id": "6770:12331",
+          "name": "State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3991.0,
+            "y": 3169.0,
+            "width": 1140.0,
+            "height": 333.0
+          }
+        },
+        {
+          "id": "5908:11813",
+          "name": ".master Drag and drop file upload - file list",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -5269.0,
+            "y": 2332.0,
+            "width": 1140.0,
+            "height": 264.0
+          },
+          "componentPropertyDefinitions": {
+            "Document name#6770:59": {
+              "type": "TEXT",
+              "defaultValue": "Document name placeholder.docx"
+            },
+            "Error text#6880:32": {
+              "type": "TEXT",
+              "defaultValue": "Vyskytol sa problém pri nahrávaní"
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Uploading",
+                "Error"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5908:11812",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 2362.0,
+            "width": 1080.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "5908:11810",
+          "name": "State=Uploading",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 2440.0,
+            "width": 1080.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "5908:11811",
+          "name": "State=Error",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 2518.0,
+            "width": 1080.0,
+            "height": 49.0
+          }
+        },
+        {
+          "id": "5908:12066",
+          "name": ".master Drag and drop zone",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -5261.0,
+            "y": 3628.0,
+            "width": 1124.0,
+            "height": 854.0
+          },
+          "componentPropertyDefinitions": {
+            "Supported files#5908:5": {
+              "type": "TEXT",
+              "defaultValue": "jpg, png, doc, docx, pdf"
+            },
+            "Max file size#5908:10": {
+              "type": "TEXT",
+              "defaultValue": "500 Mb"
+            },
+            "Focus#6880:8": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover",
+                "Disabled"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5908:12065",
+          "name": "State=Disabled",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 4210.0,
+            "width": 1080.0,
+            "height": 251.0
+          }
+        },
+        {
+          "id": "5908:12063",
+          "name": "State=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 3930.0,
+            "width": 1080.0,
+            "height": 251.0
+          }
+        },
+        {
+          "id": "5908:12062",
+          "name": "State=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5239.0,
+            "y": 3650.0,
+            "width": 1080.0,
+            "height": 251.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:7795",
+      "name": "12 Akordeón (Accordion)",
+      "components": [
+        {
+          "id": "2911:9948",
+          "name": "Accordion",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -3378.0,
+            "y": 7912.0,
+            "width": 1200.0,
+            "height": 1116.0
+          },
+          "componentPropertyDefinitions": {
+            "Hint#5085:10": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Focus#5927:84": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Heading#5927:87": {
+              "type": "TEXT",
+              "defaultValue": "Nadpis sekcie"
+            },
+            "Hint text#5927:90": {
+              "type": "TEXT",
+              "defaultValue": "Popis. Pokiaľ nie je nadpis dostatočne zrejmý a potrebuje vysvetlenie, alebo ak je nadpis príliš dlhý (viac, ako 5 slov), toto je miesto na viacslovný popis."
+            },
+            "Content#7085:0": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "7085:24279",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "9e64dbb299f86304d272900221cd91559e8b0b67"
+                }
+              ]
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover"
+              ]
+            },
+            "Expanded": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7085:24461",
+          "name": "State=Default, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3348.0,
+            "y": 7942.0,
+            "width": 1140.0,
+            "height": 131.0
+          }
+        },
+        {
+          "id": "7085:24485",
+          "name": "State=Hover, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3348.0,
+            "y": 8093.0,
+            "width": 1140.0,
+            "height": 131.0
+          }
+        },
+        {
+          "id": "5085:4502",
+          "name": "State=Default, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3348.0,
+            "y": 8244.0,
+            "width": 1140.0,
+            "height": 367.0
+          }
+        },
+        {
+          "id": "7085:24473",
+          "name": "State=Hover, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3348.0,
+            "y": 8631.0,
+            "width": 1140.0,
+            "height": 367.0
+          }
+        },
+        {
+          "id": "7085:24279",
+          "name": ".master Accordion content - replace to change",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3345.0,
+            "y": 9203.0,
+            "width": 1135.0,
+            "height": 196.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:7796",
+      "name": "13 Omrvinková navigácia (Breadcrumbs)",
+      "components": [
+        {
+          "id": "5085:11436",
+          "name": "Breadcrumbs",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -2753.0,
+            "y": 2736.0,
+            "width": 1430.0,
+            "height": 261.0
+          },
+          "componentPropertyDefinitions": {
+            "Device": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5085:11437",
+          "name": "Device=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2743.0,
+            "y": 2742.0,
+            "width": 1410.0,
+            "height": 44.0
+          }
+        },
+        {
+          "id": "5085:11439",
+          "name": "Device=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2743.0,
+            "y": 2813.0,
+            "width": 1410.0,
+            "height": 44.0
+          }
+        },
+        {
+          "id": "5085:11441",
+          "name": ".master Breadcrumbs ",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -2753.0,
+            "y": 3053.0,
+            "width": 450.0,
+            "height": 372.0
+          },
+          "componentPropertyDefinitions": {
+            "Viewport": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Desktop",
+                "Mobile"
+              ]
+            },
+            "Crumbs": {
+              "type": "VARIANT",
+              "defaultValue": "2",
+              "variantOptions": [
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5085:11442",
+          "name": "Viewport=Desktop, Crumbs=2",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3073.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11456",
+          "name": "Viewport=Mobile, Crumbs=2",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3117.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11470",
+          "name": "Viewport=Desktop, Crumbs=3",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3161.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11484",
+          "name": "Viewport=Mobile, Crumbs=3",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3205.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11498",
+          "name": "Viewport=Desktop, Crumbs=4",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3249.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11512",
+          "name": "Viewport=Mobile, Crumbs=4",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3293.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11526",
+          "name": "Viewport=Desktop, Crumbs=5",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3337.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5085:11540",
+          "name": "Viewport=Mobile, Crumbs=5",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -2733.0,
+            "y": 3381.0,
+            "width": 410.0,
+            "height": 24.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:8297",
+      "name": "14 Informačná lišta (Notification banner) ",
+      "components": [
+        {
+          "id": "5085:12823",
+          "name": "Notification banner",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -1818.0,
+            "y": -1759.0,
+            "width": 1120.0,
+            "height": 1851.0
+          },
+          "componentPropertyDefinitions": {
+            "Button#5085:46": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Message#5097:0": {
+              "type": "TEXT",
+              "defaultValue": "Text dôležitej informácie s dĺžkou max. 25 slov sa používa, keď je potrebné používateľovi nejakú informáciu zdôrazniť alebo ho na niečo upozorniť."
+            },
+            "Hint text#5097:5": {
+              "type": "TEXT",
+              "defaultValue": "Popis, doplnenie alebo vysvetlenie informácie v prípade, že informácia je dlhšia ako 20 slov."
+            },
+            "Hint#5097:25": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Link#6298:9": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Focus#6298:27": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Accent",
+              "variantOptions": [
+                "Accent",
+                "Success",
+                "Warning",
+                "Alert"
+              ]
+            },
+            "Screen size": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5085:12850",
+          "name": "Type=Accent, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -1739.0,
+            "width": 1080.0,
+            "height": 178.0
+          }
+        },
+        {
+          "id": "5085:12884",
+          "name": "Type=Alert, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -1541.0,
+            "width": 1080.0,
+            "height": 178.0
+          }
+        },
+        {
+          "id": "5085:12918",
+          "name": "Type=Warning, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -1343.0,
+            "width": 1080.0,
+            "height": 178.0
+          }
+        },
+        {
+          "id": "5085:12952",
+          "name": "Type=Success, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -1145.0,
+            "width": 1080.0,
+            "height": 178.0
+          }
+        },
+        {
+          "id": "5099:2193",
+          "name": "Type=Accent, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -947.0,
+            "width": 640.0,
+            "height": 240.0
+          }
+        },
+        {
+          "id": "5099:2203",
+          "name": "Type=Alert, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -687.0,
+            "width": 640.0,
+            "height": 239.0
+          }
+        },
+        {
+          "id": "5105:14383",
+          "name": "Type=Warning, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -428.0,
+            "width": 640.0,
+            "height": 240.0
+          }
+        },
+        {
+          "id": "5099:2213",
+          "name": "Type=Success, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -1798.0,
+            "y": -168.0,
+            "width": 640.0,
+            "height": 240.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:7791",
+      "name": "15 Lišta spätnej väzby (Feedback bar) ",
+      "components": [
+        {
+          "id": "3311:26707",
+          "name": "Feedback bar",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -7887.0,
+            "y": 2863.0,
+            "width": 1500.0,
+            "height": 593.0
+          },
+          "componentPropertyDefinitions": {
+            "Report problem#5539:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "State": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Submitted"
+              ]
+            },
+            "Device": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Mobile",
+                "Desktop"
+              ]
+            }
+          }
+        },
+        {
+          "id": "4997:11088",
+          "name": "State=Default, Device=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7867.0,
+            "y": 2883.0,
+            "width": 1460.0,
+            "height": 80.0
+          }
+        },
+        {
+          "id": "4997:11109",
+          "name": "State=Submitted, Device=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7867.0,
+            "y": 2993.0,
+            "width": 1460.0,
+            "height": 68.0
+          }
+        },
+        {
+          "id": "4997:11098",
+          "name": "State=Default, Device=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7867.0,
+            "y": 3091.0,
+            "width": 800.0,
+            "height": 169.0
+          }
+        },
+        {
+          "id": "4997:11117",
+          "name": "State=Submitted, Device=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -7867.0,
+            "y": 3290.0,
+            "width": 800.0,
+            "height": 146.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5421:17675",
+      "name": "16 Oznamovacia lišta (Announcement bar)",
+      "components": [
+        {
+          "id": "2911:10735",
+          "name": "Toast",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 1147.0,
+            "y": 4588.0,
+            "width": 1520.0,
+            "height": 1552.0
+          },
+          "componentPropertyDefinitions": {
+            "Headline#5085:24": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Close button#6298:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Link#6298:18": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Focus#6298:36": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Hint#6298:45": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Headline (text)#6298:54": {
+              "type": "TEXT",
+              "defaultValue": "Nadpis"
+            },
+            "Hint text#6298:63": {
+              "type": "TEXT",
+              "defaultValue": "Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. Nepoužívať pri implementácii a dizajne."
+            },
+            "Status": {
+              "type": "VARIANT",
+              "defaultValue": "Error alert",
+              "variantOptions": [
+                "Information",
+                "Error alert",
+                "Warning",
+                "Success"
+              ]
+            },
+            "Screen size": {
+              "type": "VARIANT",
+              "defaultValue": "Desktop",
+              "variantOptions": [
+                "Desktop",
+                "Mobile"
+              ]
+            }
+          }
+        },
+        {
+          "id": "2911:10772",
+          "name": "Status=Error alert, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 4618.0,
+            "width": 1460.0,
+            "height": 141.0
+          }
+        },
+        {
+          "id": "2911:10763",
+          "name": "Status=Warning, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 4779.0,
+            "width": 1460.0,
+            "height": 141.0
+          }
+        },
+        {
+          "id": "6428:7405",
+          "name": "Status=Success, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 4940.0,
+            "width": 1460.0,
+            "height": 141.0
+          }
+        },
+        {
+          "id": "2911:10781",
+          "name": "Status=Information, Screen size=Desktop",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 5101.0,
+            "width": 1460.0,
+            "height": 141.0
+          }
+        },
+        {
+          "id": "5085:17113",
+          "name": "Status=Error alert, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 5262.0,
+            "width": 640.0,
+            "height": 197.0
+          }
+        },
+        {
+          "id": "5085:17122",
+          "name": "Status=Warning, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 5479.0,
+            "width": 640.0,
+            "height": 197.0
+          }
+        },
+        {
+          "id": "5085:17131",
+          "name": "Status=Success, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 5696.0,
+            "width": 640.0,
+            "height": 197.0
+          }
+        },
+        {
+          "id": "5085:17140",
+          "name": "Status=Information, Screen size=Mobile",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1177.0,
+            "y": 5913.0,
+            "width": 640.0,
+            "height": 197.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:8298",
+      "name": "17 Kartička (Card)",
+      "components": [
+        {
+          "id": "2910:20581",
+          "name": "Card",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -3418.0,
+            "y": 5902.0,
+            "width": 1120.0,
+            "height": 1790.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#6489:9": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Image#6489:18": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Tag line#6489:27": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Button 1#6489:36": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Button 2#6489:45": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Title#6489:54": {
+              "type": "TEXT",
+              "defaultValue": "Nadpis kartičky"
+            },
+            "Body text#6489:63": {
+              "type": "TEXT",
+              "defaultValue": "Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. Nepoužívať pri implementácii a dizajne. Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. "
+            },
+            "Date#6557:118": {
+              "type": "TEXT",
+              "defaultValue": "1.12. 2025"
+            },
+            "Tag 1#6557:121": {
+              "type": "TEXT",
+              "defaultValue": "Tag 1"
+            },
+            "Tag 2#6557:124": {
+              "type": "TEXT",
+              "defaultValue": "Tag 2"
+            },
+            "Tag 3#6557:127": {
+              "type": "TEXT",
+              "defaultValue": "Tag 3"
+            },
+            "Buttons Set#6884:0": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Orientation": {
+              "type": "VARIANT",
+              "defaultValue": "Vertical",
+              "variantOptions": [
+                "Vertical",
+                "Horizontal"
+              ]
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "2910:20598",
+          "name": "Orientation=Vertical, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3388.0,
+            "y": 5932.0,
+            "width": 360.0,
+            "height": 548.0
+          }
+        },
+        {
+          "id": "6562:3712",
+          "name": "Orientation=Vertical, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3388.0,
+            "y": 6510.0,
+            "width": 360.0,
+            "height": 548.0
+          }
+        },
+        {
+          "id": "6489:6773",
+          "name": "Orientation=Horizontal, Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3388.0,
+            "y": 7088.0,
+            "width": 1060.0,
+            "height": 272.0
+          }
+        },
+        {
+          "id": "6562:3746",
+          "name": "Orientation=Horizontal, Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -3388.0,
+            "y": 7390.0,
+            "width": 1060.0,
+            "height": 272.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "2911:8299",
+      "name": "18 Rázcestník (Signpost)",
+      "components": [
+        {
+          "id": "3313:26557",
+          "name": "Signpost horizontal",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -5735.0,
+            "y": 5071.0,
+            "width": 640.0,
+            "height": 420.0
+          },
+          "componentPropertyDefinitions": {
+            "Lead icon#6508:21": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:34923",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "ddde0064cf3bac61b035d2bb495637dd47737f22"
+                }
+              ]
+            },
+            "Headline#6508:30": {
+              "type": "TEXT",
+              "defaultValue": "Nadpis"
+            },
+            "Body#6508:39": {
+              "type": "TEXT",
+              "defaultValue": "Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. Nepoužívať pri implementácii a dizajne."
+            },
+            "Focus#6508:81": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Left icon#7281:3": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Right arrow#7281:6": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Body text#7281:9": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Property 1": {
+              "type": "VARIANT",
+              "defaultValue": "Default",
+              "variantOptions": [
+                "Default",
+                "Hover"
+              ]
+            }
+          }
+        },
+        {
+          "id": "3313:26564",
+          "name": "Property 1=Default",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5705.0,
+            "y": 5101.0,
+            "width": 580.0,
+            "height": 165.0
+          }
+        },
+        {
+          "id": "3313:26585",
+          "name": "Property 1=Hover",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -5705.0,
+            "y": 5296.0,
+            "width": 580.0,
+            "height": 165.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5240:2330",
+      "name": "19 Dátová lišta (Data panel)",
+      "components": [
+        {
+          "id": "5254:1778",
+          "name": "Data panel",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 453.0,
+            "y": -294.0,
+            "width": 1064.0,
+            "height": 502.0
+          },
+          "componentPropertyDefinitions": {
+            "Button 1#5254:4": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Button delete#5254:5": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Heading#5254:6": {
+              "type": "TEXT",
+              "defaultValue": "Názov datasetu"
+            },
+            "Icon#5254:7": {
+              "type": "INSTANCE_SWAP",
+              "defaultValue": "3239:34923",
+              "preferredValues": [
+                {
+                  "type": "COMPONENT",
+                  "key": "0b0abaa80429db858bd59194758d417cf47f5702"
+                }
+              ]
+            },
+            "ROW 1.#6298:72": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "1. label#6298:75": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "1. data#6298:78": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "ROW 2.#6298:81": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "ROW 3.#6298:85": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "ROW 4.#6298:89": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 5.#6298:93": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 6.#6298:97": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 7.#6298:101": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 8.#6298:105": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 9.#6298:109": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "ROW 10.#6298:113": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "2. label#6298:117": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "2. data#6298:121": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "3. label#6298:125": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "4. label#6298:129": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "5. label#6298:133": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "6. label#6298:137": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "7. label#6298:141": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "8. label#6298:145": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "9. label#6298:149": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "10. label#6298:153": {
+              "type": "TEXT",
+              "defaultValue": "Label"
+            },
+            "3. data#6298:157": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "4. data#6298:161": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "5. data#6298:165": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "6. data#6298:169": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "7. data#6298:173": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "8. data#6298:177": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "9. data#6298:181": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "10. data#6298:185": {
+              "type": "TEXT",
+              "defaultValue": "Lorem ipsum dolor"
+            },
+            "----- (1. row)#6298:189": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "----- (2. row)#6298:193": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "----- (3. row)#6298:197": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (4. row)#6298:201": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (5. row)#6298:205": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (6. row)#6298:209": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (7. row)#6298:213": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (8. row)#6298:217": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (9. row)#6298:221": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "----- (10. row)#6298:225": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Focus#6508:48": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Actions#7281:12": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Device": {
+              "type": "VARIANT",
+              "defaultValue": "Web",
+              "variantOptions": [
+                "Web",
+                "Mobile v2"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5240:4369",
+          "name": "Device=Web",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 473.0,
+            "y": -274.0,
+            "width": 1024.0,
+            "height": 153.0
+          }
+        },
+        {
+          "id": "6298:7407",
+          "name": "Device=Mobile v2",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 473.0,
+            "y": -92.0,
+            "width": 320.0,
+            "height": 280.0
+          }
+        },
+        {
+          "id": "7636:15547",
+          "name": "IDSK Documentation",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 553.0,
+            "y": -3536.0,
+            "width": 1500.0,
+            "height": 497.0
+          },
+          "componentPropertyDefinitions": {
+            "Heading#5012:4": {
+              "type": "TEXT",
+              "defaultValue": "Dátová lišta (Data panel)"
+            },
+            "Description#5012:5": {
+              "type": "TEXT",
+              "defaultValue": "Dátová lišta je primárne určená na prehľadné zobrazenie základných údajov o subjekte z registrov."
+            },
+            "Has description#5012:6": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Link-playground#5012:7": {
+              "type": "TEXT",
+              "defaultValue": "https://komponenty.idsk3.gov.sk"
+            },
+            "Link-documentation#5012:8": {
+              "type": "TEXT",
+              "defaultValue": "https://idsk.gov.sk"
+            },
+            "Documentation#5012:9": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Playground#5012:10": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Badges#5012:11": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Header",
+              "variantOptions": [
+                "Header"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7636:15548",
+          "name": "Type=Header",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 583.0,
+            "y": -3506.0,
+            "width": 1440.0,
+            "height": 437.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5274:4160",
+      "name": "20 Vysvetlivka (Tooltip)",
+      "components": [
+        {
+          "id": "7340:20672",
+          "name": ".master Tooltip mark",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 4550.0,
+            "y": 6848.0,
+            "width": 65.0,
+            "height": 110.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#7340:23": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7340:20671",
+          "name": "Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4570.0,
+            "y": 6868.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7340:20673",
+          "name": "Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4570.0,
+            "y": 6913.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21275",
+          "name": "Tooltip",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 4550.0,
+            "y": 5409.0,
+            "width": 599.0,
+            "height": 1398.0
+          },
+          "componentPropertyDefinitions": {
+            "Info bubble": {
+              "type": "VARIANT",
+              "defaultValue": "Right",
+              "variantOptions": [
+                "Left",
+                "Top",
+                "Right",
+                "Bottom"
+              ]
+            },
+            "Expanded": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "On",
+                "Off"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7367:20789",
+          "name": "Info bubble=Left, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4605.0,
+            "y": 5566.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21965",
+          "name": "Info bubble=Left, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 5090.0,
+            "y": 6331.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21276",
+          "name": "Info bubble=Top, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4605.0,
+            "y": 5500.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21962",
+          "name": "Info bubble=Top, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4848.0,
+            "y": 6181.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21330",
+          "name": "Info bubble=Right, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4605.0,
+            "y": 5436.0,
+            "width": 24.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "7370:21959",
+          "name": "Info bubble=Right, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4605.0,
+            "y": 5784.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21384",
+          "name": "Info bubble=Bottom, Expanded=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4605.0,
+            "y": 5628.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7370:21968",
+          "name": "Info bubble=Bottom, Expanded=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4849.0,
+            "y": 6473.0,
+            "width": 25.0,
+            "height": 25.0
+          }
+        },
+        {
+          "id": "7975:15461",
+          "name": ".master Tooltip Bubble",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 4651.0,
+            "y": 6848.0,
+            "width": 482.0,
+            "height": 560.0
+          },
+          "componentPropertyDefinitions": {
+            "Info text#7975:0": {
+              "type": "TEXT",
+              "defaultValue": "Sem vložte požadovaný text s dĺžkou max. 290 znakov (vrátane medzier). Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo."
+            },
+            "Bubble focus#7975:1": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            },
+            "Hover": {
+              "type": "VARIANT",
+              "defaultValue": "Off",
+              "variantOptions": [
+                "Off",
+                "On"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7364:20746",
+          "name": "Hover=Off",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4671.0,
+            "y": 6868.0,
+            "width": 442.0,
+            "height": 250.0
+          }
+        },
+        {
+          "id": "7975:15462",
+          "name": "Hover=On",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 4671.0,
+            "y": 7138.0,
+            "width": 442.0,
+            "height": 250.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5274:3983",
+      "name": "21 Rozdeľovník (Divider) ",
+      "components": [
+        {
+          "id": "5281:6405",
+          "name": "Divider",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -680.0,
+            "y": 774.0,
+            "width": 1440.0,
+            "height": 2.0
+          }
+        },
+        {
+          "id": "7615:4313",
+          "name": ".IDSK Documentation",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": -600.0,
+            "y": -1842.0,
+            "width": 1500.0,
+            "height": 533.0
+          },
+          "componentPropertyDefinitions": {
+            "Heading#5012:4": {
+              "type": "TEXT",
+              "defaultValue": "Rozdeľovník (Divider)"
+            },
+            "Description#5012:5": {
+              "type": "TEXT",
+              "defaultValue": "Rozdeľovník je jednoduchý vizuálny prvok používaný na oddelenie obsahových blokov na stránke. Pomáha používateľom rýchlejšie vnímať jednotlivé sekcie a zlepšuje čitateľnosť obsahu. "
+            },
+            "Has description#5012:6": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Link-playground#5012:7": {
+              "type": "TEXT",
+              "defaultValue": "https://komponenty.idsk3.gov.sk"
+            },
+            "Link-documentation#5012:8": {
+              "type": "TEXT",
+              "defaultValue": "https://idsk.gov.sk"
+            },
+            "Documentation#5012:9": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Playground#5012:10": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Badges#5012:11": {
+              "type": "BOOLEAN",
+              "defaultValue": true
+            },
+            "Type": {
+              "type": "VARIANT",
+              "defaultValue": "Header",
+              "variantOptions": [
+                "Header"
+              ]
+            }
+          }
+        },
+        {
+          "id": "7615:4314",
+          "name": "Type=Header",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": -570.0,
+            "y": -1812.0,
+            "width": 1440.0,
+            "height": 473.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "5274:3806",
+      "name": "22 Vysvetlivka označenia povinných polí (Mandatory field legend)",
+      "components": [
+        {
+          "id": "7405:7671",
+          "name": "Mandatory field legend",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 1928.0,
+            "y": -4570.0,
+            "width": 300.0,
+            "height": 40.0
+          },
+          "componentPropertyDefinitions": {
+            "Focus#7975:4": {
+              "type": "BOOLEAN",
+              "defaultValue": false
+            }
+          }
+        },
+        {
+          "id": "5113:6151",
+          "name": "Mandatory field",
+          "type": "COMPONENT_SET",
+          "absoluteBoundingBox": {
+            "x": 2297.0,
+            "y": -4570.0,
+            "width": 200.0,
+            "height": 370.0
+          },
+          "componentPropertyDefinitions": {
+            "Mandatory": {
+              "type": "VARIANT",
+              "defaultValue": "Yes",
+              "variantOptions": [
+                "Yes",
+                "No",
+                "Yes (text)"
+              ]
+            },
+            "Used for": {
+              "type": "VARIANT",
+              "defaultValue": "Headline",
+              "variantOptions": [
+                "Field",
+                "Headline"
+              ]
+            }
+          }
+        },
+        {
+          "id": "5113:6152",
+          "name": "Mandatory=Yes, Used for=Headline",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4540.0,
+            "width": 11.0,
+            "height": 36.0
+          }
+        },
+        {
+          "id": "5113:6154",
+          "name": "Mandatory=No, Used for=Headline",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4474.0,
+            "width": 121.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5711:10237",
+          "name": "Mandatory=Yes (text), Used for=Headline",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4420.0,
+            "width": 104.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5711:15571",
+          "name": "Mandatory=Yes, Used for=Field",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4366.0,
+            "width": 11.0,
+            "height": 28.0
+          }
+        },
+        {
+          "id": "5711:15569",
+          "name": "Mandatory=No, Used for=Field",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4308.0,
+            "width": 121.0,
+            "height": 24.0
+          }
+        },
+        {
+          "id": "5711:15567",
+          "name": "Mandatory=Yes (text), Used for=Field",
+          "type": "COMPONENT",
+          "absoluteBoundingBox": {
+            "x": 2327.0,
+            "y": -4254.0,
+            "width": 104.0,
+            "height": 24.0
+          }
+        }
+      ]
+    }
+  ]
+}

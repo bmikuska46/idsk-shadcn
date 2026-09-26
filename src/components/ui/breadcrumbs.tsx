@@ -1,5 +1,5 @@
-import { ChevronLeft, ChevronRight, House } from 'lucide-react'
 
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 export type BreadcrumbItem = {
@@ -19,6 +19,10 @@ export type BreadcrumbsProps = {
   label?: string
 }
 
+/**
+ * IDSK "Omrvinková navigácia": Body 1 (16/24) links, 14/20 on small screens,
+ * each followed 5px later by a small chevron, with 25px before the next item.
+ */
 export function Breadcrumbs({
   className,
   contained = true,
@@ -28,30 +32,32 @@ export function Breadcrumbs({
   label = 'Omrvinková navigácia',
 }: BreadcrumbsProps) {
   const currentIndex = items.length - 1
-  const parent = items.at(-2)
+  const parent = items[items.length - 2]
+  const linkClassName =
+    'min-w-0 break-words rounded-[5px] text-foreground underline hover:text-link hover:decoration-[3px] focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus'
 
   return (
     <nav
       aria-label={label}
       className={cn(
-        'mt-8 text-[16px]/[24px] text-black',
+        'mt-8 text-[14px] leading-5 text-foreground sm:text-[16px] sm:leading-6',
         contained && 'idsk-container',
         className,
       )}
     >
       {collapseOnMobile && parent?.href ? (
         <a
-          className="mb-2 hidden items-center gap-1 text-[#212121] underline hover:text-[#0B4199] hover:decoration-[3px] focus:rounded-[5px] focus:outline focus:outline-[3px] focus:outline-[#D96E00] focus:outline-offset-2 max-[480px]:inline-flex"
+          className={cn(linkClassName, 'mb-2 hidden items-center gap-[5px] max-[480px]:inline-flex')}
           href={parent.href}
         >
-          <ChevronLeft aria-hidden="true" className="h-4 w-4 shrink-0" />
+          <MaterialIcon name="chevronLeft" aria-hidden="true" className="size-6 shrink-0" />
           <span>{parent.label}</span>
         </a>
       ) : null}
       <ol
         className={cn(
-          'flex flex-wrap items-center gap-y-2',
-          collapseOnMobile && 'max-[480px]:hidden',
+          'flex flex-wrap items-center gap-x-[25px] gap-y-2',
+          collapseOnMobile && parent?.href && 'max-[480px]:hidden',
         )}
         role="list"
       >
@@ -62,26 +68,19 @@ export function Breadcrumbs({
           return (
             <li
               aria-current={isCurrent ? 'page' : undefined}
-              className="flex min-w-0 items-center gap-2"
+              className="flex min-w-0 items-center gap-[5px]"
               key={`${item.label}-${index}`}
             >
-              {index > 0 ? (
-                <ChevronRight
-                  aria-hidden="true"
-                  className="h-4 w-4 shrink-0 text-[#757575]"
-                  focusable="false"
-                />
-              ) : null}
               {!isCurrent && item.href ? (
                 <a
                   aria-label={showHomeIcon ? item.label : undefined}
-                  className="min-w-0 break-words rounded-[5px] text-[#212121] underline hover:text-[#0B4199] hover:decoration-[3px] focus:outline focus:outline-[3px] focus:outline-[#D96E00] focus:outline-offset-2"
+                  className={linkClassName}
                   href={item.href}
                 >
                   {showHomeIcon ? (
-                    <House
+                    <MaterialIcon name="home"
                       aria-hidden="true"
-                      className="h-4 w-4 shrink-0"
+                      className="size-6 shrink-0"
                       focusable="false"
                     />
                   ) : (
@@ -89,8 +88,15 @@ export function Breadcrumbs({
                   )}
                 </a>
               ) : (
-                <span className="min-w-0 break-words text-black">{item.label}</span>
+                <span className="min-w-0 break-words text-foreground">{item.label}</span>
               )}
+              {!isCurrent ? (
+                <MaterialIcon name="chevronRight"
+                  aria-hidden="true"
+                  className="size-4 shrink-0 text-[#505A5F]"
+                  focusable="false"
+                />
+              ) : null}
             </li>
           )
         })}

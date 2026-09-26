@@ -1,6 +1,5 @@
 'use client'
 
-import { AlertTriangle, CheckCircle, Upload, X } from 'lucide-react'
 import {
   forwardRef,
   useCallback,
@@ -11,8 +10,12 @@ import {
   type ChangeEvent,
   type DragEvent,
   type InputHTMLAttributes,
+  type ReactNode,
 } from 'react'
 
+import { buttonVariants } from '@/components/ui/button'
+import { FieldError, FieldErrorIcon, FieldHint, FieldLabelText, type RequiredIndicator } from '@/components/ui/field'
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 export type FileUploadItem = {
@@ -22,7 +25,7 @@ export type FileUploadItem = {
   name: string
   progress?: number
   size?: number
-  status?: 'uploading' | 'success' | 'error'
+  status?: 'selected' | 'uploading' | 'success' | 'error'
 }
 
 export type FileUploadProps = Omit<
@@ -32,6 +35,7 @@ export type FileUploadProps = Omit<
   buttonLabel?: string
   className?: string
   defaultFiles?: FileUploadItem[]
+  /** Renders the drop zone (default). `false` renders the compact "Vyberte súbor" button. */
   dragAndDrop?: boolean
   error?: string
   files?: FileUploadItem[]
@@ -39,41 +43,53 @@ export type FileUploadProps = Omit<
   inputClassName?: string
   label?: string
   headingLevel?: 2 | 3 | 4
+  /** Maximum bytes per file. Defaults to 15 MiB. */
+  maxSizeBytes?: number
   maxSizeLabel?: string
+  /** Additional client validation. Return a message to reject the file. */
+  validateFile?: (file: File) => string | undefined
+  onFilesRejected?: (files: { file: File; error: string }[]) => void
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void
   onFilesChange?: (files: FileUploadItem[], selectedFiles?: File[]) => void
   onRemoveFile?: (file: FileUploadItem, index: number) => void
   optional?: boolean
+  /** Text after the label for optional uploads. */
+  optionalText?: ReactNode
+  /** Show the mandatory marker as a red asterisk (default) or as "(povinné pole)". */
+  requiredIndicator?: RequiredIndicator
+  /** Prompt inside the drop zone. */
   subtitle?: string
   supportedFormats?: string
+  /** Tooltip mark rendered after the label, see `InfoTooltip`. */
+  tooltip?: ReactNode
 }
 
-function formatFileSize(size?: number) {
+/** IDSK shows sizes as "kB" and "MB" with one decimal place for megabytes. */
+export function formatFileSize(size?: number) {
   if (size === undefined) return undefined
   if (size < 1024) return `${size} B`
-  if (size < 1024 * 1024) return `${Math.round(size / 1024)} KB`
-  return `${(size / 1024 / 1024).toFixed(1)} MB`
+  if (size < 1024 * 1024) return `${Math.round(size / 1024)} kB`
+  return `${(size / 1024 / 1024).toFixed(1).replace('.', ',')} MB`
 }
 
 function fileKey(file: FileUploadItem, index: number) {
   return file.id ?? `${file.name}-${file.size ?? 'unknown'}-${index}`
 }
 
-const CloudUploadIcon = () => (
-  <svg
-    aria-hidden="true"
-    className="mx-auto mb-4 h-10 w-10 text-primary-dark"
-    fill="none"
-    focusable="false"
-    viewBox="0 0 40 40"
-  >
-    <path
-      d="M32.25 16.7332C31.1167 10.9832 26.0667 6.6665 20 6.6665C15.1833 6.6665 11 9.39984 8.91667 13.3998C3.9 13.9332 0 18.1832 0 23.3332C0 28.8498 4.48333 33.3332 10 33.3332H31.6667C36.2667 33.3332 40 29.5998 40 24.9998C40 20.5998 36.5833 17.0332 32.25 16.7332ZM23.3333 21.6665V28.3332H16.6667V21.6665H11.6667L20 13.3332L28.3333 21.6665H23.3333Z"
-      fill="currentColor"
-    />
-  </svg>
-)
+/** Slovak plural for "N súborov": 1 súbor, 2-4 súbory, 5+ súborov. */
+function pluralFiles(count: number) {
+  if (count === 1) return '1 súbor'
+  if (count >= 2 && count <= 4) return `${count} súbory`
+  return `${count} súborov`
+}
 
+/**
+ * IDSK "Nahranie súboru". Multiple-file mode renders the N90 drop zone with a
+ * 2px N600 border and 10px radius: cloud icon, prompt, accepted formats and a
+ * secondary "Pridať súbor" button, all in P600. Uploaded files are listed below
+ * the zone as 49px N90 rows with a 1px N300 border, Error alert border when the
+ * upload failed. Single-file mode renders the button with the selection text.
+ */
 export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
   (
     {
@@ -85,21 +101,27 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
       dragAndDrop = true,
       error,
       files,
-      hint = 'Spresnite požiadavku na nahrávaný súbor.',
+      hint,
       headingLevel = 2,
       id,
       inputClassName,
-      label = 'Nahrajte súbor',
-      maxSizeLabel = '15 MB',
+      label = 'Nahrajte súbory',
+      maxSizeBytes = 15 * 1024 * 1024,
+      maxSizeLabel = formatFileSize(maxSizeBytes),
+      validateFile,
+      onFilesRejected,
       multiple = true,
       name,
       onChange,
       onFilesChange,
       onRemoveFile,
       optional = false,
+      optionalText = '(nepovinné prílohy)',
       required = false,
-      subtitle = 'Nahrajte súbor alebo ho sem presuňte.',
-      supportedFormats = 'JPG, PNG, DOC, DOCX, PDF',
+      requiredIndicator,
+      subtitle = 'Zvoľte súbor a nahrajte ho alebo preneste zvolenú prílohu sem.',
+      supportedFormats = 'jpg, png, doc, docx, pdf',
+      tooltip,
       ...inputProps
     },
     forwardedRef,
@@ -107,14 +129,17 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
     const generatedId = useId()
     const inputId = id ?? `file-upload-${generatedId.replace(/:/g, '')}`
     const titleId = `${inputId}-title`
-    const hintId = `${inputId}-hint`
-    const subtitleId = `${inputId}-subtitle`
+    const titleTextId = `${inputId}-title-text`
+    const hintId = hint ? `${inputId}-hint` : undefined
+    const subtitleId = dragAndDrop ? `${inputId}-subtitle` : undefined
     const formatsId = `${inputId}-formats`
     const maxSizeId = `${inputId}-max-size`
     const errorId = error ? `${inputId}-error` : undefined
     const selectionStatusId = !dragAndDrop ? `${inputId}-selection-status` : undefined
     const filesTitleId = `${inputId}-files-title`
     const describedBy = [
+      inputProps['aria-describedby'],
+      `${inputId}-validation`,
       hintId,
       subtitleId,
       formatsId,
@@ -125,12 +150,17 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
       .filter(Boolean)
       .join(' ')
     const inputRef = useRef<HTMLInputElement>(null)
+    const compactButtonRef = useRef<HTMLButtonElement>(null)
+    const selectionCounter = useRef(0)
     const [internalFiles, setInternalFiles] = useState<FileUploadItem[]>(defaultFiles)
     const [dragging, setDragging] = useState(false)
     const [announcement, setAnnouncement] = useState('')
+    const [validationError, setValidationError] = useState('')
     const displayedFiles = files ?? internalFiles
     const isUploading = displayedFiles.some((file) => file.status === 'uploading')
     const Heading = headingLevel === 3 ? 'h3' : headingLevel === 4 ? 'h4' : 'h2'
+    const FilesHeading = headingLevel === 3 ? 'h4' : headingLevel === 4 ? 'h5' : 'h3'
+    const resolvedButtonLabel = buttonLabel ?? 'Pridať súbor'
 
     const syncNativeFiles = useCallback((nextFiles: FileUploadItem[]) => {
       if (!inputRef.current || typeof DataTransfer === 'undefined') return
@@ -146,30 +176,71 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
       syncNativeFiles(displayedFiles)
     }, [displayedFiles, syncNativeFiles])
 
+    useEffect(() => {
+      const form = inputRef.current?.form
+      const reset = (event: Event) => {
+        setTimeout(() => {
+          if (event.defaultPrevented) return
+          const resetFiles = files ?? defaultFiles
+          if (files === undefined) setInternalFiles(resetFiles)
+          syncNativeFiles(resetFiles)
+          setValidationError('')
+          setAnnouncement('')
+        })
+      }
+      form?.addEventListener('reset', reset)
+      return () => form?.removeEventListener('reset', reset)
+    }, [files, defaultFiles, syncNativeFiles])
+
     const updateFiles = (nextFiles: FileUploadItem[], selectedFiles?: File[]) => {
       if (files === undefined) setInternalFiles(nextFiles)
       onFilesChange?.(nextFiles, selectedFiles)
     }
 
     const appendFiles = (fileList: FileList | null) => {
-      if (!fileList?.length || disabled) return
+      if (!fileList?.length || disabled) {
+        syncNativeFiles(displayedFiles)
+        return
+      }
 
-      const selectedFiles = Array.from(fileList)
+      const rejected: { file: File; error: string }[] = []
+      const formats = accept.split(',').map((format) => format.trim().toLowerCase()).filter(Boolean)
+      const selectedFiles = Array.from(fileList).filter((file) => {
+        const matchesFormat = formats.length === 0 || formats.some((format) =>
+          format.startsWith('.') ? file.name.toLowerCase().endsWith(format)
+            : format.endsWith('/*') ? file.type.startsWith(format.slice(0, -1))
+              : file.type === format,
+        )
+        const reason = !matchesFormat ? 'Nepodporovaný formát súboru.'
+          : file.size > maxSizeBytes ? `Súbor prekračuje maximálnu veľkosť ${maxSizeLabel}.`
+            : validateFile?.(file)
+        if (reason) rejected.push({ file, error: reason })
+        return !reason
+      })
+      setValidationError(rejected.map(({ file, error }) => `${file.name}: ${error}`).join(' '))
+      if (rejected.length) onFilesRejected?.(rejected)
+      if (!selectedFiles.length) {
+        syncNativeFiles(displayedFiles)
+        return
+      }
       const nextItems = selectedFiles.map<FileUploadItem>((file) => ({
         file,
-        id: `${file.name}-${file.lastModified}-${file.size}`,
+        id: `${file.name}-${file.lastModified}-${file.size}-${++selectionCounter.current}`,
         name: file.name,
         size: file.size,
-        status: 'success',
+        status: 'selected',
       }))
       const nextFiles = multiple ? [...displayedFiles, ...nextItems] : nextItems.slice(0, 1)
 
       updateFiles(nextFiles, selectedFiles)
-      syncNativeFiles(nextFiles)
+      syncNativeFiles(files === undefined ? nextFiles : files)
+      if (!nextItems.length) return
       setAnnouncement(
-        nextItems.length === 1
+        files !== undefined ? 'Výber bol odovzdaný na spracovanie.' : nextItems.length === 1
           ? `Súbor ${nextItems[0].name} bol vybraný.`
-          : `Boli vybrané ${nextItems.length} súbory.`,
+          : nextItems.length <= 4
+            ? `Boli vybrané ${pluralFiles(nextItems.length)}.`
+            : `Bolo vybraných ${pluralFiles(nextItems.length)}.`,
       )
     }
 
@@ -185,18 +256,135 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
     }
 
     const removeFile = (file: FileUploadItem, index: number) => {
+      if (disabled) return
       const nextFiles = displayedFiles.filter((_, currentIndex) => currentIndex !== index)
       updateFiles(nextFiles)
-      syncNativeFiles(nextFiles)
-      setAnnouncement(`Súbor ${file.name} bol odstránený.`)
+      syncNativeFiles(files === undefined ? nextFiles : files)
+      setAnnouncement(files === undefined ? `Súbor ${file.name} bol odstránený.` : `Požiadavka na odstránenie súboru ${file.name} bola odovzdaná na spracovanie.`)
       onRemoveFile?.(file, index)
     }
 
-    const selectionText = displayedFiles.length
-      ? displayedFiles.length === 1
-        ? 'Vybraný je 1 súbor.'
-        : `Vybrané sú ${displayedFiles.length} súbory.`
-      : 'Nie je vybraný žiadny súbor.'
+    const selectionText = displayedFiles.length ? 'Vyberte ďalší súbor' : 'Nie je vybraný žiadny súbor'
+
+    const formatsInfo = (
+      <>
+        <span className="block" id={formatsId}>
+          Podporované formáty: {supportedFormats}
+        </span>
+        <span className="block" id={maxSizeId}>
+          Maximálna veľkosť súboru: {maxSizeLabel}
+        </span>
+      </>
+    )
+
+    const fileList = displayedFiles.length ? (
+      <section
+        aria-busy={isUploading || undefined}
+        aria-labelledby={filesTitleId}
+        className={dragAndDrop ? 'mt-[15px] sm:mt-5' : undefined}
+      >
+        <FilesHeading
+          className={cn(
+            'mb-5 text-[20px] leading-[26px] font-bold text-foreground',
+            !dragAndDrop && 'sr-only',
+          )}
+          id={filesTitleId}
+        >
+          Vybrané súbory
+        </FilesHeading>
+        <ul className="flex flex-col gap-[10px]">
+          {displayedFiles.map((file, index) => {
+            const status = file.status ?? 'selected'
+            const statusId = `${inputId}-file-${index}-status`
+            const itemErrorId = status === 'error' && file.error ? `${inputId}-file-${index}-error` : undefined
+            const progress = Math.max(0, Math.min(100, file.progress ?? 0))
+            const statusText =
+              status === 'uploading'
+                ? `Nahrávanie súboru ${file.name} prebieha. Priebeh nahrávania je ${progress} %.`
+                : status === 'error'
+                  ? `Súbor ${file.name} sa nepodarilo nahrať.`
+                  : status === 'success' ? `Súbor ${file.name} bol úspešne nahraný.`
+                    : `Súbor ${file.name} bol vybraný.`
+
+            return (
+              <li
+                aria-busy={status === 'uploading' || undefined}
+                aria-describedby={[statusId, itemErrorId].filter(Boolean).join(' ')}
+                className={cn(
+                  'grid min-h-[49px] grid-cols-[minmax(0,1fr)_49px] items-center gap-x-[10px] rounded-[5px] bg-surface py-0 pr-0 pl-[10px] ring-1 ring-inset',
+                  'sm:grid-cols-[minmax(0,1fr)_auto_49px] sm:gap-x-[10px]',
+                  status === 'error' ? 'ring-error' : 'ring-border',
+                )}
+                key={fileKey(file, index)}
+              >
+                <span className="sr-only" id={statusId}>
+                  {statusText}
+                </span>
+                <p className="col-start-1 row-start-1 flex min-w-0 items-center gap-[10px] break-words text-[19px] leading-7 text-foreground">
+                  {status === 'uploading' ? (
+                    <MaterialIcon name="upload" aria-hidden="true" className="size-6 shrink-0 text-foreground-muted" />
+                  ) : status === 'error' ? (
+                    <FieldErrorIcon className="size-6 shrink-0 text-error" />
+                  ) : status === 'selected' ? (
+                    <MaterialIcon name="file" aria-hidden="true" className="size-6 shrink-0 text-foreground-soft" />
+                  ) : (
+                    <MaterialIcon name="checkCircle" aria-hidden="true" className="size-6 shrink-0 text-success" />
+                  )}
+                  <span className="min-w-0 break-words">{file.name}</span>
+                </p>
+                <div className="col-start-1 row-start-2 min-w-0 sm:col-start-2 sm:row-start-1 sm:mr-5 sm:flex sm:items-center sm:justify-end">
+                  {status === 'uploading' ? (
+                    <div className="flex w-full min-w-0 items-center gap-[10px] sm:w-[180px]">
+                      <span className="sr-only" id={`${inputId}-file-${index}-progress-label`}>
+                        Priebeh nahrávania súboru {file.name}
+                      </span>
+                      <div className="flex h-4 min-w-0 flex-1 items-center rounded-[10px] border border-primary-dark p-[3px]">
+                        <progress
+                          aria-labelledby={`${inputId}-file-${index}-progress-label`}
+                          aria-valuetext={`${progress}%`}
+                          className="block h-full w-full appearance-none overflow-hidden rounded-lg [&::-moz-progress-bar]:rounded-lg [&::-moz-progress-bar]:bg-primary-dark [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-primary-dark"
+                          max={100}
+                          value={progress}
+                        >
+                          {progress}%
+                        </progress>
+                      </div>
+                      <span className="shrink-0 text-[16px] leading-6 whitespace-nowrap">{progress}%</span>
+                    </div>
+                  ) : status === 'error' ? (
+                    <p className="min-w-0 break-words text-[16px] leading-6 text-error sm:text-right" id={itemErrorId}>
+                      <span className="sr-only">Chyba: </span>
+                      {file.error ?? 'Nepodarilo sa nahrať súbor.'}
+                    </p>
+                  ) : (
+                    <span className="text-[16px] leading-6 whitespace-nowrap text-foreground">
+                      {formatFileSize(file.size)}
+                    </span>
+                  )}
+                </div>
+                <div className="col-start-2 row-start-1 flex size-[49px] items-center justify-center sm:col-start-3">
+                  <button
+                    aria-label={`Odstrániť súbor ${file.name}`}
+                    className={cn(
+                      'inline-flex size-[49px] items-center justify-center rounded-[5px]',
+                      status === 'error'
+                        ? 'text-error hover:ring-[5px] hover:ring-foreground-muted active:bg-surface-error'
+                        : 'text-link hover:ring-[5px] hover:ring-foreground-muted active:bg-surface-primary',
+                      'focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
+                    )}
+                    disabled={disabled}
+                    onClick={() => removeFile(file, index)}
+                    type="button"
+                  >
+                    <MaterialIcon name="close" aria-hidden="true" className="size-[25px]" />
+                  </button>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+    ) : null
 
     return (
       <div className={cn('w-full', className)}>
@@ -204,125 +392,46 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           {announcement}
         </div>
 
-        <div aria-describedby={describedBy} aria-labelledby={titleId} role="region">
-          <Heading className="mb-[10px] text-2xl leading-tight font-bold text-foreground" id={titleId}>
-            {label}
-            {required ? (
-              <span aria-hidden="true" className="ml-1 text-warning">
-                *
-              </span>
-            ) : optional ? (
-              <span className="ml-1 text-base font-normal text-foreground-muted">
-                (nepovinné pole)
-              </span>
-            ) : null}
+        <FieldError id={`${inputId}-validation`} prefix={validationError ? 'Chyba: ' : ''} role="alert">{validationError}</FieldError>
+        <div
+          aria-describedby={describedBy}
+          aria-labelledby={titleTextId}
+          className={cn(!dragAndDrop && error && 'border-l-[5px] border-error pl-[15px]')}
+          role="region"
+        >
+          <Heading
+            className={cn(
+              'text-[20px] leading-[26px] font-bold text-foreground sm:text-[24px] sm:leading-[35px]',
+              hint ? (dragAndDrop ? 'mb-[10px]' : 'mb-0') : 'mb-[15px] sm:mb-5',
+            )}
+            id={titleId}
+          >
+            <FieldLabelText
+              optional={optional}
+              optionalText={optionalText}
+              required={required}
+              requiredIndicator={requiredIndicator}
+              textId={titleTextId}
+              tooltip={tooltip}
+            >
+              {label}
+              {!dragAndDrop && required && requiredIndicator !== 'text' ? (
+                <span className="sr-only"> (povinné pole)</span>
+              ) : null}
+            </FieldLabelText>
           </Heading>
-          <p className="mb-5 text-[19px] leading-7 text-foreground-muted" id={hintId}>
-            {hint}
-          </p>
-
-          {displayedFiles.length ? (
-            <section aria-busy={isUploading || undefined} aria-labelledby={filesTitleId} className="mb-5">
-              <h3 className="mb-3 text-[20px] leading-7 font-bold text-foreground" id={filesTitleId}>
-                Nahrané súbory
-              </h3>
-              <ul className="space-y-3">
-                {displayedFiles.map((file, index) => {
-                  const status = file.status ?? 'success'
-                  const statusId = `${inputId}-file-${index}-status`
-                  const itemErrorId = status === 'error' && file.error ? `${inputId}-file-${index}-error` : undefined
-                  const progress = Math.max(0, Math.min(100, file.progress ?? 0))
-                  const statusText =
-                    status === 'uploading'
-                      ? `Nahrávanie súboru ${file.name} prebieha. Priebeh nahrávania je ${progress} %.`
-                      : status === 'error'
-                        ? `Súbor ${file.name} sa nepodarilo nahrať.`
-                        : `Súbor ${file.name} bol úspešne nahraný.`
-
-                  return (
-                    <li
-                      aria-busy={status === 'uploading' || undefined}
-                      aria-describedby={[statusId, itemErrorId].filter(Boolean).join(' ')}
-                      className={cn(
-                        'grid grid-cols-[40px_minmax(0,1fr)_40px] items-center gap-x-3 gap-y-2 rounded-[5px] border bg-surface-muted px-4 py-4',
-                        'md:grid-cols-[40px_minmax(0,1fr)_minmax(160px,34%)_40px]',
-                        status === 'error' ? 'border-warning' : 'border-border',
-                      )}
-                      key={fileKey(file, index)}
-                    >
-                      <span className="sr-only" id={statusId}>
-                        {statusText}
-                      </span>
-                      <div className="col-start-1 row-start-1 flex h-10 w-10 items-center justify-center">
-                        {status === 'uploading' ? (
-                          <Upload aria-hidden="true" className="h-7 w-7 text-primary-dark" />
-                        ) : status === 'error' ? (
-                          <AlertTriangle aria-hidden="true" className="h-7 w-7 text-warning" />
-                        ) : (
-                          <CheckCircle aria-hidden="true" className="h-7 w-7 text-success" />
-                        )}
-                      </div>
-                      <p className="col-start-2 row-start-1 min-w-0 break-words text-[19px] leading-7 text-foreground">
-                        {file.name}
-                      </p>
-                      <div className="col-start-2 row-start-2 min-w-0 md:col-start-3 md:row-start-1 md:flex md:items-center md:justify-end">
-                        {status === 'uploading' ? (
-                          <div className="flex w-full min-w-0 items-center gap-3">
-                            <span className="sr-only" id={`${inputId}-file-${index}-progress-label`}>
-                              Priebeh nahrávania súboru {file.name}
-                            </span>
-                            <div className="flex h-4 min-w-0 flex-1 items-center rounded-[10px] border-2 border-primary-dark p-0.5">
-                              <progress
-                                aria-labelledby={`${inputId}-file-${index}-progress-label`}
-                                aria-valuetext={`${progress} %`}
-                                className="block h-full w-full overflow-hidden rounded-lg appearance-none [&::-moz-progress-bar]:rounded-lg [&::-moz-progress-bar]:bg-primary-dark [&::-webkit-progress-bar]:bg-transparent [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-primary-dark"
-                                max={100}
-                                value={progress}
-                              >
-                                {progress} %
-                              </progress>
-                            </div>
-                            <span className="shrink-0 text-base leading-6 whitespace-nowrap">{progress} %</span>
-                          </div>
-                        ) : status === 'error' ? (
-                          <p className="min-w-0 break-words text-base leading-6 text-warning md:text-right" id={itemErrorId}>
-                            <span>Chyba: </span>
-                            {file.error ?? 'Nepodarilo sa nahrať súbor.'}
-                          </p>
-                        ) : (
-                          <span className="text-[19px] leading-7 whitespace-nowrap">
-                            {formatFileSize(file.size)}
-                          </span>
-                        )}
-                      </div>
-                      <div className="col-start-3 row-start-1 flex h-10 w-10 items-center justify-center md:col-start-4">
-                        <button
-                          aria-label={`Odstrániť súbor ${file.name}`}
-                          className={cn(
-                            'inline-flex h-10 w-10 items-center justify-center rounded-md',
-                            'hover:ring-[4px] hover:ring-foreground-muted active:bg-surface-primary',
-                            'focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
-                            status === 'error' ? 'text-warning' : 'text-primary-dark',
-                          )}
-                          onClick={() => removeFile(file, index)}
-                          type="button"
-                        >
-                          <X aria-hidden="true" className="h-5 w-5" />
-                        </button>
-                      </div>
-                    </li>
-                  )
-                })}
-              </ul>
-            </section>
+          {hint ? (
+            <FieldHint className="mb-[15px] text-[16px] leading-6 sm:mb-5 sm:text-[19px] sm:leading-7" id={hintId}>
+              {hint}
+            </FieldHint>
           ) : null}
 
           <input
             {...inputProps}
             accept={accept}
             aria-describedby={describedBy}
-            aria-invalid={error ? true : undefined}
-            aria-labelledby={titleId}
+            aria-invalid={error || validationError ? true : inputProps['aria-invalid']}
+            aria-labelledby={titleTextId}
             className={cn('peer sr-only', inputClassName)}
             disabled={disabled}
             id={inputId}
@@ -334,9 +443,15 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               if (typeof forwardedRef === 'function') forwardedRef(node)
               else if (forwardedRef) forwardedRef.current = node
             }}
-            required={
-              required && !displayedFiles.some((item) => item.file)
-            }
+            required={required && !displayedFiles.some((item) => item.file || item.status === 'success')}
+            onInvalid={(event) => {
+              inputProps.onInvalid?.(event)
+              if (!dragAndDrop && !event.defaultPrevented) {
+                event.preventDefault()
+                compactButtonRef.current?.focus()
+                setValidationError('Vyberte súbor.')
+              }
+            }}
             tabIndex={dragAndDrop ? undefined : -1}
             type="file"
           />
@@ -344,13 +459,13 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
           {dragAndDrop ? (
             <label
               className={cn(
-                'group block rounded-md border-2 border-dashed px-5 py-[30px] text-center text-primary-dark transition-all duration-150',
-                'peer-focus:bg-surface-primary peer-focus:outline-solid peer-focus:outline-[3px] peer-focus:outline-offset-2 peer-focus:outline-focus',
+                'group flex flex-col items-center gap-[10px] rounded-[10px] border-2 bg-surface px-[13px] py-[18px] text-center transition-[box-shadow,background-color] duration-150 sm:px-[18px] sm:py-[28px]',
+                'peer-focus:outline-solid peer-focus:outline-[3px] peer-focus:outline-offset-2 peer-focus:outline-focus',
                 disabled
-                  ? 'cursor-not-allowed border-border bg-surface-muted opacity-60'
-                  : 'cursor-pointer border-foreground-muted bg-white hover:bg-surface-primary hover:ring-[4px] hover:ring-foreground-muted',
-                dragging && !disabled && 'bg-surface-primary ring-[4px] ring-foreground-muted',
-                error && 'border-warning',
+                  ? 'cursor-not-allowed border-border text-foreground-muted'
+                  : 'cursor-pointer border-foreground-muted text-primary-dark hover:bg-surface-primary hover:ring-[5px] hover:ring-foreground-muted',
+                dragging && !disabled && 'bg-surface-primary ring-[5px] ring-foreground-muted',
+                error && 'border-error',
               )}
               htmlFor={inputId}
               onDragEnter={(event) => {
@@ -363,67 +478,68 @@ export const FileUpload = forwardRef<HTMLInputElement, FileUploadProps>(
               onDragOver={(event) => event.preventDefault()}
               onDrop={handleDrop}
             >
-              <CloudUploadIcon />
-              <p className="mt-2 text-[20px] leading-[26px] font-bold" id={subtitleId}>
-                {subtitle}
-              </p>
-              <div className="mt-1 space-y-1 text-[19px] leading-7">
-                <div id={formatsId}>
-                  Podporované formáty: <span className="font-bold">{supportedFormats}</span>
-                </div>
-                <p id={maxSizeId}>
-                  Maximálna veľkosť súboru: <span className="font-bold">{maxSizeLabel}</span>
-                </p>
-              </div>
-              <span className="mt-6 inline-flex items-center justify-center rounded-[5px] border-2 border-primary-dark bg-white px-5 py-3 font-bold text-primary-dark transition-colors duration-150 group-hover:bg-primary-dark group-hover:text-white">
-                <Upload aria-hidden="true" className="mr-2 h-5 w-5 shrink-0" />
-                <span>{buttonLabel ?? (multiple ? 'Vyberte súbory' : 'Vyberte súbor')}</span>
+              <MaterialIcon name="cloudUpload" aria-hidden="true" className="size-10 shrink-0" />
+              <span className="block">
+                <span className="block text-[19px] leading-6 font-bold sm:text-[20px] sm:leading-[26px]" id={subtitleId}>
+                  {subtitle}
+                </span>
+                <span className="block text-[16px] leading-6 sm:text-[19px] sm:leading-7">{formatsInfo}</span>
+              </span>
+              <span
+                className={cn(
+                  buttonVariants({ variant: 'secondary', size: 'lg' }),
+                  disabled
+                    ? 'border-disabled text-disabled'
+                    : 'group-hover:underline group-active:bg-surface-primary',
+                )}
+              >
+                <MaterialIcon name="add" aria-hidden="true" className="size-[25px] shrink-0" />
+                <span>{resolvedButtonLabel}</span>
                 <span className="sr-only"> pre pole {label}</span>
               </span>
             </label>
           ) : (
-            <div>
-              <p className="mb-5 text-[19px] leading-7 text-foreground-muted" id={subtitleId}>
-                {subtitle}
-              </p>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex flex-col gap-[15px] sm:gap-5">
+              {fileList}
+              {error ? (
+                <FieldError className="font-bold" id={errorId}>
+                  {error}
+                </FieldError>
+              ) : null}
+              <div className="flex flex-col gap-[15px] sm:flex-row sm:items-center sm:gap-5">
                 <button
                   aria-describedby={describedBy}
-                  className={cn(
-                    'inline-flex min-h-12 items-center justify-center gap-2 rounded-[5px] border-2 px-5 py-3 font-bold tracking-wide',
-                    'focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
-                    disabled
-                      ? 'cursor-not-allowed border-border bg-white text-border'
-                      : 'border-primary-dark bg-white text-primary-dark hover:underline hover:ring-[4px] hover:ring-foreground-muted active:bg-surface-primary',
-                  )}
+                  className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'self-start')}
                   disabled={disabled}
+                  ref={compactButtonRef}
                   onClick={() => inputRef.current?.click()}
                   type="button"
                 >
-                  <Upload aria-hidden="true" className="h-5 w-5" />
-                  <span>{buttonLabel ?? (multiple ? 'Vyberte súbory' : 'Vyberte súbor')}</span>
-                  <span className="sr-only"> pre pole {label}</span>
+                  <MaterialIcon name="add" aria-hidden="true" className="size-[25px] shrink-0" />
+                  <span>{resolvedButtonLabel}</span>
+                  <span className="sr-only">
+                    {' '}
+                    pre pole {label}
+                    {required ? ' (povinné pole)' : null}
+                  </span>
                 </button>
-                <p className="text-base leading-6 text-foreground-muted" id={selectionStatusId}>
+                <p
+                  className={cn('text-[16px] leading-6 sm:text-[19px] sm:leading-7', disabled ? 'text-foreground-muted' : 'text-foreground')}
+                  id={selectionStatusId}
+                >
                   {selectionText}
                 </p>
               </div>
-              <div className="mt-3 space-y-1 text-[19px] leading-7 text-foreground-muted">
-                <div id={formatsId}>
-                  Podporované formáty: <span className="font-bold">{supportedFormats}</span>
-                </div>
-                <p id={maxSizeId}>
-                  Maximálna veľkosť súboru: <span className="font-bold">{maxSizeLabel}</span>
-                </p>
-              </div>
+              <div className="text-[16px] leading-6 text-foreground-muted sm:text-[19px] sm:leading-7">{formatsInfo}</div>
             </div>
           )}
 
-          {error ? (
-            <p className="mt-3 text-[19px] leading-7 text-warning" id={errorId}>
-              <span>Chyba: </span>
+          {dragAndDrop ? fileList : null}
+
+          {dragAndDrop && error ? (
+            <FieldError className="mt-[10px]" id={errorId}>
               {error}
-            </p>
+            </FieldError>
           ) : null}
         </div>
       </div>

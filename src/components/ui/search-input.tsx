@@ -1,6 +1,5 @@
 'use client'
 
-import { Search } from 'lucide-react'
 import {
   forwardRef,
   useId,
@@ -9,6 +8,7 @@ import {
   type InputHTMLAttributes,
 } from 'react'
 
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 type SearchInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> & {
@@ -30,7 +30,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
       buttonClassName,
       className,
       defaultValue,
-      disableSubmitWhenEmpty = true,
+      disableSubmitWhenEmpty = false,
       disabled,
       fullWidth = true,
       id,
@@ -66,7 +66,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     return (
       <form
         className={cn(
-          'group flex rounded-[8px] focus-within:outline focus-within:outline-3 focus-within:outline-offset-[2px] focus-within:outline-focus hover:shadow-[0_0_0_3px_var(--foreground-muted)]',
+          'group flex rounded-[5px] focus-within:outline focus-within:outline-3 focus-within:outline-offset-[2px] focus-within:outline-focus hover:shadow-[0_0_0_5px_var(--foreground-muted)] has-[input:disabled]:hover:shadow-none',
           fullWidth ? 'w-full' : 'w-fit',
           className,
         )}
@@ -86,16 +86,16 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         </label>
         <div
           className={cn(
-            'relative flex grow rounded-l-[8px] rounded-r-none border-2 border-r-0 border-border-strong bg-white',
+            'relative flex grow rounded-l-[5px] rounded-r-none border-2 border-r-0 border-border-strong bg-white has-[:disabled]:border-border-muted',
           )}
         >
           <input
             className={cn(
-              'w-full rounded-l-[8px] rounded-r-none bg-white px-4 text-foreground-soft placeholder:text-foreground-muted outline-none focus:outline-none focus-visible:outline-none',
-              'disabled:border-border disabled:text-foreground-muted disabled:placeholder:text-foreground-muted',
+              'w-full rounded-l-[5px] rounded-r-none bg-white px-4 text-foreground-soft placeholder:text-foreground-muted outline-none focus:outline-none focus-visible:outline-none',
+              'disabled:cursor-not-allowed disabled:text-foreground-muted disabled:placeholder:text-foreground-muted',
               size === 'large'
-                ? 'h-12 text-xl leading-8'
-                : 'h-10 text-base leading-6',
+                ? 'h-11 text-[19px] leading-7'
+                : 'h-9 text-[16px] leading-6',
               inputClassName,
             )}
             disabled={disabled}
@@ -110,7 +110,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         <button
           aria-label={buttonAriaLabel}
           className={cn(
-            'flex shrink-0 self-stretch items-center justify-center rounded-r-[8px] rounded-l-none bg-primary text-white outline-none transition-colors focus:outline-none focus-visible:outline-none active:bg-primary-dark',
+            'flex shrink-0 self-stretch items-center justify-center rounded-r-[5px] rounded-l-none bg-primary text-white outline-none transition-colors focus:outline-none focus-visible:outline-none active:bg-primary-dark',
             'hover:bg-primary/90 disabled:bg-disabled',
             size === 'large' ? 'w-[3.25rem]' : 'w-12',
             buttonClassName,
@@ -118,7 +118,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           disabled={isSubmitDisabled}
           type="submit"
         >
-          <Search
+          <MaterialIcon name="search"
             aria-hidden="true"
             className={size === 'large' ? 'h-8 w-8' : 'h-5 w-5'}
           />

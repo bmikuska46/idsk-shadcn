@@ -9,7 +9,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'IDSK shadcn – React komponenty pre slovenské e-služby',
+    default: 'IDSK shadcn - React komponenty pre slovenské e-služby',
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -40,20 +40,20 @@ export const metadata: Metadata = {
     locale: 'sk_SK',
     url: '/',
     siteName: SITE_NAME,
-    title: 'IDSK shadcn – React komponenty pre slovenské e-služby',
+    title: 'IDSK shadcn - React komponenty pre slovenské e-služby',
     description: SITE_DESCRIPTION,
     images: [
       {
         url: '/og',
         width: 1200,
         height: 630,
-        alt: 'IDSK shadcn – React komponenty podľa dizajnového systému IDSK 3.1',
+        alt: 'IDSK shadcn - React komponenty podľa dizajnového systému IDSK 3.1',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IDSK shadcn – React komponenty pre slovenské e-služby',
+    title: 'IDSK shadcn - React komponenty pre slovenské e-služby',
     description: SITE_DESCRIPTION,
     images: ['/og'],
   },

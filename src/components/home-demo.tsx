@@ -1,13 +1,17 @@
 'use client'
 
-import { Home, Search } from 'lucide-react'
+import { FileText, Home, Search } from 'lucide-react'
 import { useState } from 'react'
 
 import { IdskAccordion } from '@/components/ui/accordion'
+import { AnnouncementBar } from '@/components/ui/announcement-bar'
 import { Breadcrumbs } from '@/components/ui/breadcrumbs'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { CheckboxGroup } from '@/components/ui/checkbox-group'
+import { CookieBar } from '@/components/ui/cookie-bar'
+import { DataPanel } from '@/components/ui/data-panel'
+import { Divider } from '@/components/ui/divider'
 import { ErrorSummary } from '@/components/ui/error-summary'
 import { FeedbackBar } from '@/components/ui/feedback-bar'
 import { FileUpload } from '@/components/ui/file-upload'
@@ -15,11 +19,13 @@ import { IdskFooter } from '@/components/ui/footer'
 import { IdskHeader } from '@/components/ui/header'
 import { InformationBar } from '@/components/ui/information-bar'
 import { Input } from '@/components/ui/input'
+import { MandatoryFieldLegend } from '@/components/ui/mandatory-field-legend'
 import { IdskRadioGroup } from '@/components/ui/radio-group'
 import { SearchInput } from '@/components/ui/search-input'
 import { Select } from '@/components/ui/select'
 import { Signpost } from '@/components/ui/signpost'
 import { Textarea } from '@/components/ui/textarea'
+import { InfoTooltip } from '@/components/ui/tooltip'
 
 const placeholderImage =
   'https://placehold.co/960x540/EFF5FE/126DFF?text=IDSK'
@@ -27,14 +33,18 @@ const placeholderImage =
 export function HomeDemo() {
   const [radioValue, setRadioValue] = useState('citizen')
   const [checkboxValues, setCheckboxValues] = useState<string[]>(['notifications'])
+  const [cookieBarOpen, setCookieBarOpen] = useState(false)
+  const [announcementOpen, setAnnouncementOpen] = useState(true)
 
   return (
     <div className="min-w-0 bg-background text-foreground">
+      <a className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:p-3" href="#main-content">Preskočiť na hlavný obsah</a>
       <IdskHeader
         actions={[
           { label: 'Prihlásiť sa' },
           { label: 'Kontakt', variant: 'secondary' },
         ]}
+        showOfficialBanner
         nav={[
           { href: '#instalacia', label: 'Inštalácia' },
           { href: '#komponenty', label: 'Komponenty', active: true },
@@ -45,7 +55,6 @@ export function HomeDemo() {
         ]}
         search
         serviceName="IDSK shadcn"
-        tagline="Neoficiálna ukážka React komponentov"
         variant="website"
       />
 
@@ -58,11 +67,11 @@ export function HomeDemo() {
         ]}
       />
 
-      <main className="pb-16">
+      <main className="pb-16" id="main-content" tabIndex={-1}>
         <section className="idsk-container py-8 md:py-12">
           <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr]">
             <div className="space-y-6">
-              <span className="inline-flex rounded-full bg-surface-primary px-4 py-2 text-sm font-bold text-primary-dark">
+              <span className="inline-flex rounded-[5px] bg-surface-primary px-[10px] py-[2px] text-[16px] leading-6 font-bold text-link">
                 Neoficiálna ukážka shadcn komponentov
               </span>
               <div className="space-y-4">
@@ -74,7 +83,7 @@ export function HomeDemo() {
                 </p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Button asChild leadingIcon={<Search className="h-4 w-4" />}>
+                <Button asChild leadingIcon={<Search />}>
                   <a href="#komponenty">Preskúmať komponenty</a>
                 </Button>
                 <Button asChild variant="secondary">
@@ -86,14 +95,14 @@ export function HomeDemo() {
                     Zobraziť zdroje
                   </a>
                 </Button>
-                <Button asChild tone="warning" variant="text">
+                <Button asChild variant="text">
                   <a href="#instalacia">Ako nainštalovať</a>
                 </Button>
               </div>
             </div>
             <div className="rounded-[5px] border border-border bg-surface p-4 shadow-idsk-md sm:p-6">
               <h2 className="idsk-h3">Použité základy</h2>
-              <ul className="mt-4 space-y-3 text-sm text-foreground-muted md:text-base">
+              <ul className="mt-4 space-y-3 text-sm text-foreground-soft md:text-base">
                 <li>
                   <span className="font-bold text-foreground">Typografia:</span> Source Sans Pro, responzívny škálovaný systém nadpisov, textu a odkazov.
                 </li>
@@ -114,9 +123,9 @@ export function HomeDemo() {
         <section className="idsk-container py-8" id="instalacia">
           <div className="space-y-6">
             <div className="space-y-2">
-              <h2 className="idsk-h2">Open source a inštalácia</h2>
+              <h2 className="idsk-h2">Zdrojový kód a inštalácia</h2>
               <p className="idsk-body max-w-3xl text-foreground-soft">
-                Tento projekt je open source. Zdrojový kód nájdete v repozitári{' '}
+                Zdrojový kód projektu je verejne dostupný. Zdrojový kód nájdete v repozitári{' '}
                 <a
                   className="idsk-link font-bold"
                   href="https://github.com/bmikuska46/idsk-shadcn"
@@ -125,54 +134,49 @@ export function HomeDemo() {
                 >
                   github.com/bmikuska46/idsk-shadcn
                 </a>
-                . Komponenty inštalujte cez oficiálny shadcn postup pre registry tretích strán (namespaced registries).
+                . Komponenty inštalujte cez oficiálny shadcn postup pre GitHub registry.
               </p>
             </div>
 
             <InformationBar
               className="max-w-none"
-              title="Použite oficiálny shadcn návod pre other registries"
+              title="Inštalácia z GitHub registry"
             >
               Postupujte podľa dokumentácie{' '}
               <a
                 className="font-bold underline underline-offset-2"
-                href="https://ui.shadcn.com/docs/registry/namespace"
+                href="https://ui.shadcn.com/docs/registry/github"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Namespaces / other registries
+                GitHub registry
               </a>
-              : najprv pridajte registry do <code>components.json</code>, potom
-              inštalujte položky cez CLI v tvare <code>@namespace/component</code>.
+              : v projekte s nakonfigurovaným shadcn inštalujte štýly a jednotlivé komponenty cez CLI.
             </InformationBar>
 
             <div className="grid min-w-0 gap-6 lg:grid-cols-2">
               <div className="min-w-0 space-y-4 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
-                <h3 className="idsk-h4">1. Pridajte registry</h3>
+                <h3 className="idsk-h4">1. Nainštalujte štýly</h3>
                 <p className="idsk-body text-foreground-soft">
-                  Do <code>components.json</code> doplňte pole{' '}
-                  <code>registries</code> podľa oficiálneho návodu. URL musí
-                  obsahovať placeholder <code>{'{name}'}</code>.
+                  Importujte súbor src/styles/idsk.css v hlavnom vstupe aplikácie. Štýly nastavujú globálne tokeny a breakpoint sm na 730px.
                 </p>
-                <pre className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
-                  <code>{`{
-  "registries": {
-    "@idsk": "https://example.com/r/{name}.json"
-  }
-}`}</code>
+                <pre tabIndex={0} aria-label="Inštalačný príkaz" className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
+                  <code>{`pnpm dlx shadcn@latest add bmikuska46/idsk-shadcn/styles
+pnpm add @fontsource/source-sans-pro`}</code>
                 </pre>
               </div>
               <div className="min-w-0 space-y-4 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
                 <h3 className="idsk-h4">2. Nainštalujte komponent</h3>
                 <p className="idsk-body text-foreground-soft">
-                  Po konfigurácii registry použite shadcn CLI. Alternatívne môžete
-                  pridať položku priamo z URL podľa rovnakého oficiálneho návodu.
+                  Načítajte font Source Sans Pro vo váhach 400, 700 a 900 v hlavnom vstupe aplikácie.
                 </p>
-                <pre className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
-                  <code>{`npx shadcn@latest add @idsk/button
+                <pre tabIndex={0} aria-label="Inštalačný príkaz" className="max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground">
+                  <code>{`pnpm dlx shadcn@latest add bmikuska46/idsk-shadcn/button
 
-# alebo priamo z URL
-npx shadcn@latest add https://example.com/r/button.json`}</code>
+import '@fontsource/source-sans-pro/400.css'
+import '@fontsource/source-sans-pro/700.css'
+import '@fontsource/source-sans-pro/900.css'
+import './styles/idsk.css' `}</code>
                 </pre>
               </div>
             </div>
@@ -184,7 +188,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
             <div className="space-y-2">
               <h2 className="idsk-h2">Tlačidlá</h2>
               <p className="idsk-body max-w-3xl text-foreground-soft">
-                Primárne, sekundárne a textové varianty s basic, success a warning tónmi podľa oficiálnej špecifikácie tlačidiel.
+                Primárne, sekundárne a terciárne (textové) varianty v základnej, úspešnej a chybovej farebnej schéme, veľkosti L, M a S podľa špecifikácie IDSK.
               </p>
             </div>
             <div className="grid min-w-0 gap-6 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6 lg:grid-cols-2">
@@ -203,11 +207,34 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                   <Button tone="success" variant="secondary">
                     Sekundárne úspešné
                   </Button>
-                  <Button tone="warning">Odstrániť</Button>
-                  <Button tone="warning" variant="text">
+                  <Button tone="error">Odstrániť</Button>
+                  <Button tone="error" variant="text">
                     Zrušiť oprávnenie
                   </Button>
                 </div>
+              </div>
+              <div className="space-y-4">
+                <h3 className="idsk-h4">Veľkosti a stavy</h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Button size="lg">Veľkosť L</Button>
+                  <Button size="md">Veľkosť M</Button>
+                  <Button size="sm">Veľkosť S</Button>
+                  <Button disabled>Neaktívne</Button>
+                  <Button disabled variant="secondary">
+                    Neaktívne
+                  </Button>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h3 className="idsk-h4">Vysvetlivka a oddeľovač</h3>
+                <p className="flex items-center gap-2 text-[19px] leading-7">
+                  Rodné číslo
+                  <InfoTooltip>
+                    Rodné číslo nájdete na prednej strane občianskeho preukazu. Zadajte ho bez lomky alebo s lomkou.
+                  </InfoTooltip>
+                </p>
+                <Divider />
+                <Button variant="text-inline">Terciárne bez odsadenia</Button>
               </div>
             </div>
           </div>
@@ -225,11 +252,11 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
               <InformationBar title="Dôležitá informácia">
                 Pre rýchlejšie vybavenie žiadosti odporúčame priložiť doklad o ukončení štúdia.
               </InformationBar>
-              <InformationBar title="Žiadosť nie je úplná" variant="error">
-                Skontrolujte formulár a doplňte chýbajúce povinné údaje.
-              </InformationBar>
               <InformationBar title="Upozornenie" variant="warning">
                 Ak prílohy nenahráte teraz, bude potrebné ich doložiť dodatočne.
+              </InformationBar>
+              <InformationBar title="Žiadosť nie je úplná" variant="error">
+                Skontrolujte formulár a doplňte chýbajúce povinné údaje.
               </InformationBar>
               <InformationBar title="Formulár bol uložený" variant="success">
                 Vypĺňanie môžete bezpečne dokončiť neskôr.
@@ -245,6 +272,48 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
               >
                 Skontrolujte zmeny a pokračujte v najnovšej verzii formulára.
               </InformationBar>
+            </div>
+          </div>
+        </section>
+
+        <section className="idsk-container py-8" id="listy">
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h2 className="idsk-h2">Oznamovacia a cookie lišta</h2>
+              <p className="idsk-body max-w-3xl text-foreground-soft">
+                Oznamovacia lišta upozorňuje na celoportálové udalosti v štyroch stavoch. Cookie lišta ponúka prijatie, odmietnutie a nastavenia cookies.
+              </p>
+            </div>
+            <div className="grid gap-5">
+              {announcementOpen ? (
+                <AnnouncementBar
+                  headingLevel={3}
+                  link={<a className="idsk-link" href="#">Viac informácií o odstávke</a>}
+                  onDismiss={() => setAnnouncementOpen(false)}
+                  title="Plánovaná odstávka služieb"
+                >
+                  V sobotu 4. 10. 2026 od 22:00 do 02:00 budú elektronické služby nedostupné z dôvodu údržby.
+                </AnnouncementBar>
+              ) : (
+                <Button className="self-start" onClick={() => setAnnouncementOpen(true)} variant="secondary">
+                  Zobraziť oznamovaciu lištu
+                </Button>
+              )}
+              <AnnouncementBar headingLevel={3} status="success" title="Podanie bolo odoslané">
+                Potvrdenie sme vám poslali do elektronickej schránky.
+              </AnnouncementBar>
+              <AnnouncementBar headingLevel={3} status="warning" title="Blíži sa termín">
+                Žiadosť je potrebné doplniť do 30. 9. 2026.
+              </AnnouncementBar>
+              <AnnouncementBar headingLevel={3} status="error" title="Služba je dočasne nedostupná">
+                Skúste to prosím neskôr alebo kontaktujte podporu.
+              </AnnouncementBar>
+            </div>
+            <div className="space-y-4">
+              <Button onClick={() => setCookieBarOpen(true)} variant="secondary">
+                Zobraziť cookie lištu
+              </Button>
+              <CookieBar position="static" />
             </div>
           </div>
         </section>
@@ -277,6 +346,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 Textové pole, viacriadkové pole, rozbaľovací zoznam, prepínacie a zaškrtávacie polia s povinnými stavmi a chybovým prehľadom.
               </p>
             </div>
+            <MandatoryFieldLegend />
             <ErrorSummary
               description="Priestor pre popis, k akým chybám došlo a ako ich opraviť."
               items={[
@@ -303,14 +373,16 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                   placeholder="+421 901 234 567"
                 />
                 <Input
-                  label="Malé pole"
+                  label="Stredné pole"
                   optional
                   placeholder="VS123"
-                  small
+                  size="m"
                 />
+                <Input disabled label="Neaktívne pole" value="Nedá sa upraviť" />
                 <Select
                   defaultValue="second"
                   label="Typ žiadosti"
+                  tooltip={<InfoTooltip>Vyberte typ podania, ktorý najlepšie zodpovedá vašej situácii.</InfoTooltip>}
                   options={[
                     { value: 'first', label: 'Nová žiadosť' },
                     { value: 'second', label: 'Doplnenie podania' },
@@ -372,7 +444,16 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
               </div>
             </div>
             <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
-              <FileUpload />
+              <FileUpload headingLevel={3} optional />
+            </div>
+            <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
+              <FileUpload
+                headingLevel={3}
+                defaultFiles={[{ name: 'zivotopis.pdf', size: 245760, status: 'success' }]}
+                dragAndDrop={false}
+                label="Nahrajte súbor"
+                multiple={false}
+              />
             </div>
           </div>
         </section>
@@ -387,6 +468,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
             </div>
             <div className="rounded-[5px] border border-border bg-white shadow-idsk-sm">
               <IdskHeader
+                navLabel="Navigácia služby"
                 actions={[
                   { label: 'Profil', variant: 'secondary' },
                   { label: 'Odhlásiť sa', variant: 'text' },
@@ -397,8 +479,11 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                   { href: '#', label: 'Správy' },
                   { href: '#', label: 'Platby' },
                 ]}
+                mail={{ hasNew: true, href: '#' }}
+                notifications={{ hasNew: false, href: '#' }}
                 serviceName="Elektronická služba"
-                userName="jana.novakova"
+                subheading="Ministerstvo investícií, regionálneho rozvoja a informatizácie SR"
+                user={{ caption: 'Fyzická osoba', name: 'Jana Nováková' }}
                 variant="service"
               />
             </div>
@@ -406,15 +491,14 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
               <Signpost
                 description="Prehľad základných údajov a stav vybavenia žiadosti."
                 href="#"
-                icon={<Home className="h-6 w-6" />}
-                showArrow
+                icon={<Home />}
                 title="Horizontálny rázcestník"
                 variant="horizontal"
               />
               <Signpost
                 description="Obsahová dlaždica bez ikony vhodná pre stručné textové navigácie."
                 href="#"
-                showArrow
+                showArrow={false}
                 tag="Nové"
                 title="Textový rázcestník"
                 variant="text"
@@ -424,13 +508,15 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 href="#"
                 imageAlt="Ilustračný náhľad vertikálneho rázcestníka"
                 imageSrc={placeholderImage}
-                showArrow
                 title="Vertikálny rázcestník"
                 variant="vertical"
               />
             </div>
             <div className="min-w-0 rounded-[5px] border border-border bg-white p-4 shadow-idsk-sm sm:p-6">
               <IdskAccordion
+                headingLevel={3}
+                title="Časté otázky"
+                toggleAll
                 items={[
                   {
                     content:
@@ -497,15 +583,54 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 description="Obsahový blok bez obrázka pre stránky, kde sa kladie dôraz na text, meta informácie a odkazy."
                 tags={[{ text: 'Usmernenie' }, { text: 'Formuláre' }]}
                 title="Kartička bez obrázku"
+                actions={
+                  <>
+                    <Button size="md" variant="secondary">
+                      Otvoriť
+                    </Button>
+                    <Button size="md" variant="text-inline">
+                      Zdieľať
+                    </Button>
+                  </>
+                }
               />
             </div>
+            <DataPanel
+              actions={
+                <>
+                  <Button size="md" variant="text">
+                    Upraviť
+                  </Button>
+                  <Button size="md" variant="text">
+                    Stiahnuť PDF
+                  </Button>
+                </>
+              }
+              icon={<FileText />}
+              items={[
+                { label: 'Číslo podania', value: 'POD-2026-004512' },
+                { label: 'Stav', value: 'Prijaté na spracovanie' },
+                { label: 'Dátum podania', value: '21. 4. 2026' },
+                { label: 'Úrad', value: 'Okresný úrad Bratislava' },
+              ]}
+              title="Podanie žiadosti o občiansky preukaz"
+            />
           </div>
         </section>
       </main>
 
       <FeedbackBar />
 
+      {cookieBarOpen ? (
+        <CookieBar
+          onAcceptAll={() => setCookieBarOpen(false)}
+          onRejectAll={() => setCookieBarOpen(false)}
+          onSettings={() => setCookieBarOpen(false)}
+        />
+      ) : null}
+
       <IdskFooter
+        id="paticka"
         columns={[
           {
             title: 'Elektronické služby',
@@ -539,7 +664,7 @@ npx shadcn@latest add https://example.com/r/button.json`}</code>
                 label: 'GitHub (open source)',
               },
               {
-                href: 'https://ui.shadcn.com/docs/registry/namespace',
+                href: 'https://ui.shadcn.com/docs/registry/github',
                 label: 'shadcn other registries',
               },
               { href: '#instalacia', label: 'Inštalácia' },

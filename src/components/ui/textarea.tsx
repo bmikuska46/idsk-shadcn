@@ -3,12 +3,15 @@
 import {
   forwardRef,
   useId,
+  useEffect,
+  useRef,
   useState,
   type ChangeEvent,
   type ReactNode,
   type TextareaHTMLAttributes,
 } from 'react'
 
+import { FieldError, FieldErrorIcon, FieldHint, FieldLabelText, type RequiredIndicator } from '@/components/ui/field'
 import { cn } from '@/lib/utils'
 
 export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
@@ -19,21 +22,13 @@ export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   description?: ReactNode
   error?: ReactNode
   optional?: boolean
+  /** Show the mandatory marker as a red asterisk (default) or as "(povinné pole)". */
+  requiredIndicator?: RequiredIndicator
   counter?: boolean
-}
-
-function ErrorIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-5 w-5"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12 2 1 21h22L12 2Zm1 16h-2v-2h2v2Zm0-4h-2V9h2v5Z" />
-    </svg>
-  )
+  /** IDSK size: L uses 19px text, M uses 16px text. */
+  size?: 'm' | 'l'
+  /** Tooltip mark rendered after the label, see `InfoTooltip`. */
+  tooltip?: ReactNode
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
@@ -49,11 +44,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       error,
       optional,
       required,
+      requiredIndicator,
       disabled,
       maxLength,
       counter = true,
       onChange,
       defaultValue,
+      size = 'l',
+      tooltip,
       value,
       rows = 4,
       wrap = 'soft',
@@ -70,6 +68,17 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     const limitId = hasCounter ? `${textareaId}-character-limit` : undefined
     const statusId = hasCounter ? `${textareaId}-character-status` : undefined
     const [internalValue, setInternalValue] = useState(String(defaultValue ?? ''))
+    const localRef = useRef<HTMLTextAreaElement>(null)
+    useEffect(() => {
+      const form = localRef.current?.form
+      const reset = (event: Event) => {
+        setTimeout(() => {
+          if (!event.defaultPrevented && value === undefined) setInternalValue(localRef.current?.value ?? '')
+        })
+      }
+      form?.addEventListener('reset', reset)
+      return () => form?.removeEventListener('reset', reset)
+    }, [value])
     const currentLength = String(value ?? internalValue).length
     const remainingCharacters =
       typeof maxLength === 'number' ? maxLength - currentLength : undefined
@@ -88,32 +97,25 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
 
     return (
       <div className="flex w-full flex-col">
-        <label
-          className={cn(
-            'mb-1 flex flex-col text-[19px] leading-7 text-[#212121]',
-            disabled && 'text-[#757575]',
-          )}
-          htmlFor={textareaId}
-        >
-          <span>
-            {label}
-            {required ? (
-              <span aria-hidden="true" className="ml-1 text-[#C3112B]">
-                *
-              </span>
-            ) : optional ? (
-              <span
-                className="ml-1 text-[16px] leading-6 font-normal text-[#757575]"
-              >
-                (nepovinné pole)
-              </span>
-            ) : null}
-          </span>
-        </label>
+        <div className={cn('flex items-center gap-[5px]', !hint && 'mb-[5px]')}>
+          <label
+            className={cn(
+              'block text-foreground',
+              size === 'l' ? 'text-[19px] leading-7' : 'text-[16px] leading-6',
+              disabled && 'text-foreground-muted',
+            )}
+            htmlFor={textareaId}
+          >
+            <FieldLabelText size={size} optional={optional} required={required} requiredIndicator={requiredIndicator}>
+              {label}
+            </FieldLabelText>
+          </label>
+          {tooltip}
+        </div>
         {hint ? (
-          <span className="mb-2 text-[19px] leading-7 text-[#757575]" id={hintId}>
+          <FieldHint className="mb-[5px] text-[16px] leading-6" id={hintId}>
             {hint}
-          </span>
+          </FieldHint>
         ) : null}
         <div className="relative flex w-full">
           <textarea
@@ -121,11 +123,12 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             aria-invalid={error ? true : ariaInvalid}
             aria-required={required || undefined}
             className={cn(
-              'min-h-[88px] w-full resize-y rounded-[5px] border-2 border-[#424242] bg-white px-4 pt-2.5 text-[19px] leading-7 text-[#212121] outline-none placeholder:text-[#757575]',
-              'hover:ring-4 hover:ring-[#757575] focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-[#D96E00]',
-              'disabled:cursor-not-allowed disabled:resize-none disabled:border-[#BDBDBD] disabled:bg-[#F5F5F5] disabled:text-[#757575] disabled:hover:ring-0',
+              'min-h-[97px] w-full resize-y rounded-[5px] border-2 border-border-strong bg-white px-[15px] pt-2.5 text-foreground outline-none placeholder:text-foreground-muted',
+              'hover:ring-[5px] hover:ring-foreground-muted focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
+              'disabled:cursor-not-allowed disabled:resize-none disabled:border-border-muted disabled:bg-white disabled:text-foreground-muted disabled:hover:ring-0',
+              size === 'l' ? 'text-[19px] leading-7' : 'text-[16px] leading-6',
               hasCounter ? 'pb-8' : 'pb-2.5',
-              error && 'border-[#C3112B] pr-12',
+              error && 'border-error pr-12',
               className,
             )}
             defaultValue={value === undefined ? defaultValue : undefined}
@@ -133,7 +136,11 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             id={textareaId}
             maxLength={maxLength}
             onChange={handleChange}
-            ref={ref}
+            ref={(node) => {
+              localRef.current = node
+              if (typeof ref === 'function') ref(node)
+              else if (ref) ref.current = node
+            }}
             required={required}
             rows={rows}
             value={value}
@@ -143,18 +150,15 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           {error ? (
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute top-3 right-4 z-10 text-[#C3112B]"
+              className="pointer-events-none absolute top-3 right-4 z-10 text-error"
             >
-              <ErrorIcon />
+              <FieldErrorIcon />
             </span>
           ) : null}
           {hasCounter ? (
             <span
               aria-hidden="true"
-              className={cn(
-                'pointer-events-none absolute right-4 bottom-2 z-10 px-1 text-[16px] leading-6 text-[#757575]',
-                disabled ? 'bg-[#F5F5F5]' : 'bg-white',
-              )}
+              className="pointer-events-none absolute right-[22px] bottom-2 z-10 bg-white px-1 text-[16px] leading-6 text-foreground-muted"
             >
               {currentLength}/{maxLength}
             </span>
@@ -174,15 +178,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           </>
         ) : null}
         {description ? (
-          <span className="mt-2 text-[16px] leading-6 text-[#757575]" id={descriptionId}>
+          <FieldHint className="mt-[5px] text-[16px] leading-6" id={descriptionId}>
             {description}
-          </span>
+          </FieldHint>
         ) : null}
         {error ? (
-          <span className="mt-2 text-[19px] leading-7 text-[#C3112B]" id={errorId}>
-            <span>Chyba: </span>
+          <FieldError className="mt-[5px] text-[16px] leading-6" id={errorId}>
             {error}
-          </span>
+          </FieldError>
         ) : null}
       </div>
     )

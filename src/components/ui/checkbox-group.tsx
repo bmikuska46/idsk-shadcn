@@ -1,9 +1,9 @@
 'use client'
 
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import { Check, Minus } from 'lucide-react'
-import { useId, useState, type ReactNode } from 'react'
+import { useId, useState, useEffect, useRef, type ReactNode } from 'react'
 
+import { FieldError, FieldHint, FieldLabelText, type RequiredIndicator } from '@/components/ui/field'
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 export type CheckboxItem = {
@@ -14,7 +14,7 @@ export type CheckboxItem = {
   disabled?: boolean
   required?: boolean
   optional?: boolean
-  /** Displays Radix's native mixed/indeterminate checkbox state. */
+  /** Displays the native mixed/indeterminate checkbox state after hydration. */
   indeterminate?: boolean
   id?: string
   name?: string
@@ -29,8 +29,13 @@ export type CheckboxGroupProps = {
   name?: string
   disabled?: boolean
   required?: boolean
+  /** Show the mandatory marker as a red asterisk (default) or as "(povinné pole)". */
+  requiredIndicator?: RequiredIndicator
   onValuesChange?: (values: string[]) => void
+  /** IDSK size: L is a 40px box with 19px label, S is a 24px box with 16px label. */
   size?: 's' | 'l'
+  /** Tooltip mark rendered after the group label, see `InfoTooltip`. */
+  tooltip?: ReactNode
   /** Controlled selected values. */
   values?: string[]
   /** Initial values for uncontrolled usage. */
@@ -46,8 +51,10 @@ export function CheckboxGroup({
   name,
   disabled = false,
   required = false,
+  requiredIndicator,
   onValuesChange,
   size = 'l',
+  tooltip,
   values,
   defaultValues = [],
 }: CheckboxGroupProps) {
@@ -56,150 +63,147 @@ export function CheckboxGroup({
   const groupErrorId = error ? `${generatedId}-error` : undefined
   const [internalValues, setInternalValues] = useState(defaultValues)
   const selectedValues = values ?? internalValues
+  const fieldsetRef = useRef<HTMLFieldSetElement>(null)
+  useEffect(() => {
+    const form = fieldsetRef.current?.form
+    const reset = (event: Event) => setTimeout(() => {
+      if (!event.defaultPrevented && values === undefined) setInternalValues(defaultValues)
+    })
+    form?.addEventListener('reset', reset)
+    return () => form?.removeEventListener('reset', reset)
+  }, [values, defaultValues])
+  const hasEnabledSelection = items.some((item) => !item.disabled && !item.indeterminate && selectedValues.includes(item.value))
+  const firstEnabledIndex = items.findIndex((item) => !item.disabled)
+  const isLarge = size === 'l'
 
   const updateValues = (nextValues: string[]) => {
     if (values === undefined) setInternalValues(nextValues)
     onValuesChange?.(nextValues)
   }
 
+  const legendTextId = label && tooltip ? `${generatedId}-legend` : undefined
+
   return (
     <fieldset
       aria-describedby={[hintId, groupErrorId].filter(Boolean).join(' ') || undefined}
-      aria-invalid={error ? true : undefined}
+      aria-labelledby={legendTextId}
       className={cn('flex min-w-0 flex-col', className)}
       disabled={disabled}
+      ref={fieldsetRef}
+      aria-invalid={error ? true : undefined}
     >
       {label ? (
-        <legend className="mb-1 text-[19px] leading-7 text-[#212121]">
-          {label}
-          {required ? (
-            <span aria-hidden="true" className="ml-1 text-[#C3112B]">
-              *
-            </span>
-          ) : null}
+        <legend className={cn('text-[19px] leading-7 text-foreground', !hint && 'mb-[5px]')}>
+          <FieldLabelText
+            required={required}
+            requiredIndicator={requiredIndicator}
+            textId={legendTextId}
+            tooltip={tooltip}
+          >
+            {label}
+          </FieldLabelText>
         </legend>
       ) : null}
       {hint ? (
-        <p className="mb-3 text-[19px] leading-7 text-[#757575]" id={hintId}>
+        <FieldHint className="mb-[5px]" id={hintId}>
           {hint}
-        </p>
+        </FieldHint>
       ) : null}
-      <div className="flex flex-col gap-4">
+      <div className={cn('flex flex-col', isLarge ? 'gap-[10px]' : 'gap-[5px]')}>
         {items.map((item, index) => {
           const itemId = item.id ?? `${generatedId}-${index}`
           const itemHintId = item.hint ? `${itemId}-hint` : undefined
           const itemError = item.error
           const itemErrorId = itemError ? `${itemId}-error` : undefined
           const itemLabelId = `${itemId}-label`
-          const describedBy = [hintId, itemHintId, itemErrorId, groupErrorId]
-            .filter(Boolean)
-            .join(' ') || undefined
+          const describedBy = [itemHintId, itemErrorId].filter(Boolean).join(' ') || undefined
           const isDisabled = disabled || item.disabled
           const isItemRequired = item.required === true
           const isNativeRequired =
-            isItemRequired || (required && selectedValues.length === 0 && index === 0)
+            isItemRequired || (required && !hasEnabledSelection && index === firstEnabledIndex)
           const isChecked = selectedValues.includes(item.value)
-          const checked = item.indeterminate ? 'indeterminate' : isChecked
           const hasError = Boolean(error || itemError)
 
           return (
             <div className="flex flex-col" key={item.value}>
               <label
                 className={cn(
-                  'group relative inline-flex w-fit max-w-full self-start items-start rounded-[5px]',
-                  'focus-within:outline-solid focus-within:outline-[3px] focus-within:outline-offset-2 focus-within:outline-[#D96E00]',
+                  'group relative inline-flex w-fit max-w-full items-center self-start rounded-[5px]',
                   isDisabled ? 'cursor-not-allowed' : 'cursor-pointer',
                 )}
                 htmlFor={itemId}
               >
-                <CheckboxPrimitive.Root
+                <input
                   aria-describedby={describedBy}
                   aria-invalid={hasError || undefined}
                   aria-labelledby={itemLabelId}
-                  aria-required={isNativeRequired || undefined}
-                  checked={checked}
-                  className={cn(
-                    'flex shrink-0 items-center justify-center rounded-[5px] border-2 bg-white text-[#424242] outline-none focus:outline-none focus-visible:outline-none',
-                    !isDisabled && 'group-hover:ring-4 group-hover:ring-[#757575]',
-                    'disabled:cursor-not-allowed disabled:border-[#BDBDBD]',
-                    size === 'l' ? 'h-10 w-10' : 'h-6 w-6',
-                    hasError ? 'border-[#C3112B]' : 'border-[#424242]',
-                  )}
+                  checked={values !== undefined ? isChecked : undefined}
+                  defaultChecked={values === undefined ? defaultValues.includes(item.value) : undefined}
+                  className="peer absolute top-0 left-0 z-10 cursor-inherit opacity-0"
+                  style={{ width: isLarge ? 40 : 24, height: isLarge ? 40 : 24 }}
                   disabled={isDisabled}
                   id={itemId}
                   name={item.name ?? name}
-                  onCheckedChange={(nextChecked) => {
-                    const nextValues =
-                      nextChecked === true
-                        ? Array.from(new Set([...selectedValues, item.value]))
-                        : selectedValues.filter((value) => value !== item.value)
-
+                  onChange={(event) => {
+                    const nextValues = event.currentTarget.checked
+                      ? Array.from(new Set([...selectedValues, item.value]))
+                      : selectedValues.filter((value) => value !== item.value)
                     updateValues(nextValues)
                   }}
+                  ref={(node) => { if (node) node.indeterminate = Boolean(item.indeterminate) }}
                   required={isNativeRequired}
+                  type="checkbox"
                   value={item.value}
+                />
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'flex shrink-0 items-center justify-center rounded-[5px] border-2 bg-white text-black',
+                    'peer-focus-visible:outline-solid peer-focus-visible:outline-[3px] peer-focus-visible:outline-offset-2 peer-focus-visible:outline-focus',
+                    'peer-checked:[&_.check]:block peer-indeterminate:[&_.mixed]:block peer-indeterminate:[&_.check]:hidden',
+                    !isDisabled && 'group-hover:ring-[5px] group-hover:ring-foreground-muted',
+                    isDisabled && 'border-border-muted text-foreground-muted',
+                    isLarge ? 'h-10 w-10' : 'h-6 w-6',
+                    hasError ? 'border-error' : 'border-black',
+                  )}
                 >
-                  <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-                    {checked === 'indeterminate' ? (
-                      <Minus
-                        aria-hidden="true"
-                        className={size === 'l' ? 'h-5 w-5' : 'h-3 w-3'}
-                        strokeWidth={3}
-                      />
-                    ) : (
-                      <Check
-                        aria-hidden="true"
-                        className={size === 'l' ? 'h-5 w-5' : 'h-3 w-3'}
-                        strokeWidth={3}
-                      />
-                    )}
-                  </CheckboxPrimitive.Indicator>
-                </CheckboxPrimitive.Root>
+                  <MaterialIcon name="check" className={cn('check hidden', isLarge ? 'h-6 w-6' : 'h-4 w-4')} />
+                  <MaterialIcon name="remove" className={cn('mixed hidden', isLarge ? 'h-6 w-6' : 'h-4 w-4')} />
+                </span>
                 <span
                   className={cn(
-                    'ml-3 min-w-0 text-[19px] leading-7',
-                    isDisabled ? 'text-[#757575]' : 'text-black',
+                    'ml-[10px] min-w-0',
+                    isLarge ? 'text-[19px] leading-7' : 'text-[16px] leading-6',
+                    isDisabled ? 'text-foreground-muted' : 'text-foreground',
                   )}
                   id={itemLabelId}
                 >
-                  {item.label}
-                  {isItemRequired ? (
-                    <span aria-hidden="true" className="ml-1 text-[#C3112B]">
-                      *
-                    </span>
-                  ) : item.optional ? (
-                    <span className="ml-1 text-[16px] leading-6 text-[#757575]">
-                      nepovinné pole
-                    </span>
-                  ) : null}
+                  <FieldLabelText optional={item.optional} required={isItemRequired}>
+                    {item.label}
+                  </FieldLabelText>
                 </span>
               </label>
               {item.hint ? (
-                <span
-                  className={cn(
-                    'mt-1 text-[19px] leading-7 text-[#757575]',
-                    size === 'l' ? 'ml-[52px]' : 'ml-9',
-                  )}
+                <FieldHint
+                  className={cn('mt-[5px]', isLarge ? 'ml-[50px]' : 'ml-[34px] text-[16px] leading-6')}
                   id={itemHintId}
                 >
                   {item.hint}
-                </span>
+                </FieldHint>
               ) : null}
               {itemError ? (
-                <span className="mt-2 text-[19px] leading-7 text-[#C3112B]" id={itemErrorId}>
-                  <span>Chyba: </span>
+                <FieldError className="mt-[5px]" id={itemErrorId}>
                   {itemError}
-                </span>
+                </FieldError>
               ) : null}
             </div>
           )
         })}
       </div>
       {error ? (
-        <p className="mt-2 text-[19px] leading-7 text-[#C3112B]" id={groupErrorId}>
-          <span>Chyba: </span>
+        <FieldError className="mt-[5px]" id={groupErrorId}>
           {error}
-        </p>
+        </FieldError>
       ) : null}
     </fieldset>
   )

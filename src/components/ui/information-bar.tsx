@@ -1,19 +1,9 @@
 'use client'
 
-import {
-  CircleCheck,
-  CircleX,
-  Info,
-  TriangleAlert,
-  X,
-} from 'lucide-react'
-import {
-  useId,
-  type HTMLAttributes,
-  type ReactNode,
-} from 'react'
+import { useId, type HTMLAttributes, type ReactNode } from 'react'
 
 import { Button } from '@/components/ui/button'
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 type InformationBarVariant = 'information' | 'error' | 'warning' | 'success'
@@ -23,40 +13,46 @@ type InformationBarProps = Omit<HTMLAttributes<HTMLElement>, 'title'> & {
   children: ReactNode
   dismissLabel?: string
   dynamic?: boolean
+  headingLevel?: 2 | 3 | 4
   icon?: ReactNode
   onDismiss?: () => void
   title: ReactNode
   variant?: InformationBarVariant
 }
 
-const variants: Record<
-  InformationBarVariant,
-  { className: string; icon: ReactNode }
-> = {
+const variants: Record<InformationBarVariant, { className: string; icon: ReactNode }> = {
   information: {
     className: 'border-primary text-primary',
-    icon: <Info aria-hidden="true" className="size-6" />,
-  },
-  error: {
-    className: 'border-warning text-warning',
-    icon: <CircleX aria-hidden="true" className="size-6" />,
-  },
-  warning: {
-    className: 'border-alert text-alert',
-    icon: <TriangleAlert aria-hidden="true" className="size-6" />,
+    icon: <MaterialIcon name="info" className="size-[25px]" />,
   },
   success: {
     className: 'border-success text-success',
-    icon: <CircleCheck aria-hidden="true" className="size-6" />,
+    icon: <MaterialIcon name="checkCircle" className="size-[25px]" />,
+  },
+  warning: {
+    className: 'border-warning text-warning',
+    icon: <MaterialIcon name="warning" className="size-[25px]" />,
+  },
+  error: {
+    className: 'border-error text-error',
+    icon: <MaterialIcon name="error" className="size-[25px]" />,
   },
 }
 
+/**
+ * IDSK "Informačná lišta": white box with a 2px semantic border, 5px on the
+ * left, 5px radius. Desktop padding 20px / 30px, mobile 15px / 20px. Title is
+ * Headline M (24/35), body is Body (19/28); on mobile Body and Body 1.
+ * Variants: information (P400), success (Positive), warning (Warning orange)
+ * and error (Error alert red).
+ */
 export function InformationBar({
   action,
   children,
   className,
   dismissLabel = 'Zatvoriť informačnú lištu',
   dynamic = false,
+  headingLevel = 3,
   icon,
   onDismiss,
   title,
@@ -66,6 +62,7 @@ export function InformationBar({
   const generatedId = useId()
   const titleId = `${generatedId}-title`
   const config = variants[variant]
+  const Heading = headingLevel === 2 ? 'h2' : headingLevel === 4 ? 'h4' : 'h3'
   const role = dynamic
     ? variant === 'error' || variant === 'warning'
       ? 'alert'
@@ -76,39 +73,35 @@ export function InformationBar({
     <section
       aria-labelledby={titleId}
       className={cn(
-        'relative flex w-full max-w-[740px] flex-col gap-3 rounded-[5px] border-2 border-l-[5px] bg-white p-4 sm:flex-row sm:items-center sm:px-6 sm:py-5',
+        'relative flex w-full flex-col gap-[15px] rounded-[5px] border-2 border-l-[5px] bg-white pt-[13px] pr-[18px] pb-[13px] pl-[15px] sm:flex-row sm:items-center sm:gap-5 sm:pt-[18px] sm:pr-[28px] sm:pb-[18px] sm:pl-[25px]',
         config.className,
         className,
       )}
       role={role}
       {...props}
     >
-      <div className="flex min-w-0 grow items-start">
-        <div className="mr-3 shrink-0 self-center sm:mr-4">
-          {icon ?? config.icon}
-        </div>
-        <div className="min-w-0 grow text-foreground">
-          <h3 className="text-base font-bold leading-6 tracking-wide sm:text-lg" id={titleId}>
+      <div className="flex min-w-0 grow flex-col gap-[15px] sm:flex-row sm:items-center sm:gap-5">
+        <div className="shrink-0 self-start sm:self-center">{icon ?? config.icon}</div>
+        <div className="flex min-w-0 grow flex-col text-foreground">
+          <Heading className="text-[19px] leading-7 font-bold sm:text-[24px] sm:leading-9" id={titleId}>
             {title}
-          </h3>
-          <div className="mt-1 text-sm leading-6 tracking-wide sm:text-base">
-            {children}
-          </div>
+          </Heading>
+          <div className="text-[16px] leading-6 sm:text-[19px] sm:leading-7">{children}</div>
         </div>
       </div>
       {action || onDismiss ? (
-        <div className="flex shrink-0 items-center gap-1 self-start pl-9 sm:ml-3 sm:self-center sm:pl-0">
+        <div className="flex shrink-0 items-center gap-[10px] self-end sm:self-center">
           {action}
           {onDismiss ? (
             <Button
               aria-label={dismissLabel}
-              className="size-10 p-0"
+              className="size-[41px] p-0"
               onClick={onDismiss}
               size="md"
               type="button"
               variant="text"
             >
-              <X aria-hidden="true" className="size-5" />
+              <MaterialIcon name="close" aria-hidden="true" className="size-6" />
             </Button>
           ) : null}
         </div>

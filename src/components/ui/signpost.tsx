@@ -1,6 +1,6 @@
-import { ArrowRight } from 'lucide-react'
 import type { ReactNode } from 'react'
 
+import { MaterialIcon } from '@/components/ui/material-icon'
 import { cn } from '@/lib/utils'
 
 type SignpostBaseProps = {
@@ -8,11 +8,11 @@ type SignpostBaseProps = {
   description: ReactNode
   headingLevel?: 2 | 3 | 4
   href?: string
-  /** Decorative thematic icon displayed before the title. */
+  /** Decorative thematic icon displayed before the title, rendered at 36px. */
   icon?: ReactNode
-  /** Kept for the image-led compatibility variant; IDSK horizontal signposts do not require an image. */
   newWindowLabel?: string
   rel?: string
+  /** IDSK signposts end with an arrow; pass `false` for the plain text variant. */
   showArrow?: boolean
   tag?: string
   target?: string
@@ -26,6 +26,11 @@ type SignpostImageProps =
 
 export type SignpostProps = SignpostBaseProps & SignpostImageProps
 
+/**
+ * IDSK "Rozcestník": white box, 2px N300 border, 10px radius, 20px padding.
+ * Title is Headline M in the link colour with underline, description is Body
+ * 5px below, arrow_forward on the right. Hover shows the 5px N600 outline.
+ */
 export function Signpost({
   className,
   description,
@@ -36,7 +41,7 @@ export function Signpost({
   imageSrc,
   newWindowLabel = 'Otvorí sa v novom okne.',
   rel,
-  showArrow = false,
+  showArrow = true,
   tag,
   target,
   title,
@@ -46,15 +51,17 @@ export function Signpost({
   const hasImage = variant === 'vertical' && Boolean(imageSrc)
   const opensNewWindow = target === '_blank'
   const rootClassName = cn(
-    'group block w-full min-w-0 rounded-[10px] border-2 border-[#BDBDBD] bg-white tracking-wide no-underline hover:ring-[4px] hover:ring-[#757575] focus:outline-none focus-visible:outline-[3px] focus-visible:outline-solid focus-visible:outline-[#D96E00] focus-visible:outline-offset-2',
-    hasImage ? 'overflow-hidden' : 'p-5',
+    'group block w-full min-w-0 rounded-[10px] border-2 border-border bg-white no-underline transition-shadow duration-100',
+    href &&
+      'hover:ring-[5px] hover:ring-foreground-muted focus:outline-none focus-visible:outline-solid focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-focus',
+    hasImage ? 'overflow-hidden' : 'p-[18px]',
     className,
   )
 
   const content = (
     <>
       {hasImage ? (
-        <div className="h-[192px] w-full overflow-hidden bg-zinc-200">
+        <div className="h-[192px] w-full overflow-hidden bg-surface-hover">
           <img
             alt={imageAlt}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
@@ -62,38 +69,30 @@ export function Signpost({
           />
         </div>
       ) : null}
-      <div className={cn(hasImage && 'p-5')}>
+      <div className={cn(hasImage && 'p-[18px]')}>
         {tag ? (
-          <span className="mb-3 inline-flex rounded-full bg-[#EFF5FE] px-3 py-1 text-sm font-bold text-[#0B4199]">
+          <span className="mb-[10px] inline-flex rounded-[5px] bg-surface-primary px-[10px] py-[2px] text-[16px] leading-6 font-bold text-link">
             {tag}
           </span>
         ) : null}
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex min-w-0 items-start gap-3">
-            {icon ? (
-              <span
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-[#0B4199]"
-              >
-                {icon}
-              </span>
-            ) : null}
-            <Heading className="min-w-0 text-[19px] leading-7 font-bold text-[#0B4199] underline sm:text-[24px] sm:leading-9 group-hover:decoration-[3px] group-hover:underline-offset-2">
+        <div className="flex items-start gap-5">
+          {icon ? (
+            <span aria-hidden="true" className="shrink-0 text-link [&>svg]:size-9">
+              {icon}
+            </span>
+          ) : null}
+          <div className="flex min-w-0 grow flex-col gap-[5px]">
+            <Heading className="min-w-0 text-[24px] leading-9 font-bold text-link underline group-hover:decoration-[3px]">
               {title}
             </Heading>
+            <p className="text-[19px] leading-7 text-foreground">{description}</p>
           </div>
           {showArrow ? (
-            <ArrowRight
-              aria-hidden="true"
-              className="mt-1 h-6 w-6 shrink-0 text-[#0B4199] group-focus-visible:text-[#0B0C0C]"
-              focusable="false"
-              strokeWidth={2}
-            />
+            <span aria-hidden="true" className="shrink-0 py-[6px] text-link">
+              <MaterialIcon name="arrowForward" className="size-6" focusable="false" />
+            </span>
           ) : null}
         </div>
-        <p className="mt-5 text-[19px] leading-7 text-[#212121] group-focus-visible:text-[#0B0C0C]">
-          {description}
-        </p>
         {opensNewWindow ? (
           <span className="sr-only"> {newWindowLabel}</span>
         ) : null}

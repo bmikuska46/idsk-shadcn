@@ -8,10 +8,11 @@ IDSK shadcn poskytuje kopírovateľné komponenty v štýle shadcn/ui. Projekt o
 
 - [Ukážka komponentov](https://idsk.bmikuska.com/): Kompletná interaktívna ukážka dostupných komponentov.
 - [Inštalácia](https://idsk.bmikuska.com/#instalacia): Postup inštalácie komponentov cez shadcn CLI.
-- [Komponenty](https://idsk.bmikuska.com/#komponenty): Tlačidlá a základné interaktívne prvky.
-- [Formuláre](https://idsk.bmikuska.com/#formulare): Polia, výbery, nahrávanie súborov a chybové stavy.
+- [Komponenty](https://idsk.bmikuska.com/#komponenty): Tlačidlá, vysvetlivky, oddeľovače a základné interaktívne prvky.
+- [Formuláre](https://idsk.bmikuska.com/#formulare): Polia, výbery, nahrávanie súborov, legenda povinných polí a chybové stavy.
 - [Navigácia](https://idsk.bmikuska.com/#navigacia): Hlavičky, rázcestníky a akordeóny.
-- [Obsah](https://idsk.bmikuska.com/#obsah): Kartičky a obsahové bloky.
+- [Lišty](https://idsk.bmikuska.com/#listy): Informačné, oznamovacie a cookie lišty.
+- [Obsah](https://idsk.bmikuska.com/#obsah): Kartičky, dátové panely a obsahové bloky.
 - [Zdrojový kód](https://github.com/bmikuska46/idsk-shadcn): GitHub repozitár, dokumentácia a aktuálny zoznam komponentov.
 
 ## Technológie

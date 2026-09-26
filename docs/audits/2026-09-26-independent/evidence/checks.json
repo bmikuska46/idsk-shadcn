@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-26",
+  "lint": {
+    "exitCode": 0,
+    "errors": 0,
+    "warnings": 3
+  },
+  "typescript": {
+    "exitCode": 0
+  },
+  "build": {
+    "exitCode": 0
+  },
+  "registry": {
+    "validationExitCode": 0,
+    "buildExitCode": 0,
+    "items": 27
+  },
+  "consumer": {
+    "installExitCode": 0,
+    "typescriptExitCode": 0,
+    "uiFiles": 25,
+    "aliases": {
+      "ui": "~/ui",
+      "utils": "~/lib/utils"
+    },
+    "transport": "Local HTTP mirror of freshly generated registry items; dependency URLs rewritten to the mirror. Production GitHub transport was not tested."
+  }
+}

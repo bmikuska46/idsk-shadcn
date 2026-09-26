@@ -1,0 +1,2255 @@
+[
+  {
+    "id": "5617:2039",
+    "name": "Logged in=Off, Type=Website, Navigation service=Off",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -12550.0,
+      "y": 828.0,
+      "width": 1420.0,
+      "height": 188.0
+    },
+    "layoutMode": "VERTICAL",
+    "strokes": [],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "visible": false,
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.10196078568696976,
+          "b": 0.10196078568696976,
+          "a": 0.20000000298023224
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0.0,
+          "y": 10.0
+        },
+        "radius": 20.0,
+        "spread": -10.0,
+        "showShadowBehindNode": true
+      }
+    ],
+    "textNodes": [
+      {
+        "id": "I6271:13286;7715:19964;7715:14888;7024:19549",
+        "name": "Text label",
+        "characters": "Oficiálna stránka verejnej správy SR ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5078:6391"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6271:13286;7715:19965;7715:17476;7715:14888;7024:19549",
+        "name": "Text label",
+        "characters": "slovenčina",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5078:6391"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "7809:9729",
+        "name": "Názov Organizácie",
+        "characters": "Názov Organizácie",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "TRUNCATE",
+          "textTruncation": "ENDING",
+          "fontSize": 24.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.0,
+          "lineHeightPx": 35.0,
+          "lineHeightPercent": 116.01697540283203,
+          "lineHeightPercentFontSize": 145.8333282470703,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5077:3307"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "8287:10019",
+        "name": "Podnadpis",
+        "characters": "Podnadpis",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "TRUNCATE",
+          "textTruncation": "ENDING",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.4588235318660736,
+              "g": 0.4588235318660736,
+              "b": 0.4588235318660736,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5078:6384"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:9733;7039:5114;7024:19538",
+        "name": "Text label",
+        "characters": "Tlačidlo",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:18999;7039:4655;7024:19538",
+        "name": "Text label",
+        "characters": "Prihlásiť sa",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:23918;7809:23782",
+        "name": "Sekcia",
+        "characters": "Sekcia",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:24098;7809:23782",
+        "name": "Sekcia",
+        "characters": "Sekcia",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:24278;7809:23782",
+        "name": "Sekcia",
+        "characters": "Sekcia",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:24818;7809:22964",
+        "name": "Sekcia",
+        "characters": "Sekcia",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7809:24944;7809:22964",
+        "name": "Sekcia",
+        "characters": "Sekcia",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6601:7888",
+    "name": "Device=Web",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -7824.0,
+      "y": 6404.0,
+      "width": 1440.0,
+      "height": 389.0
+    },
+    "layoutMode": "VERTICAL",
+    "itemSpacing": 10.0,
+    "paddingLeft": 60.0,
+    "paddingRight": 60.0,
+    "paddingTop": 30.0,
+    "paddingBottom": 30.0,
+    "cornerRadius": 10.0,
+    "strokes": [],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5105:14439"
+          }
+        }
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.10196078568696976,
+          "b": 0.10196078568696976,
+          "a": 0.1599999964237213
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0.0,
+          "y": 24.0
+        },
+        "radius": 40.0,
+        "showShadowBehindNode": true
+      }
+    ],
+    "textNodes": [
+      {
+        "id": "6601:4652",
+        "name": "Lorem ipsum",
+        "characters": "Lorem ipsum ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Black",
+          "fontStyle": "Black",
+          "fontWeight": 900,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 36.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.0,
+          "lineHeightPx": 45.0,
+          "lineHeightPercent": 99.44312286376953,
+          "lineHeightPercentFontSize": 125.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:4653",
+        "name": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        "characters": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 24.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 36.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:14898",
+        "name": "Viac informácií nájdete v",
+        "characters": "Viac informácií nájdete v ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6601:14877;5072:4158",
+        "name": "Text",
+        "characters": "nastaveniach cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:7885",
+        "name": "a v",
+        "characters": "a v",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6601:14891;5072:4158",
+        "name": "Text",
+        "characters": "zásadách ochrany osobných údajov.",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:9896;7039:4655;6912:13643",
+        "name": "Text label",
+        "characters": "Prijať súbory cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:9897;7039:4655;6912:13643",
+        "name": "Text label",
+        "characters": "Odmietnuť súbory cookies  ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:9955;5072:4086",
+        "name": "Text",
+        "characters": "Nastavenia cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 24.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 36.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6601:7890",
+    "name": "Device=Mobile",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -7821.0,
+      "y": 6823.0,
+      "width": 320.0,
+      "height": 633.0
+    },
+    "layoutMode": "VERTICAL",
+    "itemSpacing": 10.0,
+    "paddingLeft": 20.0,
+    "paddingRight": 20.0,
+    "paddingTop": 40.0,
+    "paddingBottom": 40.0,
+    "strokes": [],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5105:14439"
+          }
+        }
+      }
+    ],
+    "effects": [
+      {
+        "type": "DROP_SHADOW",
+        "visible": true,
+        "color": {
+          "r": 0.10196078568696976,
+          "g": 0.10196078568696976,
+          "b": 0.10196078568696976,
+          "a": 0.1599999964237213
+        },
+        "blendMode": "NORMAL",
+        "offset": {
+          "x": 0.0,
+          "y": 24.0
+        },
+        "radius": 40.0,
+        "showShadowBehindNode": true
+      }
+    ],
+    "textNodes": [
+      {
+        "id": "6601:7893",
+        "name": "Lorem ipsum",
+        "characters": "Lorem ipsum ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Black",
+          "fontStyle": "Black",
+          "fontWeight": 900,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 24.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.0,
+          "lineHeightPx": 35.0,
+          "lineHeightPercent": 116.01697540283203,
+          "lineHeightPercentFontSize": 145.8333282470703,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:7894",
+        "name": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        "characters": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:14912",
+        "name": "Viac informácií nájdete v",
+        "characters": "Viac informácií nájdete v ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6601:14913;5072:4158",
+        "name": "Text",
+        "characters": "nastaveniach cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:14914",
+        "name": "a v",
+        "characters": "a v",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6601:14915;5072:4158",
+        "name": "Text",
+        "characters": "zásadách ochrany osobných údajov.",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:10035;7039:4655;6912:13643",
+        "name": "Text label",
+        "characters": "Prijať súbory cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:10036;7039:4655;6912:13643",
+        "name": "Text label",
+        "characters": "Odmietnuť súbory cookies  ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7039:10130;5072:4086",
+        "name": "Text",
+        "characters": "Nastavenia cookies",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6489:6773",
+    "name": "Orientation=Horizontal, Hover=Off",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -3388.0,
+      "y": 7088.0,
+      "width": 1060.0,
+      "height": 272.0
+    },
+    "layoutMode": "HORIZONTAL",
+    "cornerRadius": 10.0,
+    "strokes": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.8784313797950745,
+          "g": 0.8784313797950745,
+          "b": 0.8784313797950745,
+          "a": 1.0
+        }
+      }
+    ],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    ],
+    "effects": [],
+    "textNodes": [
+      {
+        "id": "6489:6778",
+        "name": "Title",
+        "characters": "Nadpis kartičky",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 24.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 36.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6489:6779",
+        "name": "Description",
+        "characters": "Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. Nepoužívať pri implementácii a dizajne. Tento text slúži iba ako ukážka naplneného obsahu v danom komponente. ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6489:6780",
+        "name": "Tag Line",
+        "characters": "1.1. 2025   —   Tag 1   |  Tag 2  |  Tag 3",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.4588235318660736,
+              "g": 0.4588235318660736,
+              "b": 0.4588235318660736,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7281:12306;7039:4655;6912:13643",
+        "name": "Text label",
+        "characters": "Tlačidlo",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I7281:12307;7039:5114;6912:13643",
+        "name": "Text label",
+        "characters": "Tlačidlo",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5240:4369",
+    "name": "Device=Web",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": 473.0,
+      "y": -274.0,
+      "width": 1024.0,
+      "height": 153.0
+    },
+    "layoutMode": "VERTICAL",
+    "paddingLeft": 30.0,
+    "paddingBottom": 10.0,
+    "cornerRadius": 5.0,
+    "strokes": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.027450980618596077,
+          "g": 0.1725490242242813,
+          "b": 0.4000000059604645,
+          "a": 1.0
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5077:3302"
+          }
+        }
+      }
+    ],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "boundVariables": {
+          "color": {
+            "type": "VARIABLE_ALIAS",
+            "id": "VariableID:5078:6327"
+          }
+        }
+      }
+    ],
+    "effects": [],
+    "textNodes": [
+      {
+        "id": "5240:4373",
+        "name": "Dataset name",
+        "characters": "Názov datasetu",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 20.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.15000000596046448,
+          "lineHeightPx": 26.0,
+          "lineHeightPercent": 103.42084503173828,
+          "lineHeightPercentFontSize": 130.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I5908:9144;7039:5114;6912:13643",
+        "name": "Text label",
+        "characters": "Tlačidlo",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12480"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "I5248:940;7039:7327;6912:13643",
+        "name": "Text label",
+        "characters": "Odstrániť",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Bold",
+          "fontStyle": "Bold",
+          "fontWeight": 700,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "textDecoration": "UNDERLINE",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "CENTER",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.7647058963775635,
+              "g": 0.06666667014360428,
+              "b": 0.16862745583057404,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5078:6408"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5240:4379",
+        "name": "Text",
+        "characters": "Label",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:7473",
+        "name": "Text",
+        "characters": ":",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "5240:4380",
+        "name": "Text",
+        "characters": "Lorem ipsum dolor",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8164",
+        "name": "Text",
+        "characters": "Label",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8165",
+        "name": "Text",
+        "characters": ":",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8166",
+        "name": "Text",
+        "characters": "Lorem ipsum dolor",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8211",
+        "name": "Text",
+        "characters": "Label",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8212",
+        "name": "Text",
+        "characters": ":",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "6298:8213",
+        "name": "Text",
+        "characters": "Lorem ipsum dolor",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.04313725605607033,
+              "g": 0.2549019753932953,
+              "b": 0.6000000238418579,
+              "a": 1.0
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:5197:12487"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6601:15355",
+    "name": "Size=M, State=Default",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -2213.0,
+      "y": 6726.0,
+      "width": 400.0,
+      "height": 48.0
+    },
+    "layoutMode": "HORIZONTAL",
+    "itemSpacing": 10.0,
+    "paddingLeft": 15.0,
+    "paddingRight": 15.0,
+    "paddingTop": 10.0,
+    "paddingBottom": 10.0,
+    "cornerRadius": 5.0,
+    "strokes": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.25882354378700256,
+          "g": 0.25882354378700256,
+          "b": 0.25882354378700256,
+          "a": 1.0
+        }
+      }
+    ],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    ],
+    "effects": [],
+    "textNodes": [
+      {
+        "id": "6601:15356",
+        "name": "Text label",
+        "characters": " ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6601:15407",
+    "name": "Size=S, State=Default",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -2213.0,
+      "y": 6812.0,
+      "width": 400.0,
+      "height": 40.0
+    },
+    "layoutMode": "HORIZONTAL",
+    "itemSpacing": 10.0,
+    "paddingLeft": 15.0,
+    "paddingRight": 15.0,
+    "paddingTop": 10.0,
+    "paddingBottom": 10.0,
+    "cornerRadius": 5.0,
+    "strokes": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.25882354378700256,
+          "g": 0.25882354378700256,
+          "b": 0.25882354378700256,
+          "a": 1.0
+        }
+      }
+    ],
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        }
+      }
+    ],
+    "effects": [],
+    "textNodes": [
+      {
+        "id": "6601:15408",
+        "name": "Text label",
+        "characters": " ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5927:6401",
+    "name": "Size=M, State=Default",
+    "type": "COMPONENT",
+    "absoluteBoundingBox": {
+      "x": -12391.0,
+      "y": -2014.0,
+      "width": 400.0,
+      "height": 134.0
+    },
+    "layoutMode": "VERTICAL",
+    "itemSpacing": 5.0,
+    "strokes": [],
+    "fills": [],
+    "effects": [],
+    "textNodes": [
+      {
+        "id": "5927:6404",
+        "name": "Label",
+        "characters": "Názov textového poľa",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I6601:18219;5711:15572",
+        "name": "Asterisk",
+        "characters": "*",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 19.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 28.0,
+          "lineHeightPercent": 117.23821258544922,
+          "lineHeightPercentFontSize": 147.36842346191406,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.7647058963775635,
+              "g": 0.06666667014360428,
+              "b": 0.16862745583057404,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5927:6406",
+        "name": "Label",
+        "characters": "Popis textového poľa",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.4588235318660736,
+              "g": 0.4588235318660736,
+              "b": 0.4588235318660736,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "I5927:6407;5718:14029",
+        "name": "Text label",
+        "characters": " ",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:22888",
+        "name": "Popisný text",
+        "characters": "Popisný text",
+        "style": {
+          "fontFamily": "Source Sans Pro",
+          "fontPostScriptName": "SourceSansPro-Regular",
+          "fontStyle": "Regular",
+          "fontWeight": 400,
+          "textAutoResize": "WIDTH_AND_HEIGHT",
+          "fontSize": 16.0,
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "CENTER",
+          "letterSpacing": 0.5,
+          "lineHeightPx": 24.0,
+          "lineHeightPercent": 119.33174133300781,
+          "lineHeightPercentFontSize": 150.0,
+          "lineHeightUnit": "PIXELS"
+        },
+        "fills": [
+          {
+            "blendMode": "NORMAL",
+            "type": "SOLID",
+            "color": {
+              "r": 0.4588235318660736,
+              "g": 0.4588235318660736,
+              "b": 0.4588235318660736,
+              "a": 1.0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

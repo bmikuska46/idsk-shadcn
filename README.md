@@ -1,4 +1,4 @@
-# IDSK 3.1 — shadcn komponenty
+# IDSK 3.1 - shadcn komponenty
 
 React + TypeScript UI komponenty podľa dizajnového systému **IDSK 3.1**, implementované v štýle [shadcn/ui](https://ui.shadcn.com/) (kopírovateľné komponenty, Tailwind CSS, Radix UI).
 
@@ -14,9 +14,9 @@ Jeho účelom je **jednotný spôsob komunikácie** s používateľom elektronic
 
 Komponenty IDSK sú:
 
-- **responzívne** — správne sa zobrazujú na PC, mobile aj tablete
-- **prístupné** — použiteľné aj s asistenčnými technológiami
-- **použiteľné** — vychádzajú z overených heuristík použiteľnosti
+- **responzívne** - správne sa zobrazujú na PC, mobile aj tablete
+- **prístupné** - použiteľné aj s asistenčnými technológiami
+- **použiteľné** - vychádzajú z overených heuristík použiteľnosti
 
 IDSK je verejne dostupný na voľné použitie. Oficiálny úvod: [idsk.gov.sk/co-je/uvod](https://idsk.gov.sk/co-je/uvod).
 
@@ -49,11 +49,11 @@ pnpm dlx shadcn@latest list bmikuska46/idsk-shadcn
 pnpm dlx shadcn@latest view bmikuska46/idsk-shadcn/button
 ```
 
-Po inštalácii `styles` importujte `src/styles/idsk.css` v root layoute (alebo vstupe aplikácie) a načítajte Source Sans Pro (`@fontsource/source-sans-pro`).
+Po inštalácii `styles` importujte `src/styles/idsk.css` v root layoute (alebo vstupe aplikácie) a načítajte Source Sans Pro (`@fontsource/source-sans-pro`, váhy 400, 700 a 900).
 
 ## Použitie komponentov
 
-Komponenty sa nachádzajú v `src/components/ui/`. Zatiaľ nie je barrel export — importujte ich priamo zo súborov:
+Komponenty sa nachádzajú v `src/components/ui/`. Zatiaľ nie je barrel export - importujte ich priamo zo súborov:
 
 ```tsx
 import { Button } from '@/components/ui/button'
@@ -192,9 +192,16 @@ export function LayoutExample() {
 | IdskRadioGroup | `src/components/ui/radio-group.tsx` |
 | FileUpload | `src/components/ui/file-upload.tsx` |
 | SearchInput | `src/components/ui/search-input.tsx` |
+| FieldLabelText, FieldHint, FieldError, RequiredMark | `src/components/ui/field.tsx` |
+| InfoTooltip, Tooltip | `src/components/ui/tooltip.tsx` |
+| Divider | `src/components/ui/divider.tsx` |
+| MandatoryFieldLegend | `src/components/ui/mandatory-field-legend.tsx` |
 | ErrorSummary | `src/components/ui/error-summary.tsx` |
 | FeedbackBar | `src/components/ui/feedback-bar.tsx` |
 | InformationBar | `src/components/ui/information-bar.tsx` |
+| AnnouncementBar | `src/components/ui/announcement-bar.tsx` |
+| CookieBar | `src/components/ui/cookie-bar.tsx` |
+| DataPanel | `src/components/ui/data-panel.tsx` |
 | Breadcrumbs | `src/components/ui/breadcrumbs.tsx` |
 | IdskAccordion | `src/components/ui/accordion.tsx` |
 | Signpost | `src/components/ui/signpost.tsx` |
@@ -238,7 +245,11 @@ docker run --rm -p 8080:3000 ghcr.io/bmikuska46/idsk-shadcn:latest
 
 ## Odkazy
 
-- [Ukážka — idsk.bmikuska.com](https://idsk.bmikuska.com)
-- [Čo je IDSK — Úvod](https://idsk.gov.sk/co-je/uvod)
+- [Ukážka - idsk.bmikuska.com](https://idsk.bmikuska.com)
+- [Čo je IDSK - Úvod](https://idsk.gov.sk/co-je/uvod)
 - [Oficiálny IDSK manuál](https://idsk.gov.sk/)
 - [shadcn/ui](https://ui.shadcn.com/)
+
+## IDSK 3.1.0 integration and verification
+
+See [integration contracts](docs/idsk-integration.md) for upload validation, async feedback, native fallbacks, identity slots, icon mappings, style scope and verification commands. The implementation is unofficial; automated checks are not a conformance certification.

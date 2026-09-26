@@ -1,0 +1,3058 @@
+[
+  {
+    "page": "01 Hlavička (Header)",
+    "id": "2910:6755",
+    "sets": [
+      {
+        "id": "6184:8695",
+        "name": ".master Avatars",
+        "variants": [
+          {
+            "id": "6184:8706",
+            "name": "Type=Foto, Hover=Off",
+            "box": {
+              "x": -10657.0,
+              "y": 2634.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "7809:18511",
+            "name": "Type=Avatar, Hover=Off",
+            "box": {
+              "x": -10511.0,
+              "y": 2634.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "7809:18519",
+            "name": "Type=Inicials, Hover=Off",
+            "box": {
+              "x": -10365.0,
+              "y": 2634.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "7809:18503",
+            "name": "Type=Foto, Hover=On",
+            "box": {
+              "x": -10657.0,
+              "y": 2704.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6184:8704",
+            "name": "Type=Avatar, Hover=On",
+            "box": {
+              "x": -10511.0,
+              "y": 2704.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6184:8702",
+            "name": "Type=Inicials, Hover=On",
+            "box": {
+              "x": -10365.0,
+              "y": 2704.0,
+              "width": 116.0,
+              "height": 40.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5617:1921",
+        "name": "Header",
+        "variants": [
+          {
+            "id": "5617:2039",
+            "name": "Logged in=Off, Type=Website, Navigation service=Off",
+            "box": {
+              "x": -12550.0,
+              "y": 828.0,
+              "width": 1420.0,
+              "height": 188.0
+            }
+          },
+          {
+            "id": "7809:28201",
+            "name": "Logged in=On, Type=Website, Navigation service=Off",
+            "box": {
+              "x": -12550.0,
+              "y": 1094.0,
+              "width": 1420.0,
+              "height": 188.0
+            }
+          },
+          {
+            "id": "7809:34760",
+            "name": "Logged in=On, Type=Service, Navigation service=O",
+            "box": {
+              "x": -12550.0,
+              "y": 1360.0,
+              "width": 1420.0,
+              "height": 135.0
+            }
+          },
+          {
+            "id": "7809:34786",
+            "name": "Logged in=On, Type=Service, Navigation service=On",
+            "box": {
+              "x": -12550.0,
+              "y": 1573.0,
+              "width": 1420.0,
+              "height": 188.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7715:19960",
+        "name": ".master Top bar",
+        "variants": [
+          {
+            "id": "7715:19959",
+            "name": "Expanded=On",
+            "box": {
+              "x": -11248.0,
+              "y": 1980.0,
+              "width": 1462.0,
+              "height": 215.0
+            }
+          },
+          {
+            "id": "7715:19961",
+            "name": "Expanded=Off",
+            "box": {
+              "x": -11248.0,
+              "y": 2223.0,
+              "width": 1462.0,
+              "height": 45.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7738:25218",
+        "name": ".master language picker",
+        "variants": [
+          {
+            "id": "7738:25217",
+            "name": "Expand=Off",
+            "box": {
+              "x": -11248.0,
+              "y": 2361.0,
+              "width": 111.0,
+              "height": 35.0
+            }
+          },
+          {
+            "id": "7738:25219",
+            "name": "Expand=On",
+            "box": {
+              "x": -11248.0,
+              "y": 2449.0,
+              "width": 111.0,
+              "height": 35.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7807:9095",
+        "name": ".master Header search field",
+        "variants": [
+          {
+            "id": "7807:9094",
+            "name": "State=Default",
+            "box": {
+              "x": -10807.0,
+              "y": 2361.0,
+              "width": 49.0,
+              "height": 41.0
+            }
+          },
+          {
+            "id": "7809:9231",
+            "name": "State=Active",
+            "box": {
+              "x": -11003.0,
+              "y": 2424.0,
+              "width": 245.0,
+              "height": 41.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7809:17891",
+        "name": ".master Notification button",
+        "variants": [
+          {
+            "id": "7809:17890",
+            "name": "State=New notification",
+            "box": {
+              "x": -10673.0,
+              "y": 2361.0,
+              "width": 49.0,
+              "height": 41.0
+            }
+          },
+          {
+            "id": "7809:17889",
+            "name": "State=Default",
+            "box": {
+              "x": -10673.0,
+              "y": 2412.0,
+              "width": 49.0,
+              "height": 41.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7809:21957",
+        "name": ".master Mail button",
+        "variants": [
+          {
+            "id": "7809:21958",
+            "name": "State=New notification",
+            "box": {
+              "x": -10570.0,
+              "y": 2361.0,
+              "width": 49.0,
+              "height": 41.0
+            }
+          },
+          {
+            "id": "7809:21964",
+            "name": "State=Default",
+            "box": {
+              "x": -10570.0,
+              "y": 2412.0,
+              "width": 49.0,
+              "height": 41.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7809:22969",
+        "name": ".master Header menu Item",
+        "variants": [
+          {
+            "id": "7809:22968",
+            "name": "Type=Dropdown, State=Default, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12528.0,
+              "y": 1980.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30351",
+            "name": "Type=Dropdown, State=Default, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11932.0,
+              "y": 1980.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23780",
+            "name": "Type=Select, State=Default, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12133.0,
+              "y": 1980.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30359",
+            "name": "Type=Select, State=Default, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11537.0,
+              "y": 1980.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23564",
+            "name": "Type=Dropdown, State=Selected, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12528.0,
+              "y": 2231.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30365",
+            "name": "Type=Dropdown, State=Selected, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11932.0,
+              "y": 2231.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23788",
+            "name": "Type=Select, State=Selected, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12133.0,
+              "y": 2231.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30373",
+            "name": "Type=Select, State=Selected, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11537.0,
+              "y": 2231.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23476",
+            "name": "Type=Dropdown, State=Default, Expanded=On, Background=Light",
+            "box": {
+              "x": -12528.0,
+              "y": 2322.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30379",
+            "name": "Type=Dropdown, State=Default, Expanded=On, Background=Dark",
+            "box": {
+              "x": -11932.0,
+              "y": 2322.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23344",
+            "name": "Type=Dropdown, State=Hover, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12528.0,
+              "y": 2093.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30387",
+            "name": "Type=Dropdown, State=Hover, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11932.0,
+              "y": 2093.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23796",
+            "name": "Type=Select, State=Hover, Expanded=Off, Background=Light",
+            "box": {
+              "x": -12133.0,
+              "y": 2093.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30395",
+            "name": "Type=Select, State=Hover, Expanded=Off, Background=Dark",
+            "box": {
+              "x": -11537.0,
+              "y": 2093.0,
+              "width": 69.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:23484",
+            "name": "Type=Dropdown, State=hover, Expanded=On, Background=Light",
+            "box": {
+              "x": -12528.0,
+              "y": 2648.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "7809:30401",
+            "name": "Type=Dropdown, State=hover, Expanded=On, Background=Dark",
+            "box": {
+              "x": -11932.0,
+              "y": 2648.0,
+              "width": 94.0,
+              "height": 48.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "02 Päta (Footer)",
+    "id": "2911:8300",
+    "sets": [
+      {
+        "id": "4521:28146",
+        "name": "Footer",
+        "variants": [
+          {
+            "id": "5340:2199",
+            "name": "Type=Desktop",
+            "box": {
+              "x": -4316.0,
+              "y": 4753.0,
+              "width": 1440.0,
+              "height": 482.0
+            }
+          },
+          {
+            "id": "5927:18645",
+            "name": "Type=Mobile",
+            "box": {
+              "x": -4316.0,
+              "y": 5265.0,
+              "width": 320.0,
+              "height": 675.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5927:19241",
+        "name": ".master (Footer - link columns)",
+        "variants": [
+          {
+            "id": "5927:19238",
+            "name": "Collumn number=1",
+            "box": {
+              "x": -4316.0,
+              "y": 6056.0,
+              "width": 1120.0,
+              "height": 310.0
+            }
+          },
+          {
+            "id": "5927:19237",
+            "name": "Collumn number=2",
+            "box": {
+              "x": -4316.0,
+              "y": 6426.0,
+              "width": 1120.0,
+              "height": 310.0
+            }
+          },
+          {
+            "id": "5927:19239",
+            "name": "Collumn number=3",
+            "box": {
+              "x": -4316.0,
+              "y": 6796.0,
+              "width": 1120.0,
+              "height": 310.0
+            }
+          },
+          {
+            "id": "5927:19240",
+            "name": "Collumn number=4",
+            "box": {
+              "x": -4316.0,
+              "y": 7166.0,
+              "width": 1120.0,
+              "height": 310.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "03 Tlačidlo (Button)",
+    "id": "2910:9773",
+    "sets": [
+      {
+        "id": "7024:19534",
+        "name": ".master Button",
+        "variants": [
+          {
+            "id": "7024:19533",
+            "name": "Size=L",
+            "box": {
+              "x": -3980.0,
+              "y": 7691.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7024:19535",
+            "name": "Size=M",
+            "box": {
+              "x": -3980.0,
+              "y": 7758.0,
+              "width": 140.0,
+              "height": 41.0
+            }
+          },
+          {
+            "id": "7024:19546",
+            "name": "Size=S",
+            "box": {
+              "x": -3980.0,
+              "y": 7818.0,
+              "width": 140.0,
+              "height": 35.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7024:19640",
+        "name": "Button",
+        "variants": [
+          {
+            "id": "7024:19639",
+            "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3977.0,
+              "y": 6449.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:4654",
+            "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3777.0,
+              "y": 6449.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5113",
+            "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3577.0,
+              "y": 6449.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14873",
+            "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=White",
+            "box": {
+              "x": -3219.0,
+              "y": 6449.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5280",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3377.0,
+              "y": 6449.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14887",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=White",
+            "box": {
+              "x": -3019.0,
+              "y": 6449.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7024:19641",
+            "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3977.0,
+              "y": 6528.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:4656",
+            "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3777.0,
+              "y": 6528.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5111",
+            "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3577.0,
+              "y": 6528.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14875",
+            "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=White",
+            "box": {
+              "x": -3219.0,
+              "y": 6528.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5288",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3377.0,
+              "y": 6528.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14885",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=White",
+            "box": {
+              "x": -3019.0,
+              "y": 6528.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7024:19651",
+            "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3977.0,
+              "y": 6607.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:4658",
+            "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3777.0,
+              "y": 6607.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5109",
+            "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3577.0,
+              "y": 6607.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14877",
+            "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=White",
+            "box": {
+              "x": -3219.0,
+              "y": 6607.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5284",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3377.0,
+              "y": 6607.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14883",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=White",
+            "box": {
+              "x": -3019.0,
+              "y": 6607.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7024:19661",
+            "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3977.0,
+              "y": 6686.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:4660",
+            "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3777.0,
+              "y": 6686.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5107",
+            "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3577.0,
+              "y": 6686.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14879",
+            "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=White",
+            "box": {
+              "x": -3219.0,
+              "y": 6686.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5286",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Primary",
+            "box": {
+              "x": -3377.0,
+              "y": 6686.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7715:14881",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=White",
+            "box": {
+              "x": -3019.0,
+              "y": 6686.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7024:19731",
+            "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3977.0,
+              "y": 6765.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:4662",
+            "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3777.0,
+              "y": 6765.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5105",
+            "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3577.0,
+              "y": 6765.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:5282",
+            "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Primary",
+            "box": {
+              "x": -3377.0,
+              "y": 6765.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7322",
+            "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3977.0,
+              "y": 6844.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7324",
+            "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3777.0,
+              "y": 6844.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7326",
+            "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3577.0,
+              "y": 6844.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7328",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3377.0,
+              "y": 6844.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7336",
+            "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3977.0,
+              "y": 6923.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7338",
+            "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3777.0,
+              "y": 6923.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7340",
+            "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3577.0,
+              "y": 6923.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7342",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3377.0,
+              "y": 6923.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7350",
+            "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3977.0,
+              "y": 7002.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7352",
+            "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3777.0,
+              "y": 7002.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7354",
+            "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3577.0,
+              "y": 7002.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7356",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3377.0,
+              "y": 7002.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7364",
+            "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3977.0,
+              "y": 7081.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7366",
+            "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3777.0,
+              "y": 7081.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7368",
+            "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3577.0,
+              "y": 7081.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7370",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Error",
+            "box": {
+              "x": -3377.0,
+              "y": 7081.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7378",
+            "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3977.0,
+              "y": 7160.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7380",
+            "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3777.0,
+              "y": 7160.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7382",
+            "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3577.0,
+              "y": 7160.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7384",
+            "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Error",
+            "box": {
+              "x": -3377.0,
+              "y": 7160.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7742",
+            "name": "Button type=Primary, State=Default, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3977.0,
+              "y": 7239.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7744",
+            "name": "Button type=Secondary, State=Default, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3777.0,
+              "y": 7239.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7746",
+            "name": "Button type=Tertiary, State=Default, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3577.0,
+              "y": 7239.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7748",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3377.0,
+              "y": 7239.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7756",
+            "name": "Button type=Primary, State=Default, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3977.0,
+              "y": 7318.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7758",
+            "name": "Button type=Secondary, State=Default, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3777.0,
+              "y": 7318.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7760",
+            "name": "Button type=Tertiary, State=Default, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3577.0,
+              "y": 7318.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7762",
+            "name": "Button type=Tertiary no padding, State=Default, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3377.0,
+              "y": 7318.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7770",
+            "name": "Button type=Primary, State=Active, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3977.0,
+              "y": 7397.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7772",
+            "name": "Button type=Secondary, State=Active, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3777.0,
+              "y": 7397.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7774",
+            "name": "Button type=Tertiary, State=Active, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3577.0,
+              "y": 7397.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7776",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3377.0,
+              "y": 7397.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7784",
+            "name": "Button type=Primary, State=Active, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3977.0,
+              "y": 7476.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7786",
+            "name": "Button type=Secondary, State=Active, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3777.0,
+              "y": 7476.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7788",
+            "name": "Button type=Tertiary, State=Active, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3577.0,
+              "y": 7476.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7790",
+            "name": "Button type=Tertiary no padding, State=Active, Hover=On, Color scheme=Sucess",
+            "box": {
+              "x": -3377.0,
+              "y": 7476.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7798",
+            "name": "Button type=Primary, State=Disabled, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3977.0,
+              "y": 7555.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7800",
+            "name": "Button type=Secondary, State=Disabled, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3777.0,
+              "y": 7555.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7802",
+            "name": "Button type=Tertiary, State=Disabled, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3577.0,
+              "y": 7555.0,
+              "width": 140.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "7039:7804",
+            "name": "Button type=Tertiary no padding, State=Disabled, Hover=Off, Color scheme=Sucess",
+            "box": {
+              "x": -3377.0,
+              "y": 7555.0,
+              "width": 120.0,
+              "height": 49.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "04 Oznámenie o používaní cookie (Cookies bar)",
+    "id": "6121:13803",
+    "sets": [
+      {
+        "id": "6601:7889",
+        "name": "Cookie bar",
+        "variants": [
+          {
+            "id": "6601:7888",
+            "name": "Device=Web",
+            "box": {
+              "x": -7824.0,
+              "y": 6404.0,
+              "width": 1440.0,
+              "height": 389.0
+            }
+          },
+          {
+            "id": "6601:7890",
+            "name": "Device=Mobile",
+            "box": {
+              "x": -7821.0,
+              "y": 6823.0,
+              "width": 320.0,
+              "height": 633.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "05 Textové pole (Text input)",
+    "id": "2911:7792",
+    "sets": [
+      {
+        "id": "5718:13930",
+        "name": ".master Text Input Field",
+        "variants": [
+          {
+            "id": "5718:13957",
+            "name": "Size=L, State=Default",
+            "box": {
+              "x": -12391.0,
+              "y": -1688.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "5718:13960",
+            "name": "Size=L, State=Hover",
+            "box": {
+              "x": -11931.0,
+              "y": -1688.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "5718:13963",
+            "name": "Size=L, State=Focus",
+            "box": {
+              "x": -11471.0,
+              "y": -1688.0,
+              "width": 396.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "5718:13967",
+            "name": "Size=L, State=Error",
+            "box": {
+              "x": -11015.0,
+              "y": -1688.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "5718:13970",
+            "name": "Size=L, State=Disabled",
+            "box": {
+              "x": -10555.0,
+              "y": -1688.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "5718:14028",
+            "name": "Size=M, State=Default",
+            "box": {
+              "x": -12391.0,
+              "y": -1580.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "5718:14031",
+            "name": "Size=M, State=Hover",
+            "box": {
+              "x": -11931.0,
+              "y": -1580.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "5718:14034",
+            "name": "Size=M, State=Focus",
+            "box": {
+              "x": -11471.0,
+              "y": -1580.0,
+              "width": 396.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "5718:14038",
+            "name": "Size=M, State=Error",
+            "box": {
+              "x": -11015.0,
+              "y": -1580.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "5718:14042",
+            "name": "Size=M, State=Disabled",
+            "box": {
+              "x": -10555.0,
+              "y": -1580.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5718:14237",
+        "name": "Text field",
+        "variants": [
+          {
+            "id": "5927:6356",
+            "name": "Size=L, State=Default",
+            "box": {
+              "x": -12391.0,
+              "y": -2219.0,
+              "width": 400.0,
+              "height": 150.0
+            }
+          },
+          {
+            "id": "5927:6365",
+            "name": "Size=L, State=Hover",
+            "box": {
+              "x": -11931.0,
+              "y": -2219.0,
+              "width": 400.0,
+              "height": 150.0
+            }
+          },
+          {
+            "id": "5927:6374",
+            "name": "Size=L, State=Focus",
+            "box": {
+              "x": -11471.0,
+              "y": -2219.0,
+              "width": 400.0,
+              "height": 150.0
+            }
+          },
+          {
+            "id": "5927:6383",
+            "name": "Size=L, State=Error",
+            "box": {
+              "x": -11011.0,
+              "y": -2219.0,
+              "width": 400.0,
+              "height": 183.0
+            }
+          },
+          {
+            "id": "5927:6392",
+            "name": "Size=L, State=Disabled",
+            "box": {
+              "x": -10551.0,
+              "y": -2219.0,
+              "width": 400.0,
+              "height": 150.0
+            }
+          },
+          {
+            "id": "5927:6401",
+            "name": "Size=M, State=Default",
+            "box": {
+              "x": -12391.0,
+              "y": -2014.0,
+              "width": 400.0,
+              "height": 134.0
+            }
+          },
+          {
+            "id": "5927:6410",
+            "name": "Size=M, State=Hover",
+            "box": {
+              "x": -11931.0,
+              "y": -2014.0,
+              "width": 400.0,
+              "height": 134.0
+            }
+          },
+          {
+            "id": "5927:6419",
+            "name": "Size=M, State=Focus",
+            "box": {
+              "x": -11471.0,
+              "y": -2014.0,
+              "width": 400.0,
+              "height": 134.0
+            }
+          },
+          {
+            "id": "5927:6428",
+            "name": "Size=M, State=Error",
+            "box": {
+              "x": -11011.0,
+              "y": -2014.0,
+              "width": 400.0,
+              "height": 163.0
+            }
+          },
+          {
+            "id": "5927:6437",
+            "name": "Size=M, State=Disabled",
+            "box": {
+              "x": -10551.0,
+              "y": -2014.0,
+              "width": 400.0,
+              "height": 134.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "06 Viacriadkové textové pole (Text area) ",
+    "id": "5711:8421",
+    "sets": [
+      {
+        "id": "2910:18362",
+        "name": "Text area",
+        "variants": [
+          {
+            "id": "2910:18363",
+            "name": "Size=L",
+            "box": {
+              "x": -9554.0,
+              "y": -1981.0,
+              "width": 640.0,
+              "height": 211.0
+            }
+          },
+          {
+            "id": "6912:19340",
+            "name": "Size=M",
+            "box": {
+              "x": -9554.0,
+              "y": -1740.0,
+              "width": 640.0,
+              "height": 199.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5711:17115",
+        "name": ".master Text area",
+        "variants": [
+          {
+            "id": "5711:17114",
+            "name": "State=Default",
+            "box": {
+              "x": -10301.0,
+              "y": -1991.0,
+              "width": 640.0,
+              "height": 97.0
+            }
+          },
+          {
+            "id": "5711:17231",
+            "name": "State=Disabled",
+            "box": {
+              "x": -10301.0,
+              "y": -1640.0,
+              "width": 640.0,
+              "height": 97.0
+            }
+          },
+          {
+            "id": "5711:17160",
+            "name": "State=Error",
+            "box": {
+              "x": -10301.0,
+              "y": -1757.0,
+              "width": 640.0,
+              "height": 97.0
+            }
+          },
+          {
+            "id": "5711:17116",
+            "name": "State=Hover",
+            "box": {
+              "x": -10301.0,
+              "y": -1874.0,
+              "width": 640.0,
+              "height": 97.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "07 Rozbaľovacie pole (Select)",
+    "id": "5711:8411",
+    "sets": [
+      {
+        "id": "5711:16095",
+        "name": "Drop down field",
+        "variants": [
+          {
+            "id": "5711:15696",
+            "name": "Expanded=Off, Size=L, Selected=Off",
+            "box": {
+              "x": -2213.0,
+              "y": 7021.0,
+              "width": 400.0,
+              "height": 117.0
+            }
+          },
+          {
+            "id": "6912:15883",
+            "name": "Expanded=Off, Size=L, Selected=On",
+            "box": {
+              "x": -2213.0,
+              "y": 7354.0,
+              "width": 400.0,
+              "height": 117.0
+            }
+          },
+          {
+            "id": "6912:15480",
+            "name": "Expanded=Off, Size=M, Selected=Off",
+            "box": {
+              "x": -1253.0,
+              "y": 7021.0,
+              "width": 400.0,
+              "height": 105.0
+            }
+          },
+          {
+            "id": "6912:15947",
+            "name": "Expanded=Off, Size=M, Selected=On",
+            "box": {
+              "x": -1253.0,
+              "y": 7370.0,
+              "width": 400.0,
+              "height": 105.0
+            }
+          },
+          {
+            "id": "5711:16096",
+            "name": "Expanded=On, Size=L, Selected=Off",
+            "box": {
+              "x": -1733.0,
+              "y": 7021.0,
+              "width": 400.0,
+              "height": 117.0
+            }
+          },
+          {
+            "id": "6912:15493",
+            "name": "Expanded=On, Size=M, Selected=Off",
+            "box": {
+              "x": -773.0,
+              "y": 7021.0,
+              "width": 400.0,
+              "height": 105.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6601:15354",
+        "name": "Drop down input Field",
+        "variants": [
+          {
+            "id": "6601:15355",
+            "name": "Size=M, State=Default",
+            "box": {
+              "x": -2213.0,
+              "y": 6726.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6601:15360",
+            "name": "Size=M, State=Hover",
+            "box": {
+              "x": -1753.0,
+              "y": 6726.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6601:15366",
+            "name": "Size=M, State=Focus",
+            "box": {
+              "x": -1293.0,
+              "y": 6726.0,
+              "width": 396.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6601:15371",
+            "name": "Size=M, State=Error",
+            "box": {
+              "x": -837.0,
+              "y": 6726.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6601:15376",
+            "name": "Size=M, State=Disabled",
+            "box": {
+              "x": -377.0,
+              "y": 6726.0,
+              "width": 400.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6601:15407",
+            "name": "Size=S, State=Default",
+            "box": {
+              "x": -2213.0,
+              "y": 6812.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6601:15412",
+            "name": "Size=S, State=Hover",
+            "box": {
+              "x": -1753.0,
+              "y": 6812.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6601:15418",
+            "name": "Size=S, State=Focus",
+            "box": {
+              "x": -1293.0,
+              "y": 6812.0,
+              "width": 396.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6601:15423",
+            "name": "Size=S, State=Error",
+            "box": {
+              "x": -837.0,
+              "y": 6812.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6601:15428",
+            "name": "Size=S, State=Disabled",
+            "box": {
+              "x": -377.0,
+              "y": 6812.0,
+              "width": 400.0,
+              "height": 40.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "2910:19084",
+        "name": ".master Dropdown item",
+        "variants": [
+          {
+            "id": "2910:19091",
+            "name": "Status=Default, Hover=Off",
+            "box": {
+              "x": 30.0,
+              "y": 5157.0,
+              "width": 340.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "2910:19087",
+            "name": "Status=Default, Hover=On",
+            "box": {
+              "x": 30.0,
+              "y": 5235.0,
+              "width": 340.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "2910:19089",
+            "name": "Status=Active, Hover=Off",
+            "box": {
+              "x": 30.0,
+              "y": 5313.0,
+              "width": 340.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6047:13411",
+            "name": "Status=Active, Hover=On",
+            "box": {
+              "x": 30.0,
+              "y": 5391.0,
+              "width": 340.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "2910:19085",
+            "name": "Status=Disabled, Hover=Off",
+            "box": {
+              "x": 30.0,
+              "y": 5469.0,
+              "width": 340.0,
+              "height": 48.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "08 Začiarkavacie políčko (Checkbox) ",
+    "id": "5711:8412",
+    "sets": [
+      {
+        "id": "6728:1741",
+        "name": ".master Checkbox picker",
+        "variants": [
+          {
+            "id": "6728:1740",
+            "name": "Checked=On, Disabled=Off, Size=M",
+            "box": {
+              "x": -8205.0,
+              "y": -2719.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3188",
+            "name": "Checked=On, Disabled=Off, Size=S",
+            "box": {
+              "x": -8205.0,
+              "y": -2479.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:1742",
+            "name": "Checked=Off, Disabled=Off, Size=M",
+            "box": {
+              "x": -8205.0,
+              "y": -2659.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3192",
+            "name": "Checked=Off, Disabled=Off, Size=S",
+            "box": {
+              "x": -8205.0,
+              "y": -2419.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:2920",
+            "name": "Checked=Off, Disabled=On, Size=M",
+            "box": {
+              "x": -8205.0,
+              "y": -2599.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3196",
+            "name": "Checked=Off, Disabled=On, Size=S",
+            "box": {
+              "x": -8205.0,
+              "y": -2359.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:2925",
+            "name": "Checked=On, Disabled=On, Size=M",
+            "box": {
+              "x": -8205.0,
+              "y": -2539.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3200",
+            "name": "Checked=On, Disabled=On, Size=S",
+            "box": {
+              "x": -8205.0,
+              "y": -2299.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "6728:1755",
+        "name": "Checkbox",
+        "variants": [
+          {
+            "id": "6728:1754",
+            "name": "State=Default, Size=M",
+            "box": {
+              "x": -8055.0,
+              "y": -2725.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "6728:3230",
+            "name": "State=Default, Size=S",
+            "box": {
+              "x": -8055.0,
+              "y": -2479.0,
+              "width": 100.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6728:1779",
+            "name": "State=Disabled, Size=M",
+            "box": {
+              "x": -8055.0,
+              "y": -2561.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "6728:3240",
+            "name": "State=Disabled, Size=S",
+            "box": {
+              "x": -8055.0,
+              "y": -2397.0,
+              "width": 100.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "6728:1756",
+            "name": "State=Hover, Size=M",
+            "box": {
+              "x": -8055.0,
+              "y": -2643.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "6728:3235",
+            "name": "State=Hover, Size=S",
+            "box": {
+              "x": -8055.0,
+              "y": -2315.0,
+              "width": 100.0,
+              "height": 48.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "09 Prepínacie pole (Radio)",
+    "id": "5711:8415",
+    "sets": [
+      {
+        "id": "4519:25208",
+        "name": "Radio button",
+        "variants": [
+          {
+            "id": "4519:25218",
+            "name": "State=Default, Size=M",
+            "box": {
+              "x": -1730.0,
+              "y": -2342.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "4519:25216",
+            "name": "State=Hover, Size=M",
+            "box": {
+              "x": -1730.0,
+              "y": -2250.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "4534:6382",
+            "name": "State=Disabled, Size=M",
+            "box": {
+              "x": -1730.0,
+              "y": -2158.0,
+              "width": 128.0,
+              "height": 62.0
+            }
+          },
+          {
+            "id": "4519:25228",
+            "name": "State=Default, Size=S",
+            "box": {
+              "x": -1730.0,
+              "y": -2066.0,
+              "width": 112.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "4534:6380",
+            "name": "State=Disabled, Size=S",
+            "box": {
+              "x": -1730.0,
+              "y": -1988.0,
+              "width": 112.0,
+              "height": 48.0
+            }
+          },
+          {
+            "id": "4519:25226",
+            "name": "State=Hover, Size=S",
+            "box": {
+              "x": -1730.0,
+              "y": -1910.0,
+              "width": 112.0,
+              "height": 48.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5105:10468",
+        "name": ".master Radio picker",
+        "variants": [
+          {
+            "id": "5105:10463",
+            "name": "Checked=On, Disabled=Off, Size=M",
+            "box": {
+              "x": -1891.0,
+              "y": -2342.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3615",
+            "name": "Checked=Off, Disabled=Off, Size=M",
+            "box": {
+              "x": -1891.0,
+              "y": -2272.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3619",
+            "name": "Checked=On, Disabled=On, Size=M",
+            "box": {
+              "x": -1891.0,
+              "y": -2202.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "6728:3607",
+            "name": "Checked=Off, Disabled=On, Size=M",
+            "box": {
+              "x": -1891.0,
+              "y": -2132.0,
+              "width": 40.0,
+              "height": 40.0
+            }
+          },
+          {
+            "id": "5105:10464",
+            "name": "Checked=On, Disabled=Off, Size=S",
+            "box": {
+              "x": -1891.0,
+              "y": -2062.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:3627",
+            "name": "Checked=Off, Disabled=Off, Size=S",
+            "box": {
+              "x": -1891.0,
+              "y": -2008.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:3623",
+            "name": "Checked=On, Disabled=On, Size=S",
+            "box": {
+              "x": -1891.0,
+              "y": -1954.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "6728:3611",
+            "name": "Checked=Off, Disabled=On, Size=S",
+            "box": {
+              "x": -1891.0,
+              "y": -1900.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "10 Prehľad s chybovými hláseniami (Error summary) ",
+    "id": "5711:8413",
+    "sets": [
+      {
+        "id": "5110:5146",
+        "name": "Error summary",
+        "variants": [
+          {
+            "id": "4520:27824",
+            "name": "Property 1=Default",
+            "box": {
+              "x": -6101.0,
+              "y": -3157.0,
+              "width": 640.0,
+              "height": 213.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "11 Pole na nahratie súboru (File upload)",
+    "id": "5711:8414",
+    "sets": [
+      {
+        "id": "2910:19093",
+        "name": "Drag and drop upload",
+        "variants": [
+          {
+            "id": "2910:19094",
+            "name": "State=Default",
+            "box": {
+              "x": -3991.0,
+              "y": 3650.0,
+              "width": 1140.0,
+              "height": 344.0
+            }
+          },
+          {
+            "id": "2910:19108",
+            "name": "State=Uploaded files",
+            "box": {
+              "x": -3991.0,
+              "y": 4024.0,
+              "width": 1140.0,
+              "height": 577.0
+            }
+          },
+          {
+            "id": "2910:19101",
+            "name": "State=Disabled",
+            "box": {
+              "x": -3991.0,
+              "y": 4631.0,
+              "width": 1140.0,
+              "height": 344.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "4521:28019",
+        "name": "File upload",
+        "variants": [
+          {
+            "id": "7515:4787",
+            "name": "State=Default",
+            "box": {
+              "x": -3991.0,
+              "y": 2362.0,
+              "width": 1140.0,
+              "height": 216.0
+            }
+          },
+          {
+            "id": "6770:11770",
+            "name": "State=Uploaded",
+            "box": {
+              "x": -3991.0,
+              "y": 2608.0,
+              "width": 1140.0,
+              "height": 285.0
+            }
+          },
+          {
+            "id": "6880:976",
+            "name": "State=Disabled",
+            "box": {
+              "x": -3991.0,
+              "y": 2923.0,
+              "width": 1140.0,
+              "height": 216.0
+            }
+          },
+          {
+            "id": "6770:12331",
+            "name": "State=Error",
+            "box": {
+              "x": -3991.0,
+              "y": 3169.0,
+              "width": 1140.0,
+              "height": 333.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5908:11813",
+        "name": ".master Drag and drop file upload - file list",
+        "variants": [
+          {
+            "id": "5908:11812",
+            "name": "State=Default",
+            "box": {
+              "x": -5239.0,
+              "y": 2362.0,
+              "width": 1080.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "5908:11810",
+            "name": "State=Uploading",
+            "box": {
+              "x": -5239.0,
+              "y": 2440.0,
+              "width": 1080.0,
+              "height": 49.0
+            }
+          },
+          {
+            "id": "5908:11811",
+            "name": "State=Error",
+            "box": {
+              "x": -5239.0,
+              "y": 2518.0,
+              "width": 1080.0,
+              "height": 49.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5908:12066",
+        "name": ".master Drag and drop zone",
+        "variants": [
+          {
+            "id": "5908:12065",
+            "name": "State=Disabled",
+            "box": {
+              "x": -5239.0,
+              "y": 4210.0,
+              "width": 1080.0,
+              "height": 251.0
+            }
+          },
+          {
+            "id": "5908:12063",
+            "name": "State=Hover",
+            "box": {
+              "x": -5239.0,
+              "y": 3930.0,
+              "width": 1080.0,
+              "height": 251.0
+            }
+          },
+          {
+            "id": "5908:12062",
+            "name": "State=Default",
+            "box": {
+              "x": -5239.0,
+              "y": 3650.0,
+              "width": 1080.0,
+              "height": 251.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "12 Akordeón (Accordion)",
+    "id": "2911:7795",
+    "sets": [
+      {
+        "id": "2911:9948",
+        "name": "Accordion",
+        "variants": [
+          {
+            "id": "7085:24461",
+            "name": "State=Default, Expanded=Off",
+            "box": {
+              "x": -3348.0,
+              "y": 7942.0,
+              "width": 1140.0,
+              "height": 131.0
+            }
+          },
+          {
+            "id": "7085:24485",
+            "name": "State=Hover, Expanded=Off",
+            "box": {
+              "x": -3348.0,
+              "y": 8093.0,
+              "width": 1140.0,
+              "height": 131.0
+            }
+          },
+          {
+            "id": "5085:4502",
+            "name": "State=Default, Expanded=On",
+            "box": {
+              "x": -3348.0,
+              "y": 8244.0,
+              "width": 1140.0,
+              "height": 367.0
+            }
+          },
+          {
+            "id": "7085:24473",
+            "name": "State=Hover, Expanded=On",
+            "box": {
+              "x": -3348.0,
+              "y": 8631.0,
+              "width": 1140.0,
+              "height": 367.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "13 Omrvinková navigácia (Breadcrumbs)",
+    "id": "2911:7796",
+    "sets": [
+      {
+        "id": "5085:11436",
+        "name": "Breadcrumbs",
+        "variants": [
+          {
+            "id": "5085:11437",
+            "name": "Device=Desktop",
+            "box": {
+              "x": -2743.0,
+              "y": 2742.0,
+              "width": 1410.0,
+              "height": 44.0
+            }
+          },
+          {
+            "id": "5085:11439",
+            "name": "Device=Mobile",
+            "box": {
+              "x": -2743.0,
+              "y": 2813.0,
+              "width": 1410.0,
+              "height": 44.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "5085:11441",
+        "name": ".master Breadcrumbs ",
+        "variants": [
+          {
+            "id": "5085:11442",
+            "name": "Viewport=Desktop, Crumbs=2",
+            "box": {
+              "x": -2733.0,
+              "y": 3073.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11456",
+            "name": "Viewport=Mobile, Crumbs=2",
+            "box": {
+              "x": -2733.0,
+              "y": 3117.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11470",
+            "name": "Viewport=Desktop, Crumbs=3",
+            "box": {
+              "x": -2733.0,
+              "y": 3161.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11484",
+            "name": "Viewport=Mobile, Crumbs=3",
+            "box": {
+              "x": -2733.0,
+              "y": 3205.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11498",
+            "name": "Viewport=Desktop, Crumbs=4",
+            "box": {
+              "x": -2733.0,
+              "y": 3249.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11512",
+            "name": "Viewport=Mobile, Crumbs=4",
+            "box": {
+              "x": -2733.0,
+              "y": 3293.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11526",
+            "name": "Viewport=Desktop, Crumbs=5",
+            "box": {
+              "x": -2733.0,
+              "y": 3337.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5085:11540",
+            "name": "Viewport=Mobile, Crumbs=5",
+            "box": {
+              "x": -2733.0,
+              "y": 3381.0,
+              "width": 410.0,
+              "height": 24.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "14 Informačná lišta (Notification banner) ",
+    "id": "2911:8297",
+    "sets": [
+      {
+        "id": "5085:12823",
+        "name": "Notification banner",
+        "variants": [
+          {
+            "id": "5085:12850",
+            "name": "Type=Accent, Screen size=Desktop",
+            "box": {
+              "x": -1798.0,
+              "y": -1739.0,
+              "width": 1080.0,
+              "height": 178.0
+            }
+          },
+          {
+            "id": "5085:12884",
+            "name": "Type=Alert, Screen size=Desktop",
+            "box": {
+              "x": -1798.0,
+              "y": -1541.0,
+              "width": 1080.0,
+              "height": 178.0
+            }
+          },
+          {
+            "id": "5085:12918",
+            "name": "Type=Warning, Screen size=Desktop",
+            "box": {
+              "x": -1798.0,
+              "y": -1343.0,
+              "width": 1080.0,
+              "height": 178.0
+            }
+          },
+          {
+            "id": "5085:12952",
+            "name": "Type=Success, Screen size=Desktop",
+            "box": {
+              "x": -1798.0,
+              "y": -1145.0,
+              "width": 1080.0,
+              "height": 178.0
+            }
+          },
+          {
+            "id": "5099:2193",
+            "name": "Type=Accent, Screen size=Mobile",
+            "box": {
+              "x": -1798.0,
+              "y": -947.0,
+              "width": 640.0,
+              "height": 240.0
+            }
+          },
+          {
+            "id": "5099:2203",
+            "name": "Type=Alert, Screen size=Mobile",
+            "box": {
+              "x": -1798.0,
+              "y": -687.0,
+              "width": 640.0,
+              "height": 239.0
+            }
+          },
+          {
+            "id": "5105:14383",
+            "name": "Type=Warning, Screen size=Mobile",
+            "box": {
+              "x": -1798.0,
+              "y": -428.0,
+              "width": 640.0,
+              "height": 240.0
+            }
+          },
+          {
+            "id": "5099:2213",
+            "name": "Type=Success, Screen size=Mobile",
+            "box": {
+              "x": -1798.0,
+              "y": -168.0,
+              "width": 640.0,
+              "height": 240.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "15 Lišta spätnej väzby (Feedback bar) ",
+    "id": "2911:7791",
+    "sets": [
+      {
+        "id": "3311:26707",
+        "name": "Feedback bar",
+        "variants": [
+          {
+            "id": "4997:11088",
+            "name": "State=Default, Device=Desktop",
+            "box": {
+              "x": -7867.0,
+              "y": 2883.0,
+              "width": 1460.0,
+              "height": 80.0
+            }
+          },
+          {
+            "id": "4997:11109",
+            "name": "State=Submitted, Device=Desktop",
+            "box": {
+              "x": -7867.0,
+              "y": 2993.0,
+              "width": 1460.0,
+              "height": 68.0
+            }
+          },
+          {
+            "id": "4997:11098",
+            "name": "State=Default, Device=Mobile",
+            "box": {
+              "x": -7867.0,
+              "y": 3091.0,
+              "width": 800.0,
+              "height": 169.0
+            }
+          },
+          {
+            "id": "4997:11117",
+            "name": "State=Submitted, Device=Mobile",
+            "box": {
+              "x": -7867.0,
+              "y": 3290.0,
+              "width": 800.0,
+              "height": 146.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "16 Oznamovacia lišta (Announcement bar)",
+    "id": "5421:17675",
+    "sets": [
+      {
+        "id": "2911:10735",
+        "name": "Toast",
+        "variants": [
+          {
+            "id": "2911:10772",
+            "name": "Status=Error alert, Screen size=Desktop",
+            "box": {
+              "x": 1177.0,
+              "y": 4618.0,
+              "width": 1460.0,
+              "height": 141.0
+            }
+          },
+          {
+            "id": "2911:10763",
+            "name": "Status=Warning, Screen size=Desktop",
+            "box": {
+              "x": 1177.0,
+              "y": 4779.0,
+              "width": 1460.0,
+              "height": 141.0
+            }
+          },
+          {
+            "id": "6428:7405",
+            "name": "Status=Success, Screen size=Desktop",
+            "box": {
+              "x": 1177.0,
+              "y": 4940.0,
+              "width": 1460.0,
+              "height": 141.0
+            }
+          },
+          {
+            "id": "2911:10781",
+            "name": "Status=Information, Screen size=Desktop",
+            "box": {
+              "x": 1177.0,
+              "y": 5101.0,
+              "width": 1460.0,
+              "height": 141.0
+            }
+          },
+          {
+            "id": "5085:17113",
+            "name": "Status=Error alert, Screen size=Mobile",
+            "box": {
+              "x": 1177.0,
+              "y": 5262.0,
+              "width": 640.0,
+              "height": 197.0
+            }
+          },
+          {
+            "id": "5085:17122",
+            "name": "Status=Warning, Screen size=Mobile",
+            "box": {
+              "x": 1177.0,
+              "y": 5479.0,
+              "width": 640.0,
+              "height": 197.0
+            }
+          },
+          {
+            "id": "5085:17131",
+            "name": "Status=Success, Screen size=Mobile",
+            "box": {
+              "x": 1177.0,
+              "y": 5696.0,
+              "width": 640.0,
+              "height": 197.0
+            }
+          },
+          {
+            "id": "5085:17140",
+            "name": "Status=Information, Screen size=Mobile",
+            "box": {
+              "x": 1177.0,
+              "y": 5913.0,
+              "width": 640.0,
+              "height": 197.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "17 Kartička (Card)",
+    "id": "2911:8298",
+    "sets": [
+      {
+        "id": "2910:20581",
+        "name": "Card",
+        "variants": [
+          {
+            "id": "2910:20598",
+            "name": "Orientation=Vertical, Hover=Off",
+            "box": {
+              "x": -3388.0,
+              "y": 5932.0,
+              "width": 360.0,
+              "height": 548.0
+            }
+          },
+          {
+            "id": "6562:3712",
+            "name": "Orientation=Vertical, Hover=On",
+            "box": {
+              "x": -3388.0,
+              "y": 6510.0,
+              "width": 360.0,
+              "height": 548.0
+            }
+          },
+          {
+            "id": "6489:6773",
+            "name": "Orientation=Horizontal, Hover=Off",
+            "box": {
+              "x": -3388.0,
+              "y": 7088.0,
+              "width": 1060.0,
+              "height": 272.0
+            }
+          },
+          {
+            "id": "6562:3746",
+            "name": "Orientation=Horizontal, Hover=On",
+            "box": {
+              "x": -3388.0,
+              "y": 7390.0,
+              "width": 1060.0,
+              "height": 272.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "18 Rázcestník (Signpost)",
+    "id": "2911:8299",
+    "sets": [
+      {
+        "id": "3313:26557",
+        "name": "Signpost horizontal",
+        "variants": [
+          {
+            "id": "3313:26564",
+            "name": "Property 1=Default",
+            "box": {
+              "x": -5705.0,
+              "y": 5101.0,
+              "width": 580.0,
+              "height": 165.0
+            }
+          },
+          {
+            "id": "3313:26585",
+            "name": "Property 1=Hover",
+            "box": {
+              "x": -5705.0,
+              "y": 5296.0,
+              "width": 580.0,
+              "height": 165.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "19 Dátová lišta (Data panel)",
+    "id": "5240:2330",
+    "sets": [
+      {
+        "id": "5254:1778",
+        "name": "Data panel",
+        "variants": [
+          {
+            "id": "5240:4369",
+            "name": "Device=Web",
+            "box": {
+              "x": 473.0,
+              "y": -274.0,
+              "width": 1024.0,
+              "height": 153.0
+            }
+          },
+          {
+            "id": "6298:7407",
+            "name": "Device=Mobile v2",
+            "box": {
+              "x": 473.0,
+              "y": -92.0,
+              "width": 320.0,
+              "height": 280.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7636:15547",
+        "name": "IDSK Documentation",
+        "variants": [
+          {
+            "id": "7636:15548",
+            "name": "Type=Header",
+            "box": {
+              "x": 583.0,
+              "y": -3506.0,
+              "width": 1440.0,
+              "height": 437.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "20 Vysvetlivka (Tooltip)",
+    "id": "5274:4160",
+    "sets": [
+      {
+        "id": "7340:20672",
+        "name": ".master Tooltip mark",
+        "variants": [
+          {
+            "id": "7340:20671",
+            "name": "Hover=Off",
+            "box": {
+              "x": 4570.0,
+              "y": 6868.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7340:20673",
+            "name": "Hover=On",
+            "box": {
+              "x": 4570.0,
+              "y": 6913.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7370:21275",
+        "name": "Tooltip",
+        "variants": [
+          {
+            "id": "7367:20789",
+            "name": "Info bubble=Left, Expanded=Off",
+            "box": {
+              "x": 4605.0,
+              "y": 5566.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21965",
+            "name": "Info bubble=Left, Expanded=On",
+            "box": {
+              "x": 5090.0,
+              "y": 6331.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21276",
+            "name": "Info bubble=Top, Expanded=Off",
+            "box": {
+              "x": 4605.0,
+              "y": 5500.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21962",
+            "name": "Info bubble=Top, Expanded=On",
+            "box": {
+              "x": 4848.0,
+              "y": 6181.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21330",
+            "name": "Info bubble=Right, Expanded=Off",
+            "box": {
+              "x": 4605.0,
+              "y": 5436.0,
+              "width": 24.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "7370:21959",
+            "name": "Info bubble=Right, Expanded=On",
+            "box": {
+              "x": 4605.0,
+              "y": 5784.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21384",
+            "name": "Info bubble=Bottom, Expanded=Off",
+            "box": {
+              "x": 4605.0,
+              "y": 5628.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          },
+          {
+            "id": "7370:21968",
+            "name": "Info bubble=Bottom, Expanded=On",
+            "box": {
+              "x": 4849.0,
+              "y": 6473.0,
+              "width": 25.0,
+              "height": 25.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "7975:15461",
+        "name": ".master Tooltip Bubble",
+        "variants": [
+          {
+            "id": "7364:20746",
+            "name": "Hover=Off",
+            "box": {
+              "x": 4671.0,
+              "y": 6868.0,
+              "width": 442.0,
+              "height": 250.0
+            }
+          },
+          {
+            "id": "7975:15462",
+            "name": "Hover=On",
+            "box": {
+              "x": 4671.0,
+              "y": 7138.0,
+              "width": 442.0,
+              "height": 250.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "21 Rozdeľovník (Divider) ",
+    "id": "5274:3983",
+    "sets": [
+      {
+        "id": "7615:4313",
+        "name": ".IDSK Documentation",
+        "variants": [
+          {
+            "id": "7615:4314",
+            "name": "Type=Header",
+            "box": {
+              "x": -570.0,
+              "y": -1812.0,
+              "width": 1440.0,
+              "height": 473.0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": "22 Vysvetlivka označenia povinných polí (Mandatory field legend)",
+    "id": "5274:3806",
+    "sets": [
+      {
+        "id": "5113:6151",
+        "name": "Mandatory field",
+        "variants": [
+          {
+            "id": "5113:6152",
+            "name": "Mandatory=Yes, Used for=Headline",
+            "box": {
+              "x": 2327.0,
+              "y": -4540.0,
+              "width": 11.0,
+              "height": 36.0
+            }
+          },
+          {
+            "id": "5113:6154",
+            "name": "Mandatory=No, Used for=Headline",
+            "box": {
+              "x": 2327.0,
+              "y": -4474.0,
+              "width": 121.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5711:10237",
+            "name": "Mandatory=Yes (text), Used for=Headline",
+            "box": {
+              "x": 2327.0,
+              "y": -4420.0,
+              "width": 104.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5711:15571",
+            "name": "Mandatory=Yes, Used for=Field",
+            "box": {
+              "x": 2327.0,
+              "y": -4366.0,
+              "width": 11.0,
+              "height": 28.0
+            }
+          },
+          {
+            "id": "5711:15569",
+            "name": "Mandatory=No, Used for=Field",
+            "box": {
+              "x": 2327.0,
+              "y": -4308.0,
+              "width": 121.0,
+              "height": 24.0
+            }
+          },
+          {
+            "id": "5711:15567",
+            "name": "Mandatory=Yes (text), Used for=Field",
+            "box": {
+              "x": 2327.0,
+              "y": -4254.0,
+              "width": 104.0,
+              "height": 24.0
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "checkboxAfterClick": "false",
+  "checkboxInputs": [
+    {
+      "opacity": "0",
+      "pointerEvents": "none",
+      "tabIndex": -1,
+      "checked": false
+    },
+    {
+      "opacity": "0",
+      "pointerEvents": "none",
+      "tabIndex": -1,
+      "checked": false
+    }
+  ],
+  "selectExpanded": "false",
+  "listboxes": 0
+}

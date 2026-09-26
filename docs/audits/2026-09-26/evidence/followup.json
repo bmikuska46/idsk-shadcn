@@ -1,0 +1,32 @@
+{
+  "file": {
+    "names": [
+      [
+        "compact",
+        "unexpected.exe",
+        16777216
+      ]
+    ],
+    "text": "Súbor unexpected.exe bol vybraný.\nNahrajte súbory\n(povinné pole)\n*\nNahrané súbory\nSúbor unexpected.exe bol úspešne nahraný.\n\nunexpected.exe\n\n16,0 MB\nPridať súbor\npre pole Nahrajte súbory (povinné pole)\n\nVyberte ďalší súbor\n\nPodporované formáty: jpg, png, doc, docx, pdf\nMaximálna veľkosť súboru: 15 MB\nSubmit file"
+  },
+  "cookie320": {
+    "top": -65,
+    "height": 633,
+    "viewport": 568
+  },
+  "cookieLandscape": {
+    "top": -65,
+    "height": 435,
+    "viewport": 390
+  },
+  "feedback768": {
+    "height": 153,
+    "text": "Boli tieto informácie pre Vás užitočné?\n\nBoli tieto informácie pre Vás užitočné?\n\nÁno\nNie\nNašli ste na stránke chybu?"
+  },
+  "selectOpened": 1,
+  "selectValue": "Doplnenie podania",
+  "accordionExpanded": "true",
+  "noJsAccordion": {
+    "textVisible": 0
+  }
+}

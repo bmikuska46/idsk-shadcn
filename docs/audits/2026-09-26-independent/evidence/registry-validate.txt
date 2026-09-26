@@ -1,0 +1,4 @@
+- Validating registry.
+✔ Registry is valid.
+✔ Checked 1 registry file and 27 items.
+  - registry.json

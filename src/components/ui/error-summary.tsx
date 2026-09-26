@@ -43,10 +43,18 @@ function focusErrorTarget(event: MouseEvent<HTMLAnchorElement>, href: string) {
   window.history.replaceState(null, '', href)
 
   if (target instanceof HTMLElement) {
-    target.focus({ preventScroll: true })
+    const control = target.matches('fieldset, [role=group], [role=radiogroup]')
+      ? target.querySelector<HTMLElement>('input:not(:disabled), select:not(:disabled), textarea:not(:disabled), button:not(:disabled)')
+      : target
+    control?.focus({ preventScroll: true })
   }
 }
 
+/**
+ * IDSK "Sumár chýb": white box with a 2px Error alert border, 5px on the left,
+ * 5px radius, 20px vertical and 30px horizontal padding. Headline M (24/35),
+ * Body 1 description and Body links (19/28) in the link colour.
+ */
 export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
   (
     {
@@ -75,7 +83,7 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
         aria-describedby={descriptionId}
         aria-labelledby={titleId}
         className={cn(
-          'mb-8 max-w-[640px] min-w-0 rounded-lg border-y-2 border-r-2 border-l-[5px] border-warning bg-white p-4 text-foreground sm:p-5',
+          'mb-8 flex min-w-0 flex-col gap-[10px] rounded-[5px] border-2 border-l-[5px] border-error bg-white pt-[13px] pr-[18px] pb-[13px] pl-[15px] text-foreground sm:pt-[18px] sm:pr-[28px] sm:pb-[18px] sm:pl-[25px]',
           'focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
           className,
         )}
@@ -86,27 +94,29 @@ export const ErrorSummary = forwardRef<HTMLDivElement, ErrorSummaryProps>(
           if (typeof forwardedRef === 'function') forwardedRef(node)
           else if (forwardedRef) forwardedRef.current = node
         }}
-        role="region"
+        role={focusOnMount ? undefined : 'alert'}
         tabIndex={-1}
         {...props}
       >
-        <h2 className="mb-4 text-lg font-bold sm:text-xl" id={titleId}>
-          {title}
-        </h2>
-        {description ? (
-          <p className="mb-4 text-base leading-6" id={descriptionId}>
-            {description}
-          </p>
-        ) : null}
-        <ul className="m-0 list-none space-y-2 p-0">
+        <div>
+          <h2 className="text-[20px] leading-[26px] font-bold sm:text-[24px] sm:leading-[35px]" id={titleId}>
+            {title}
+          </h2>
+          {description ? (
+            <p className="text-[16px] leading-6" id={descriptionId}>
+              {description}
+            </p>
+          ) : null}
+        </div>
+        <ul className="m-0 flex list-none flex-col gap-[10px] p-0">
           {items.map(({ href, linkProps, text }) => (
             <li key={`${href}-${text}`}>
               <a
                 {...linkProps}
                 className={cn(
-                  'break-words text-primary underline decoration-[1px] underline-offset-3 transition-all duration-200',
-                  'hover:text-[#126DFF] hover:decoration-[2px]',
-                  'focus:text-[#126DFF] focus-visible:rounded-none focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-focus focus-visible:ring-offset-2',
+                  'break-words text-[16px] leading-6 text-link underline sm:text-[19px] sm:leading-7 decoration-[1px] underline-offset-3 transition-all duration-200',
+                  'hover:text-primary hover:decoration-[3px]',
+                  'focus-visible:rounded-none focus-visible:outline-solid focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-focus',
                   linkProps?.className,
                 )}
                 href={href}

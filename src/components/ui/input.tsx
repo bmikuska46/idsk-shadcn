@@ -1,8 +1,10 @@
 import { forwardRef, useId, type InputHTMLAttributes, type ReactNode } from 'react'
 
+import { FieldError, FieldErrorIcon, FieldHint, FieldLabelText, type RequiredIndicator } from '@/components/ui/field'
 import { cn } from '@/lib/utils'
 
-export type InputSize = 's' | 'm' | 'l'
+/** IDSK text inputs come in two heights: L 48px and M 40px. */
+export type InputSize = 'm' | 'l'
 
 export type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> & {
   label: ReactNode
@@ -12,23 +14,13 @@ export type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> & {
   description?: ReactNode
   error?: ReactNode
   optional?: boolean
-  /** IDSK visual size. `small` is kept as a backwards-compatible alias for `s`. */
+  /** Show the mandatory marker as a red asterisk (default) or as "(povinné pole)". */
+  requiredIndicator?: RequiredIndicator
   size?: InputSize
+  /** @deprecated Use `size="m"`. */
   small?: boolean
-}
-
-function ErrorIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="h-5 w-5"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12 2 1 21h22L12 2Zm1 16h-2v-2h2v2Zm0-4h-2V9h2v5Z" />
-    </svg>
-  )
+  /** Tooltip mark rendered after the label, see `InfoTooltip`. */
+  tooltip?: ReactNode
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -44,8 +36,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       error,
       optional,
       required,
+      requiredIndicator,
       size = 'l',
       small,
+      tooltip,
       disabled,
       ...props
     },
@@ -59,36 +53,29 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     const describedBy = [ariaDescribedBy, hintId, descriptionId, errorId]
       .filter(Boolean)
       .join(' ') || undefined
-    const resolvedSize = small ? 's' : size
+    const resolvedSize: InputSize = small ? 'm' : size
 
     return (
       <div className="flex w-full flex-col">
-        <label
-          className={cn(
-            'mb-1 flex flex-col text-[19px] leading-7 text-[#212121]',
-            disabled && 'text-[#757575]',
-          )}
-          htmlFor={inputId}
-        >
-          <span>
-            {label}
-            {required ? (
-              <span aria-hidden="true" className="ml-1 text-[#C3112B]">
-                *
-              </span>
-            ) : optional ? (
-              <span
-                className="ml-1 text-[16px] leading-6 font-normal text-[#757575]"
-              >
-                (nepovinné pole)
-              </span>
-            ) : null}
-          </span>
-        </label>
+        <div className={cn('flex items-center gap-[5px]', !hint && 'mb-[5px]')}>
+          <label
+            className={cn(
+              'block text-foreground',
+              resolvedSize === 'l' ? 'text-[19px] leading-7' : 'text-[16px] leading-6',
+              disabled && 'text-foreground-muted',
+            )}
+            htmlFor={inputId}
+          >
+            <FieldLabelText size={resolvedSize} optional={optional} required={required} requiredIndicator={requiredIndicator}>
+              {label}
+            </FieldLabelText>
+          </label>
+          {tooltip}
+        </div>
         {hint ? (
-          <span className="mb-2 text-[19px] leading-7 text-[#757575]" id={hintId}>
+          <FieldHint className={cn('mb-[5px]', resolvedSize === 'm' && 'text-[16px] leading-6')} id={hintId}>
             {hint}
-          </span>
+          </FieldHint>
         ) : null}
         <div className="relative flex w-full">
           <input
@@ -96,13 +83,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             aria-invalid={error ? true : ariaInvalid}
             aria-required={required || undefined}
             className={cn(
-              'w-full rounded-[5px] border-2 border-[#424242] bg-white px-4 text-[#212121] outline-none transition-colors placeholder:text-[#757575]',
-              'hover:ring-4 hover:ring-[#757575] focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-[#D96E00]',
-              'disabled:cursor-not-allowed disabled:border-[#BDBDBD] disabled:bg-[#F5F5F5] disabled:text-[#757575] disabled:hover:ring-0',
+              'tracking-[0.5px] w-full rounded-[5px] border-2 border-border-strong bg-white px-[15px] text-foreground outline-none transition-[box-shadow,border-color] placeholder:text-foreground-muted',
+              'hover:ring-[5px] hover:ring-foreground-muted focus:outline-solid focus:outline-[3px] focus:outline-offset-2 focus:outline-focus',
+              'disabled:cursor-not-allowed disabled:border-border-muted disabled:bg-white disabled:text-foreground-muted disabled:hover:ring-0',
               resolvedSize === 'l'
                 ? 'h-12 text-[19px] leading-7'
                 : 'h-10 text-[16px] leading-6',
-              error && 'border-[#C3112B] pr-12',
+              error && 'border-error pr-12',
               className,
             )}
             disabled={disabled}
@@ -114,22 +101,21 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           {error ? (
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-[#C3112B]"
+              className="pointer-events-none absolute top-1/2 right-4 z-10 -translate-y-1/2 text-error"
             >
-              <ErrorIcon />
+              <FieldErrorIcon />
             </span>
           ) : null}
         </div>
         {description ? (
-          <span className="mt-2 text-[16px] leading-6 text-[#757575]" id={descriptionId}>
+          <FieldHint className={cn('mt-[5px]', resolvedSize === 'm' && 'text-[16px] leading-6')} id={descriptionId}>
             {description}
-          </span>
+          </FieldHint>
         ) : null}
         {error ? (
-          <span className="mt-2 text-[19px] leading-7 text-[#C3112B]" id={errorId}>
-            <span>Chyba: </span>
+          <FieldError className={cn('mt-[5px]', resolvedSize === 'm' && 'text-[16px] leading-6')} id={errorId}>
             {error}
-          </span>
+          </FieldError>
         ) : null}
       </div>
     )

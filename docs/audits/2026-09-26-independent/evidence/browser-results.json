@@ -1,0 +1,231 @@
+{
+  "browser": "153.0.8010.12",
+  "errors": [],
+  "initial": {
+    "compactRequired": false,
+    "compactValid": true,
+    "checkboxValid": true,
+    "selectInvalidOverride": null,
+    "radioInvalid": null,
+    "fields": [
+      {
+        "id": "input-m",
+        "height": 40,
+        "font": "16px",
+        "tracking": "normal"
+      },
+      {
+        "id": "select-m",
+        "height": 44,
+        "font": "16px",
+        "tracking": "normal"
+      },
+      {
+        "id": "select-l",
+        "height": 52,
+        "font": "19px",
+        "tracking": "normal"
+      }
+    ]
+  },
+  "disabledActionCalls": "1",
+  "summaryFocus": {
+    "tag": "A",
+    "id": ""
+  },
+  "disabledFileRemoved": true,
+  "uploadAfterReset": {
+    "displayedFiles": 1,
+    "nativeFiles": 0,
+    "required": false,
+    "valid": true
+  },
+  "rejectedControlledUpload": {
+    "displayedFiles": 0,
+    "nativeFiles": [
+      "test.pdf"
+    ],
+    "submittedFiles": [
+      {
+        "key": "attachment",
+        "name": "test.pdf",
+        "size": 13
+      }
+    ]
+  },
+  "uploadClaim": "Súbor unexpected.exe bol vybraný.\nNahrajte súbory\n(povinné pole)\n*\nNahrané súbory\nSúbor unexpected.exe bol úspešne nahraný.\n\nunexpected.exe\n\n16,0 MB\nPridať súbor\npre pole Nahrajte súbory (povinné pole)\n\nVyberte ďalší súbor\n\nPodporované formáty: jpg, png, doc, docx, pdf\nMaximálna veľkosť súboru: 15 MB",
+  "textAfterReset": {
+    "value": "seed",
+    "text": "Reset text\n18/30\nMaximálne 30 znakov\nReset text"
+  },
+  "tooltipOnFocus": 1,
+  "tooltipAfterEscape": 0,
+  "mobileProfile": "- link:\n  - /url: \"#profile\"",
+  "mobileBreadcrumbVisible": false,
+  "mobileBreadcrumbReplacementCount": 0,
+  "cookie": {
+    "top": -65,
+    "height": 633,
+    "viewport": 568,
+    "overflow": "visible"
+  },
+  "noJavaScript": {
+    "accordionContent": false,
+    "checkboxButtons": 2,
+    "checkboxInputs": [
+      {
+        "type": "checkbox",
+        "width": 13,
+        "height": 13
+      },
+      {
+        "type": "checkbox",
+        "width": 13,
+        "height": 13
+      }
+    ],
+    "selectButtons": 2,
+    "selects": [
+      {
+        "width": 1,
+        "height": 1
+      },
+      {
+        "width": 1,
+        "height": 1
+      }
+    ]
+  },
+  "demo": [
+    {
+      "width": 320,
+      "documentWidth": 320
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Typografia:</span> Source Sans Pro, responzívny škálovaný systém nadpisov, textu a odkazov.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Farby:</span> primárna modrá <code>#126DFF</code>, tmavá modrá <code>#072C66</code>, chybová červená <code>#C3112B</code>, focus oranžová <code>#D96E00</code>.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#126DFF</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#072C66</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#C3112B</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#D96E00</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Tiene:</span> malé, stredné, veľké, dialógové a hlavičkové tiene podľa IDSK.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Grid:</span> kontajner do 1120 px, štrukturálne medzery IDSK a responzívna 4/8/12-stĺpcová mriežka.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"text-[14px] leading-5 text-pretty text-foreground-muted\">Neoficiálna ukážka komponentov</span>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #757575, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "nodes": [
+            {
+              "html": "<pre class=\"max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground\"><code>{\n  \"registries\": {\n    \"@idsk\": \"https://example.com/r/{name}.json\"\n  }\n}</code></pre>",
+              "failure": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+            },
+            {
+              "html": "<pre class=\"max-w-full min-w-0 overflow-x-auto rounded-[5px] bg-surface-primary p-4 text-sm text-foreground\"><code>npx shadcn@latest add @idsk/button\n\n# alebo priamo z URL\nnpx shadcn@latest add https://example.com/r/button.json</code></pre>",
+              "failure": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 729,
+      "documentWidth": 729
+    },
+    {
+      "width": 730,
+      "documentWidth": 730
+    },
+    {
+      "width": 768,
+      "documentWidth": 768
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1024
+    },
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Typografia:</span> Source Sans Pro, responzívny škálovaný systém nadpisov, textu a odkazov.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Farby:</span> primárna modrá <code>#126DFF</code>, tmavá modrá <code>#072C66</code>, chybová červená <code>#C3112B</code>, focus oranžová <code>#D96E00</code>.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#126DFF</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#072C66</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#C3112B</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<code>#D96E00</code>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Tiene:</span> malé, stredné, veľké, dialógové a hlavičkové tiene podľa IDSK.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<li><span class=\"font-bold text-foreground\">Grid:</span> kontajner do 1120 px, štrukturálne medzery IDSK a responzívna 4/8/12-stĺpcová mriežka.</li>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #757575, background color: #fafafa, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"text-[14px] leading-5 text-pretty text-foreground-muted\">Neoficiálna ukážka komponentov</span>",
+              "failure": "Fix any of the following:\n  Element has insufficient color contrast of 4.22 (foreground color: #757575, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

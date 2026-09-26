@@ -1,0 +1,108 @@
+{
+  "measurements": [
+    {
+      "id": "input-l",
+      "height": 48,
+      "font": "19px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "bg": "rgb(255, 255, 255)",
+      "padding": "0px 15px"
+    },
+    {
+      "id": "input-m",
+      "height": 40,
+      "font": "16px",
+      "letterSpacing": "normal",
+      "color": "rgb(0, 0, 0)",
+      "bg": "rgb(255, 255, 255)",
+      "padding": "0px 48px 0px 15px"
+    },
+    {
+      "id": "select-l",
+      "height": 52,
+      "font": "19px",
+      "letterSpacing": "normal",
+      "color": "rgb(117, 117, 117)",
+      "bg": "rgb(255, 255, 255)",
+      "padding": "10px 48px 10px 15px"
+    },
+    {
+      "id": "select-m",
+      "height": 44,
+      "font": "16px",
+      "letterSpacing": "normal",
+      "color": "rgb(117, 117, 117)",
+      "bg": "rgb(255, 255, 255)",
+      "padding": "8px 48px 8px 15px"
+    },
+    {
+      "id": "primary",
+      "height": 49,
+      "font": "16px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgb(18, 109, 255)",
+      "padding": "0px 10px"
+    },
+    {
+      "id": "success",
+      "height": 49,
+      "font": "16px",
+      "letterSpacing": "normal",
+      "color": "rgb(255, 255, 255)",
+      "bg": "rgb(7, 136, 20)",
+      "padding": "0px 10px"
+    }
+  ],
+  "required": {
+    "compact": false,
+    "uploadValid": true,
+    "checkboxValid": true,
+    "radioInvalid": null,
+    "radioGroupInvalid": null
+  },
+  "disabledLinkClicks": "1",
+  "errorFocus": {
+    "tag": "A",
+    "id": ""
+  },
+  "disabledRemoval": "Súbor existing.pdf bol odstránený.\nNahrajte súbory\nZvoľte súbor a nahrajte ho alebo preneste zvolenú prílohu sem.\nPodporované formáty: jpg, png, doc, docx, pdf\nMaximálna veľkosť súboru: 15 MB\nPridať súbor\npre pole Nahrajte súbory",
+  "reset": {
+    "textarea": "original",
+    "counter": "Reset textoriginal16/30Maximálne 30 znakovChoicesABReset",
+    "checks": [
+      "true",
+      "false"
+    ],
+    "data": [
+      [
+        "text",
+        "original"
+      ],
+      [
+        "options",
+        "a"
+      ]
+    ]
+  },
+  "mobileProfile": "- link:\n  - /url: \"#profile\"",
+  "axeMobile": [
+    {
+      "id": "link-name",
+      "nodes": [
+        "<a class=\"flex min-w-0 items-center gap-[10px] rounded-[5px] no-underline outline-none hover:ring-[5px] hover:ring-foreground-muted focus-visible:outline-solid focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-focus\" href=\"#profile\">"
+      ]
+    }
+  ],
+  "cookie": {
+    "top": 7,
+    "height": 561,
+    "viewport": 568,
+    "overflow": "visible"
+  },
+  "rsc": {
+    "status": 200,
+    "body": "Server input"
+  }
+}

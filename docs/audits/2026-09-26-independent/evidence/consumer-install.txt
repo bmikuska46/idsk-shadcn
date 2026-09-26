@@ -1,0 +1,36 @@
+- Checking registry.
+✔ Checking registry.
+- Installing dependencies.
+- Installing dependencies.
+✔ Installing dependencies.
+- Updating files.
+✔ Created 27 files:
+  - src/lib/utils.ts
+  - src/styles/idsk.css
+  - src/ui/button.tsx
+  - src/ui/government-logo.tsx
+  - src/ui/search-input.tsx
+  - src/ui/field.tsx
+  - src/ui/tooltip.tsx
+  - src/ui/announcement-bar.tsx
+  - src/ui/divider.tsx
+  - src/ui/error-summary.tsx
+  - src/ui/data-panel.tsx
+  - src/ui/card.tsx
+  - src/ui/breadcrumbs.tsx
+  - src/ui/mandatory-field-legend.tsx
+  - src/ui/signpost.tsx
+  - src/ui/cookie-bar.tsx
+  - src/ui/accordion.tsx
+  - src/ui/information-bar.tsx
+  - src/ui/footer.tsx
+  - src/ui/header.tsx
+  - src/ui/file-upload.tsx
+  - src/ui/checkbox-group.tsx
+  - src/ui/input.tsx
+  - src/ui/radio-group.tsx
+  - src/ui/textarea.tsx
+  - src/ui/select.tsx
+  - src/ui/feedback-bar.tsx
+Import `src/styles/idsk.css` in your root layout or app entry (after Tailwind). Load Source Sans Pro, e.g. `import '@fontsource/source-sans-pro/400.css'`, `700.css` and `900.css` (Headline L uses weight 900).
+
